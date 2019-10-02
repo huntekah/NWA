@@ -1,0 +1,2 @@
+nalezy uzyc flagi -r:
+tcpdump -r plik.pcap
