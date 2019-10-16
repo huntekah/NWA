@@ -1,0 +1,15 @@
+PIERWSZY:
+
+   0  auxiliary/scanner/ssl/openssl_heartbleed          2014-04-07       normal  Yes    OpenSSL Heartbeat (Heartbleed) Information Leak
+   1  auxiliary/server/openssl_heartbeat_client_memory  2014-04-07       normal  No     OpenSSL Heartbeat (Heartbleed) Client Memory Exposure
+
+
+DRUGI:
+
+   #  Name                                        Disclosure Date  Rank    Check  Description
+   -  ----                                        ---------------  ----    -----  -----------
+   0  exploit/windows/fileformat/ezip_wizard_bof  2009-03-09       good    No     eZip Wizard 3.0 Stack Buffer Overflow
+   1  exploit/windows/misc/poppeeper_date         2009-02-27       normal  No     POP Peeper v3.4 DATE Buffer Overflow
+   2  exploit/windows/misc/poppeeper_uidl         2009-02-27       normal  No     POP Peeper v3.4 UIDL Buffer Overflow
+
+
