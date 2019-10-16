@@ -12,3 +12,18 @@ Metasploit links
  * https://subscription.packtpub.com/book/networking_and_servers/9781788295970/9/ch09lvl1sec63/find-and-launch-attacks
  * https://www.ceos3c.com/hacking/vulnerability-scanning-with-metasploit/ 
 
+
+
+TCP TTL RST links:
+ * https://dev.nmap.narkive.com/SqucGHIz/using-ttl-value-of-response-packets-on-nmap-port-scans
+ * https://medium.com/@iphelix/nmap-scanning-tips-and-tricks-5b4a3d2151b3
+ ** https://www.exploit-db.com/papers/13025
+ * https://www.unknowncheats.me/forum/general-programming-and-reversing/151767-changing-ttl-value-rst-packets.html
+ * https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+ * https://tools.ietf.org/html/rfc1122#page-87
+ * https://blogs.akamai.com/sitr/2019/07/anatomy-of-a-syn-ack-attack.html
+ * https://medium.com/@chennylmf/scanning-network-989d2a8a255d
+ * https://www.icir.org/vern/papers/reset-injection.ndss09.pdf
+ * https://stackoverflow.com/questions/52769197/handle-rst-packets-as-normal-connection-termination
+ * https://social.msdn.microsoft.com/Forums/en-US/379cca53-9920-4167-bd51-d685b25ac0dc/questions-about-tcpclient-tcplistener-and-socket-classes
+

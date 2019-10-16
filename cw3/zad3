@@ -1,0 +1,159 @@
+crem de la creme :23,24
+
+materiał z https://tools.ietf.org/html/rfc1122#page-87 :
+
+            The normal TCP close sequence delivers buffered data
+            reliably in both directions.  Since the two directions of a
+            TCP connection are closed independently, it is possible for
+            a connection to be "half closed," i.e., closed in only one
+            direction, and a host is permitted to continue sending data
+            in the open direction on a half-closed connection.
+
+oraz fragment dotyczący kończenia połączenia opisany tutaj: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+
+            Some host TCP stacks may implement a half-duplex close sequence, as Linux or HP-UX do. If such a host actively closes a connection but still has not read all the incoming data the stack already received from the link, this host sends a RST (losing the received data) instead of a FIN (Section 4.2.2.13 in RFC 1122). This allows a TCP application to be sure the remote application has read all the data the former sent—waiting the FIN from the remote side, when it actively closes the connection. But the remote TCP stack cannot distinguish between a Connection Aborting RST and Data Loss RST. Both cause the remote stack to lose all the data received.
+            
+            Some application protocols using the TCP open/close handshaking for the application protocol open/close handshaking may find the RST problem on active close. As an example:
+            
+            s = connect(remote);
+            send(s, data);
+            close(s);
+            For a program flow like above, a TCP/IP stack like that described above does not guarantee that all the data arrives to the other application if unread data has arrived at this end.
+
+pozwalają wnioskować, że:
+ Jeśli znajdziemy taki IPS który ignoruje pakiety nie należące do żadnego połączenia - i wyślemy do niego pakiet z ustawionym bitem RST to będziemy w stanie wysyłać dane na w-pół otwartym połączeniu, a ponieważ IPS uzna nasze połączenie za zakończone, to nie będzie blokował przesyłanych danych - bo nie należą do żadnego połączenia.
+
+------[ 1.1.- Open Scan ]
+
+Known as TCP Scan and normally used to program sockets, this technique is
+the oldest and works making a full connection with the server. Is similar to
+make a telnet to each port but automatically.
+
+For that it makes an autentication with 3 packets. Is known as
+three-way-handshake:
+
+For the ports opened:
+
+      Client ---->   SYN   ---->
+             <---- SYN/ACK <---- Server
+      Client ---->   ACK   ---->
+
+For the ports closed:
+
+      Client ---->   SYN   ---->
+             <----   RST   <---- Server
+
+Advantages   : very easy to program.
+Disadvantages: is very easy to detect and make logs on each connection.
+
+
+Send SYN (half open connection)
+-------------------------------
+Consists in make a half connection, sending a SYN, and when we obtain any
+response (ACK+SYN or RST) sending a RST to end the comunication (using RAW
+sockets, the RST packet is sent automatically by the kernel).
+
+Original idea consists in send a SYN and if the resver response with an
+ACK+SYN, we send a RST packet saying that we don't want to make a connection
+... all is a wrong and the server doesn't save any log.
+
+Today many computers can detect it and save a log or block this kind of
+attacks with a firewall.
+
+Advantages   : workss in all operating systems and ports, if don't use a
+firewall.
+Disadvantages: is very easy to detect and log it.
+
+     flashgordon# ./sendsocket -x 192.168.2.5 -d 192.168.2.7 -c 80 -s
+      SENT DATA
+      ---------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  1  |  0  |  0  |  0  |  0  |  0  | 64  | 65535
+     seq=846930886 - ack_seq=0 - doff=5 - check=39553 - ID=27032
+
+      RECEIVED DATA
+      -------------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  1  |  1  |  0  |  0  |  0  |  0  | 64  | 53270
+     seq=-1378930670 - ack_seq=863708102 - doff=6 - check=8049 - ID=0
+
+Port opened. We obtain SYN+ACK and Window<>0
+
+     flashgordon# ./sendsocket -x 192.168.2.5 -d 192.168.2.7 -c 23 -s
+      SENT DATA
+      ---------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  1  |  0  |  0  |  0  |  0  |  0  | 64  | 65535
+     seq=846930886 - ack_seq=0 - doff=5 - check=54145 - ID=27032
+
+      RECEIVED DATA
+      -------------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  0  |  1  |  1  |  0  |  0  |  0  | 64  | 0
+     seq=0 - ack_seq=863708102 - doff=5 - check=49281 - ID=0
+
+Port closed. We obtain ACK+RST and Window=0
+
+
+Send RST
+--------
+This attack affect only some systems and is not effective always. In the
+case we obtain only an ACK or if we don't obtain response, the port is
+opened and if we obtain a RST, the port is closed.
+
+Advantages   : is more diffcult to detect.
+Disadvantages: doesn't work in all systems neither ports.
+
+     flashgordon# ./sendsocket -x 192.168.2.5 -d 192.168.2.7 -c 80 -r
+      SENT DATA
+      ---------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  0  |  0  |  1  |  0  |  0  |  0  | 64  | 65535
+     seq=846930886 - ack_seq=0 - doff=5 - check=39041 - ID=27032
+
+      RECEIVED DATA
+      -------------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  0  |  1  |  0  |  1  |  0  |  0  | 53  | 37920
+     seq=1193401395 - ack_seq=908914171 - doff=5 - check=43532 - ID=4979
+
+Port opened. We obtain ACK+PSH, TTL<64 and Window<>0
+
+     flashgordon# ./sendsocket -x 192.168.2.5 -d 192.168.2.7 -c 23 -r
+      SENT DATA
+      ---------
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  0  |  0  |  1  |  0  |  0  |  0  | 64  | 65535
+     seq=846930886 - ack_seq=0 - doff=5 - check=53633 - ID=27032
+
+Without response ... Port closed
+
+     flashgordon# ./sendsocket -x 192.168.2.5 -d 192.168.2.7 -c 22 -r
+      SENT DATA
+     | SYN | ACK | RST | PSH | URG | FIN | TTL | Window
+     |  0  |  0  |  1  |  0  |  0  |  0  | 64  | 65535
+     seq=846930886 - ack_seq=0 - doff=5 - check=53889 - ID=27032
+
+Without response ... Response is not trustworthy because the port is opened
+
+As we can see, if we obtain any response the port is opened and if we don't
+obtain response, we can't know if the port is opened or closed.
+
+
+
+
+
+
+ZRODLA:
+ * https://dev.nmap.narkive.com/SqucGHIz/using-ttl-value-of-response-packets-on-nmap-port-scans
+ * https://medium.com/@iphelix/nmap-scanning-tips-and-tricks-5b4a3d2151b3
+ ** https://www.exploit-db.com/papers/13025
+ * https://www.unknowncheats.me/forum/general-programming-and-reversing/151767-changing-ttl-value-rst-packets.html
+ * https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+ * https://tools.ietf.org/html/rfc1122#page-87
+ * https://blogs.akamai.com/sitr/2019/07/anatomy-of-a-syn-ack-attack.html
+ * https://medium.com/@chennylmf/scanning-network-989d2a8a255d
+ * https://www.icir.org/vern/papers/reset-injection.ndss09.pdf
+ * https://stackoverflow.com/questions/52769197/handle-rst-packets-as-normal-connection-termination
+ * https://social.msdn.microsoft.com/Forums/en-US/379cca53-9920-4167-bd51-d685b25ac0dc/questions-about-tcpclient-tcplistener-and-socket-classes
+
