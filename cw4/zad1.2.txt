@@ -1,0 +1,219 @@
+==========================================================
+Summary of Results
+==========================================================
+
+SPF Check : pass
+Sender-ID Check : pass
+DKIM Check : pass
+SpamAssassin Check : ham (non-spam)
+==========================================================
+Details:
+==========================================================
+
+HELO hostname: mail-wm1-f43.google.com
+Source IP: 209.85.128.43
+mail-from: huntekah@gmail.com
+Anonymous To: ins-qzrhb4pk@isnotspam.com
+---------------------------------------------------------
+SPF check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: smtp.mail=huntekah@gmail.com
+DNS record(s):
+gmail.com.	293	IN	TXT	"v=spf1 redirect=_spf.google.com"
+
+
+----------------------------------------------------------
+Sender-ID check details:
+----------------------------------------------------------
+
+Result: pass
+
+ID(s) verified: smtp.mail=huntekah@gmail.com
+DNS record(s):
+gmail.com.	293	IN	TXT	"v=spf1 redirect=_spf.google.com"
+
+
+----------------------------------------------------------
+DKIM check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: header.From=huntekah@gmail.com
+Selector=20161025
+domain=gmail.com
+DomainKeys DNS Record=20161025._domainkey.gmail.com
+
+----------------------------------------------------------
+SpamAssassin check details:
+----------------------------------------------------------
+SpamAssassin 3.4.1 (2015-04-28)
+
+Result: ham (non-spam) (01.4points, 10.0 required)
+
+pts rule name description
+---- ---------------------- -------------------------------
+
+
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* 0.5 RCVD_IN_SORBS_SPAM RBL: SORBS: sender is a spam source
+* [209.85.128.43 listed in dnsbl.sorbs.net]
+* -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at http://www.dnswl.org/, no
+* trust
+* [209.85.128.43 listed in list.dnswl.org]
+* -2.8 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+* [209.85.128.43 listed in wl.mailspike.net]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (huntekah[at]gmail.com)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=1.4 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,
+RCVD_IN_DNSWL_NONE,RCVD_IN_MSPIKE_H2,RCVD_IN_SORBS_SPAM,SPF_PASS autolearn=no
+autolearn_force=no version=3.4.0
+X-Spam-Score: 1.4
+
+To learn more about the terms used in the SpamAssassin report, please search
+here: http://wiki.apache.org/spamassassin/
+
+==========================================================
+Explanation of the possible results (adapted from 
+draft-kucherawy-sender-auth-header-04.txt):
+==========================================================
+
+"pass"
+the message passed the authentication test.
+
+"fail"
+the message failed the authentication test.
+
+"softfail"
+the message failed the authentication test, and the authentication
+method has either an explicit or implicit policy which doesn't require
+successful authentication of all messages from that domain.
+
+"neutral"
+the authentication method completed without errors, but was unable
+to reach either a positive or a negative result about the message.
+
+"temperror"
+a temporary (recoverable) error occurred attempting to authenticate
+the sender; either the process couldn't be completed locally, or
+there was a temporary failure retrieving data required for the
+authentication. A later retry may produce a more final result.
+
+"permerror"
+a permanent (unrecoverable) error occurred attempting to
+authenticate the sender; either the process couldn't be completed
+locally, or there was a permanent failure retrieving data required
+for the authentication.
+
+
+==========================================================
+Original Email
+==========================================================
+
+From huntekah@gmail.com Wed Oct 23 12:00:04 2019
+Return-path: <huntekah@gmail.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+localhost.localdomain
+X-Spam-Flag: YES
+X-Spam-Level: *
+X-Spam-Report: 
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* 0.5 RCVD_IN_SORBS_SPAM RBL: SORBS: sender is a spam source
+* [209.85.128.43 listed in dnsbl.sorbs.net]
+* -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at http://www.dnswl.org/, no
+* trust
+* [209.85.128.43 listed in list.dnswl.org]
+* -2.8 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+* [209.85.128.43 listed in wl.mailspike.net]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (huntekah[at]gmail.com)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=1.4 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,
+RCVD_IN_DNSWL_NONE,RCVD_IN_MSPIKE_H2,RCVD_IN_SORBS_SPAM,SPF_PASS autolearn=no
+autolearn_force=no version=3.4.0
+Envelope-to: ins-qzrhb4pk@isnotspam.com
+Delivery-date: Wed, 23 Oct 2019 12:00:04 +0000
+Received: from mail-wm1-f43.google.com ([209.85.128.43])
+by localhost.localdomain with esmtp (Exim 4.84_2)
+(envelope-from <huntekah@gmail.com>)
+id 1iNFJ4-0002SQ-MI
+for ins-qzrhb4pk@isnotspam.com; Wed, 23 Oct 2019 12:00:03 +0000
+Received: by mail-wm1-f43.google.com with SMTP id g24so11750677wmh.5
+for <ins-qzrhb4pk@isnotspam.com>; Wed, 23 Oct 2019 05:01:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+d=gmail.com; s=20161025;
+h=mime-version:from:date:message-id:subject:to;
+bh=fDizAUeR83IpTZmXEZJpdiyITc1scvEhBrzLHINfD4A=;
+b=V79K7H0lFVPhfVG0GA4H2Z2LVoZWxj69/IW+VLkQr9GGGD3XILYX6Bv4GmGSWFiA1s
+V+DMevQu+ihePShgkzM+bZIKwKhRj3BuRbLnxG8QX1fHNomYthoJi66MEn5XWLBdCgZl
+xjnPDgsVta3Re5fophe5z70X5TQ+epFxno5byKZkCFsdT2pmUxWYpbU9/HacCz4dK2Hw
+nA/DBWdSJ8ihIMJ0AO2nJ1sVEllLXc6nFjqY3qm9wkIREuKMuSU6tLmsvzhVZR6XzSH9
+9GBB8oSj7mBjejtlhEED3+YQSXYGDWYovVTxFLQw/WXA16yDcAf3A2T3W+7FXpTdjGFK
+3ifA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+d=1e100.net; s=20161025;
+h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+bh=fDizAUeR83IpTZmXEZJpdiyITc1scvEhBrzLHINfD4A=;
+b=TaVtOwjL3Gk1KkjvgfafMdOUkQ7IFwfp+GW7qrqzqpLZ7KX1E94U0hnBWcYkmEzFGy
+W9y0NZAN1tjr2Z6yPVIubmFw1rqt3r1fhHClBVx6iPmxObxeRf/x0Fm78tInrf3blq1/
+EVOWlaQ6wU+6mMtsALtr+ZiIOMkNvsfK9Jnn8s0mld+3Hrx24paI5vHvB/sFs0KOcHd0
+mdULKR00F/7vRj+Qi0aFJy3r45s1i0LDSACb/pfqtEe3216Wwg9uH6av4ZNk9/UZVuvx
+9g45uNVOV3BOIARwJLVyjS0yMHeWByL/o6PzkMsGzVWGurVFLyBzowwIfido/uYVIB0T
+g9eQ==
+X-Gm-Message-State: APjAAAWsaEmm4o6FhDeeqfs8rfOh/emfyD9xIOQ/5LRvAFBitguXgvfw
+Ez6AtCinibmh6TvBJ1NZUXyFMEVYJmY8rFYT4G7uqQK0ZX8=
+X-Google-Smtp-Source: APXvYqzqigAZA7Cp0LSa1j070CjdVyaVIsDxzWcGzExzuBDdAq6fNNuv3/PSHnvtmwu06lfIv0KPDyi97Ng6ge2G4lY=
+X-Received: by 2002:a05:600c:387:: with SMTP id w7mr7711604wmd.138.1571832092129;
+Wed, 23 Oct 2019 05:01:32 -0700 (PDT)
+MIME-Version: 1.0
+From: Krzysztof Jurkiewicz <huntekah@gmail.com>
+Date: Wed, 23 Oct 2019 14:02:25 +0200
+Message-ID: <CAGuysodqy0kzZqWtvMFiO7UadW9Zf0FLVibZVhhnugL2CA1pXA@mail.gmail.com>
+Subject: ten mail jest strasnym spamem hahahahha
+To: ins-qzrhb4pk@isnotspam.com
+Content-Type: multipart/alternative; boundary="0000000000007f8660059592adba"
+X-DKIM-Status: pass (gmail.com)
+--0000000000007f8660059592adba
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+KUPA
+--=20
+Z powa=C5=BCaniem,
+Krzysztof Jurkiewicz
++48 697 333 969
+
+--0000000000007f8660059592adba
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div>KUPA</div>-- <br><div dir=3D"ltr" c=
+lass=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr=
+"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Z powa=
+=C5=BCaniem,<br>Krzysztof Jurkiewicz<div>+48 697 333 969</div><div style=3D=
+"text-align:center"></div></div></div></div></div></div></div></div></div><=
+/div>
+
+--0000000000007f8660059592adba--

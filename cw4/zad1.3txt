@@ -1,0 +1,65 @@
+zaklasyfikowane jako googlowy spam:
+
+
+Delivered-To: huntekah@gmail.com
+Received: by 2002:a05:6000:118e:0:0:0:0 with SMTP id g14csp819286wrx;
+        Wed, 23 Oct 2019 05:31:47 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqzOEPf2okJMGFweoDEJyvbcdL6VvcQMMpvN9T8qWSPATqBrADlmEtsyDTnvzxa5yTNcGhE9
+X-Received: by 2002:ac8:545:: with SMTP id c5mr8958331qth.375.1571833907040;
+        Wed, 23 Oct 2019 05:31:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1571833907; cv=none;
+        d=google.com; s=arc-20160816;
+        b=O3Sqdzy3OSeswANIEt10EJUfqkg9NpuX2s7f4HSvpLrhHanaIMKWVrlRnhjaBhCiYz
+         tDC+oroXkUbdrh9QGwsnw0kkSbrEBF1EpdMA6+bgl3SUX3lBtvX/MlHfJg62AC67x0ER
+         YaJ1x/razN4m9qqDfG/1cgzUCWuZUXgomPjwspYT+8KQzqF8OoOB84Hh876InP36+7Ub
+         9Yp2FDS5rHaQL2KDL8OBCSl6JXedFNlBLzAHeyfiCwf2dO+bJbzqZwmQ6x1zth3I0Lb6
+         zkFn1QqWECbiAUxoafJJxukpWBmv+jtqIsE9KjIvUzi4/Jen6Rtv9G+3Ywx5UXjFNgHL
+         f1Jg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=dkim-signature:content-transfer-encoding:subject:from:to:date
+         :message-id:mime-version;
+        bh=Ns8xloS064UBkO2AKTyPhilLzlvl3Gq1tewmWAUK1Lo=;
+        b=Zc8A/qFtkvdn6U/TaStCx60BuOQWMEIJiDwrtUxQMTD9wyxQjPd2+VQanlYKJLLcov
+         CUO1PFRGHsgQJeT8AIw5PwrWjsvxAp2bDXSdEKWVOBmT1lVpAB8VBR0Qj1CQZrbzqdAU
+         mT2qwNU5f5fYmVIn+Q9IEbRL9CpVY7G0/VD9fhZPkWwvIH0t599dpU5XDQPmIDOCxo33
+         PBjNggsDD3I32ZpCpxizue6UQiYPGi+x+vGK1yTmP/Ld0xn84bIcHoGLbBWlK2kyYw0F
+         oF6gsTlTNlVXOocKW9/W9u7R7zfbNdClQcJ74OO2nTPfruPB2Da8SF12WhBEAKp0UB6t
+         MpbQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@guerrillamail.com header.s=highgrade header.b=fuBRUN7d;
+       spf=pass (google.com: domain of i4s54h+2uuu4yx9i1jwg@guerrillamail.com designates 2607:5300:60:689e:: as permitted sender) smtp.mailfrom=i4s54h+2uuu4yx9i1jwg@guerrillamail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=guerrillamail.com
+Return-Path: <i4s54h+2uuu4yx9i1jwg@guerrillamail.com>
+Received: from mail.guerrillamail.com ([2607:5300:60:689e::])
+        by mx.google.com with ESMTPS id b7si2189617qka.44.2019.10.23.05.31.46
+        for <huntekah@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 23 Oct 2019 05:31:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of i4s54h+2uuu4yx9i1jwg@guerrillamail.com designates 2607:5300:60:689e:: as permitted sender) client-ip=2607:5300:60:689e::;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@guerrillamail.com header.s=highgrade header.b=fuBRUN7d;
+       spf=pass (google.com: domain of i4s54h+2uuu4yx9i1jwg@guerrillamail.com designates 2607:5300:60:689e:: as permitted sender) smtp.mailfrom=i4s54h+2uuu4yx9i1jwg@guerrillamail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=guerrillamail.com
+Received: by 167.114.101.158 with HTTP; Wed, 23 Oct 2019 12:31:45 +0000
+MIME-Version: 1.0
+Message-ID: <12b9d964c565ab7c15f961761343b6b99d25@guerrillamail.com>
+Date: Wed, 23 Oct 2019 12:31:45 +0000
+To: "huntekah@gmail.com" <huntekah@gmail.com>
+From: <i4s54h+2uuu4yx9i1jwg@guerrillamail.com>
+Subject: viagra viagra viagra
+X-Originating-IP: [150.254.76.84]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Domain-Signer: PHP mailDomainSigner 0.2-20110415 <http://code.google.com/p/php-mail-domain-signer/>
+DKIM-Signature: v=1; a=rsa-sha256; s=highgrade; d=guerrillamail.com; l=203; t=1571833906; c=relaxed/relaxed; h=to:from:subject; bh=Ns8xloS064UBkO2AKTyPhilLzlvl3Gq1tewmWAUK1Lo=; b=fuBRUN7dFv6y480mZm9n6HwvP4SICPDsIw1sCjBr9fk/UFgo1y98aI4ZOIq3JBAVKy/NsNv2ckH2 GpLJVZbslXC6qGJ4tQZam+fTbegp4iMKQcInMcMTpnQ4xYJz5kfSyvncGcrUd/OUxgRM8ZMQkvIJ HsWS71rlASKaA8oefwXjXI1eGAQPp8uMIbuT1OWuJ4ACCl1P56KEgx8PqdGl2bliOSMBchMFE4zT etSkwhnCn4MJqNTA7TTP0wbhI0a0Jedn9iLIcJnvm/SdzHXDg8vmM4M0qN0vMvUqt4kukkKpG9XN rqFo9rhZ8ArBWcVtBgAiqZ5N88qTtwaGd4/GLQ==
+
+penis viagra sex viagra sex pussy viagra 100$
+
+
+
+
+
+----
+Sent using Guerrillamail.com
+Block or report abuse: https://www.guerrillamail.com//abuse/?a=3DSVR6EQgLQr=
+w1jwO1%2BXJRcRvK

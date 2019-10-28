@@ -1,0 +1,40 @@
+testy znalezione w nagłówkach:
+
+
+ALL_TRUSTED,
+AWL
+DKIM_SIGNED,
+DKIM_VERIFIED,
+HTML_MESSAGE,
+URIBL_BLACK
+FH_FROMEML_NOTLD=0.18,
+FSL_HELO_NON_FQDN_1=0.001,
+HELO_LOCALHOST=3.603,
+MISSING_MID=0.14,
+RCVD_IN_BRBL_LASTEXT=1.644,
+RCVD_IN_PBL=3.558,
+RCVD_IN_RP_RNBL=1.284,
+RCVD_IN_SORBS_DUL=0.001,
+RDNS_NONE=1.274,
+TO_NO_BRKTS_NORDNS=0.001,
+T_RCVD_IN_SEMBLACK=0.01
+
+
+
+
+
+OPISY:
+
+ 1. AWL -   From: address is in the auto white-list
+ 2. DKIM_SIGNED -   Message has a DKIM or DK signature, not necessarily valid
+ 3. DKIM_VERIFIED   -   eval:check_dkim_valid()
+ 4. DKIM_ADSP_DISCARD   -   No valid author signature, domain signs all mail and suggests discarding the rest
+ 5. HTML_MESSAGE    -   HTML included in message
+ 6. URIBL_BLACK     -   Contains an URL listed in the URIBL blacklist   
+ 7. RCVD_BAD_ID     -   Received =~ /\bid\s+[a-zA-Z0-9_+\/\\,-]+(?:[!"\#\(dollar) \%&'()*:<=>?\@\[\]^\`{| }~]| ;\S)/
+ 8. RDNS_LOCALHOST  -   Sender's public rDNS is "localhost" 
+ 9. URI_OBFU_WWW    -   Obfuscated URI  
+ 10. HELO_FRIEND    -   X-Spam-Relays-External =~ /^[^\]]+ helo=friend /i   
+ 11. RCVD_IN_NJABL_SPAM     -   NJABL: sender is confirmed spam source  
+ 12. RCVD_IN_SBL    -   Received via a relay in Spamhaus SBL    
+ 13. RCVD_IN_SORBS_DUL      -   SORBS: sent directly from dynamic IP address    

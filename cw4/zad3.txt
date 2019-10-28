@@ -1,0 +1,9 @@
+
+Algorytm:
+	wylicz zmienną a = [ int(hash(adres-email wysyłającego)) + int(hash(adres-email odbiorcy)) ]
+	policzyć rozwiązanie równania x² = a mod big_prime
+	gdzie big_prime zmienia się co 24h na serwerze poczty wychodzącej
+	wiadomość należy zweryfikować liczbą x.
+
+
+można wykorzystac rowniez np "Partial hash inversion" tak jak to jest w HashCashu, ale chciałem pomyśleć nad bardziej własnym rozwiązaniem.
