@@ -1,0 +1,635 @@
+Delivered-To: huntekah@gmail.com
+Received: by 2002:a05:6000:118e:0:0:0:0 with SMTP id g14csp3819857wrx;
+        Mon, 28 Oct 2019 15:11:48 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwWj/qOfPq1sldTd888QrRED8TVDBcarDhKTUjwGKcZJ+A8Npg7yleAxQRgKrcjgv/8pCN1
+X-Received: by 2002:ac2:4822:: with SMTP id 2mr72515lft.115.1572300708838;
+        Mon, 28 Oct 2019 15:11:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1572300708; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZK9V41duSLmvW07iATRPVCGWD8Fq/MwrnXZY0UZtBj7hN3zut/dpnyCGl3SrM8lt6M
+         IAmIfgsMBK5y9z8WnJVhwJvjN2D6zsKBNcYOdnuS41RZ7J3yk3k551+VuUJgnDot/vjR
+         h990TAX2Xs+m53eYOF4dVEPj5tiK/igTTkHmBHiEdCVa2L1zc8jD3PdpCjtY+mUoxbur
+         cP7+dGd1wywgmAOzJw+jA75qZz5rAmhDYtSP5wwEO6HVsyn/cmeYtRVc9i8iyjMTRuR2
+         N2+otm/mUX4waA1lPXNEslylo0qc+smlnO/OUbzCiIvCl7dw7yJ+A1+lGvLGaH2uvsJx
+         U8cg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:user-agent:references:message-id:in-reply-to:subject
+         :cc:to:from:date;
+        bh=XnABCX/1jcfzQMp4LWmBHhrAv9JUDNXgXHuaZJWgQxo=;
+        b=sOw9llo7DmisNIK6T5aDKTwrA8w3ApcW0s1s+eFcb/YjsYeE7tNsT4Y4qjPFI6Ro+g
+         EbFGc0A61mVrM15aACTFXoJQd8jAwUAURIYuy9At5zZ5oPD66YKI64PwxrGEo38wcR0g
+         1GsV8/XnzoFaTYfXwCQjMl7bIWMoBMaw5tMbt0x8IHWBE97x4CcKmQfF69R5B2EzG/HL
+         FvfO8s5yI+FzTMd/tqmmct2/E+K2w/Y2dGul9tbwJGqvoB7kzUbLWYEmjxGuzsU70t8z
+         gYhv4Wj3ucRTGRSaMlxzLdSuqNGr13AtMFa+d6HOCV1XDFMhP8ky2R5qhnlxk17Y6nls
+         lDRQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of filipg@amu.edu.pl designates 150.254.65.67 as permitted sender) smtp.mailfrom=filipg@amu.edu.pl
+Return-Path: <filipg@amu.edu.pl>
+Received: from pp.amu.edu.pl (pp.amu.edu.pl. [150.254.65.67])
+        by mx.google.com with ESMTPS id l30si2970816lfk.27.2019.10.28.15.11.48
+        for <huntekah@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 28 Oct 2019 15:11:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of filipg@amu.edu.pl designates 150.254.65.67 as permitted sender) client-ip=150.254.65.67;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of filipg@amu.edu.pl designates 150.254.65.67 as permitted sender) smtp.mailfrom=filipg@amu.edu.pl
+Received: from localhost (pp.amu.edu.pl [127.0.0.1]) by pp.amu.edu.pl (Postfix) with ESMTP id 0749C25E2D8; Mon, 28 Oct 2019 23:11:48 +0100 (CET)
+X-Virus-Scanned: amavisd-new at amu.edu.pl
+Received: from pp.amu.edu.pl ([127.0.0.1]) by localhost (pp.amu.edu.pl [127.0.0.1]) (amavisd-new, port 10026) with ESMTP id sCYUJzRYq9t7; Mon, 28 Oct 2019 23:11:47 +0100 (CET)
+Received: from frank.localdomain (c133-120.icpnet.pl [85.221.133.120]) by pp.amu.edu.pl (Postfix) with ESMTPA id B68CF6E7F3; Mon, 28 Oct 2019 23:11:47 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1]) by frank.localdomain (Postfix) with ESMTP id 2114017A04E3; Mon, 28 Oct 2019 23:10:22 +0100 (CET)
+Date: Mon, 28 Oct 2019 23:10:21 +0100 (CET)
+From: Filip Gralinski <filipg@amu.edu.pl>
+To: Krzysztof Jurkiewicz <huntekah@gmail.com>
+cc: Roman Grundkiewicz <rgrundki@staffmail.ed.ac.uk>
+Subject: Re: wykrywanie anomalii w tekście
+In-Reply-To: <e20b727f-3fef-bd8f-9bb4-88a85e14853c@staffmail.ed.ac.uk>
+Message-ID: <alpine.LNX.2.21.1910282214040.5722@frank>
+References: <alpine.LNX.2.21.1910152258470.57458@frank> <e20b727f-3fef-bd8f-9bb4-88a85e14853c@staffmail.ed.ac.uk>
+User-Agent: Alpine 2.21 (LNX 202 2017-01-01)
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="-1463769343-2130293039-1572300622=:5722"
+
+---1463769343-2130293039-1572300622=:5722
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+
+To ja bym mia=C5=82 taki plan. (Romanie, by=C5=82bym wdzi=C4=99czny za wsze=
+lkie
+uwagi.)
+
+1. Przerobi=C4=87 https://www.cl.cam.ac.uk/research/nl/bea2019st/ do
+zadania detekcji b=C5=82=C4=99d=C3=B3w/anomalii w jakim=C5=9B prostym forma=
+cie (np. na
+wyj=C5=9Bciu indeksy token=C3=B3w z b=C5=82=C4=99dami).
+
+Romanie, rozumiem, =C5=BCe nie ma czego=C5=9B takiego gotowego? Rozumiem, =
+=C5=BCe
+jest to jako=C5=9B implicite zawarte w tym narz=C4=99dziu ERRANT, da si=C4=
+=99 go
+=C5=82atwo zmusi=C4=87, =C5=BCeby wypisa=C5=82 te indeksy? To pewnie nie je=
+st takie
+oczywiste, np. w sytuacji, kiedy problem dotyczy wielu wyraz=C3=B3w
+r=C3=B3wnocze=C5=9Bnie, ale mam nadziej=C4=99, =C5=BCe da si=C4=99 z grubsz=
+a okre=C5=9Bli=C4=87, kt=C3=B3re
+wyrazy s=C4=85 =E2=80=9Eb=C5=82=C4=99dne=E2=80=9D. (W og=C3=B3le da si=C4=
+=99 ERRANTem =C5=82atwo ewaluowa=C4=87 systemy
+detekcji b=C5=82=C4=99d=C3=B3w?)
+
+Panie Krzysztofie, prosi=C5=82bym o przygotowanie takiego zbioru w formacie
+TSV, =C5=BCeby mo=C5=BCna by=C5=82o wci=C4=85gn=C4=85=C4=87 do Gonito.
+
+2. Trzeba by zrobi=C4=87 poprawki w `gpt2_proba_engine.py` i `oddballness_c=
+reate_html.py`
+
+- paleta kolor=C3=B3w powinna by=C4=87 dobierana od `color_threshold`, a ni=
+e od
+   0 (jak si=C4=99 ustawi `color_threshold` wysoko, to wszystko jest na
+   czerwono, nie ma gradacji)
+- trzeba by doda=C4=87 dodatkowy parametr alpha, b=C4=99dzie to wyk=C5=82ad=
+nik
+   przy liczeniu oddballness:
+
+      oddballness =3D torch.sum(
+         F.relu(tokens_proba - chosen_token_proba) ** alpha)
+
+   o tym wsp=C3=B3=C5=82czynniku p=C3=B3=C5=BAniej jeszcze opowiem.
+
+3. Zewaluowa=C4=87 model j=C4=99zyka typu GPT2 na wyzwaniu om=C3=B3wionym w=
+ punkcie 1,
+mam nadziej=C4=99, =C5=BCe b=C4=99dzie to mocny baseline nienadzorowany w s=
+tosunku do
+system=C3=B3w typu UEDIN-MS. My=C5=9Bl=C4=99, =C5=BCe by=C5=82oby to wtedy =
+warte papera.
+
+Z GPT2 jest problem jest taki, =C5=BCe w tej chwili patrzy tylko na lewy
+kontekst wyrazu, mimo wszystko co=C5=9B wychodzi (o tym za chwil=C4=99) i w=
+arto
+to zewaluowa=C4=87, ale trzeba by wymy=C5=9Bli=C4=87, jaki=C5=9B spos=C3=B3=
+b, =C5=BCeby patrza=C5=82 z
+dw=C3=B3ch stron, pomys=C5=82y:
+
+a) u=C5=BCy=C4=87 BERT-a, BERT zna co prawda ca=C5=82e zdanie (w=C5=82=C4=
+=85cznie z badanym
+s=C5=82owem), ale przez to, =C5=BCe by=C5=82 uczony z niekt=C3=B3rymi token=
+ami
+podmienionymi, mo=C5=BCe b=C4=99dzie dawa=C4=87 w miar=C4=99 sensowny rozk=
+=C5=82ad
+prawdopodobie=C5=84stwa dla b=C5=82=C4=99dnego wyrazu (tzn. taki, w kt=C3=
+=B3rym poprawny
+wyraz b=C4=99dzie mia=C5=82 du=C5=BCo wi=C4=99ksze prawdopodobie=C5=84stwo)
+
+b) u=C5=BCy=C4=87 GPT-2, tylko dla ka=C5=BCdej pozycji w zdaniu liczy=C4=87=
+ rozk=C5=82ad
+prawdopodobie=C5=84stwa wyrazu do ko=C5=84ca zdania (_nie_ zatrzymuj=C4=85c=
+ si=C4=99 na
+wyrazie), w ten spos=C3=B3b mo=C5=BCna by uwzgl=C4=99dni=C4=87 dalszy ci=C4=
+=85g (prawy
+kontekst), niestety b=C4=99dzie to b. kosztowne obliczeniowe, nie jestem
+pewien, jak to zrobi=C4=87 efektywnie obliczeniowo na karcie (pewnie jaki=
+=C5=9B
+pruning trzeba by zrobi=C4=87).
+
+4. Na wydzielonym zbiorze dostroi=C4=87 threshold i alpha, b=C4=99dzie to j=
+edyne
+uczenie w tym podej=C5=9Bciu.
+
+5. Dla por=C3=B3wnania uruchomi=C4=87 UEDIN-MS na tym samym zbiorze.
+
+Na koniec ma=C5=82y raport z eksperyment=C3=B3w, kt=C3=B3re wykona=C5=82em =
+na mojej
+ksi=C4=85=C5=BCce - w wi=C4=99kszo=C5=9Bci ksi=C4=85=C5=BCka przesz=C5=82a =
+korekt=C4=99 native speakera, wi=C4=99c
+szuka=C5=82em ju=C5=BC ostatnich, pojedynczych b=C5=82=C4=99d=C3=B3w, by=C5=
+=82 to do=C5=9B=C4=87 wymagaj=C4=85cy
+test.
+
+GPT-2/oddballness zacz=C4=99=C5=82o przynosi=C4=87 ciekawe wyniki przy zwi=
+=C4=99kszeniu
+thresholdu do 0.75 i ustawieniu alpha na 2.0, zw=C5=82aszcza to drugie
+=E2=80=9Ewyostrza=E2=80=9D precyzj=C4=99, niewiele s=C5=82=C3=B3w jest zazn=
+aczonych, ale sporo z nich
+rzeczywi=C5=9Bcie jest b=C5=82=C4=99dnych.
+
+Uruchomi=C5=82em te=C5=BC UEDIN-MS (wersja lowresource), te=C5=BC uda=C5=82=
+o mi si=C4=99 par=C4=99
+b=C5=82=C4=99d=C3=B3w znale=C5=BA=C4=87, co ciekawe innych ni=C5=BC przy u=
+=C5=BCyciu GPT-2.
+
+Poni=C5=BCej wrzucam zestawienie znalezionych i poprawionych przeze mnie
+b=C5=82=C4=99d=C3=B3w (format `git-diff --word-diff`, zmiany zaznaczony prz=
+ez
+[- foo -]{+bar+}, =C5=BAr=C3=B3d=C5=82o w LaTeX-u, mam nadziej=C4=99, =C5=
+=BCe da si=C4=99 w tym rozezna=C4=87).
+
+Pozdrawiam,
+F.G.
+
+GPT2:
+
+Even if the past is not distant, human memory (be it individual, be it
+collective) might be patchy. Let us consider a~linguistic example:
+the verb \plword{ogarnia=C4=87}, in a~number of [-meanings,-]{+senses,+} ha=
+s been rising
+in popularity in \index{Polish!colloquial}colloquial Polish. Polish speaker=
+s might remember
+the time when it was not frequent and might be able to testify
+that they could hear it all around them in a~given year,
+@@ -235,7 +235,7 @@ or 1990s printed material if needed, might be the only =
+option.
+Texts from the past might be combed for various types of, very broadly spea=
+king,
+\index{linguistic units|(}\emph{linguistic units}, though the common denomi=
+nator might not be
+discernible across discipline, as in linguistics these are \indexthis{morph=
+emes},
+words (a word as such or in a specific [-meaning),-]{+sense),+} \indexthis{=
+collocations},
+\indexthis{idiomatic expressions}, \indexthis{proverbs}, in
+\index{folklore}folkloristics: motifs, \indexthis{folk tales},
+\indexthis{jokes}, \index{legends, contemporary or urban}contemporary legen=
+ds, \indexthis{chain letters}, in \indexthis{literary studies}:
+@@ -289,7 +289,7 @@ Polskiego}.\urlnoteaccessed{http://nfjp.pl}{1~February =
+2019}
+   researchers within the Web service proposed in (D1). With
+   a~metasearch engine, laborious entering of the same \index{search engine=
+s!queries}queries (related
+   to a~given linguistic unit) into multiple search engines is no longer
+   required. Issues specific [-for-]{+to+} a given language,
+   e.g.~inflection\index{Polish!inflection} for
+   Polish, could be taken into account within a~metasearch engine,
+   even if the upstream search engines have their limitations
+@@ -397,7 +397,7 @@ is behind a~paywall, their search engines are freely av=
+ailable.)
+\item After resources in (D3--D8) are aggregated under
+   a~meta\-search engine, the next step is to automate search processes.
+   A~computer should be =E2=80=9Ctrained=E2=80=9D to identify a given lingu=
+istic unit (a~word
+   in a~specific [-meaning,-]{+sense,+} a~reference to a~specific person, a=
+~type of
+   \index{legends, contemporary or urban}contemporary legend) after a~few e=
+xamples are \index{tagging}tagged manually by
+   a~researcher. Advanced computational techniques based on statistics
+   and machine\index{machine learning} learning should be applied to this a=
+im.
+@@ -572,7 +572,7 @@ the following items available through the OAI-PMH are e=
+xcluded:
+\end{itemize}
+
+If a~metadata parameter%
+   \sidenote{A~script written in the Perl\index{Perl (programming language)=
+} programming [-languages-]{+language+} using
+     the \Texttt{HTTP::OAI} module was used to fetch OAI records.}
+is unknown (e.g.~unknown language or =E2=80=9Cother=E2=80=9D
+publication type), an item is not filtered out.
+@@ -829,7 +829,7 @@ The collection contains a~number of publications in oth=
+er languages
+(\indexthis{German}, \indexthis{English},
+\indexthis{French}, \indexthis{Russian}). The foreign-language publications=
+ are
+not distinguished in any way, and guesswork (looking for
+character digrams specific [-for-]{+to+} languages other than Polish) is ne=
+eded in order to
+determine the publication language automatically.
+
+The scanned pages are presented in the JPEG format. Worse still,
+@@ -1233,8 +1233,8 @@ might be created).
+
+In this chapter, first, we enumerate and discuss the metadata elements
+usually encountered when working with texts. Second, the general
+issues common [-for-]{+to+} all metadata are presented, followed by problem=
+s
+specific [-for-]{+to+} particular metadata elements. Finally, we discuss wh=
+at
+can be done if a~given item of metadata is missing.
+
+When speaking of metadata, the \indexthis{Dublin Core} schema is the main r=
+eference
+@@ -1329,7 +1329,7 @@ temporal\index{metadata!temporal} metadata\dots
+The problem is pervasive for language metadata of periodicals. For
+instance, a~number of publications are assigned double values for
+language (\indexthis{German} and Polish) despite their clearly German title=
+s. What
+seems a~simple human [-mistake-]{+error+} is actually a~more complicated ma=
+tter.
+Consider \textit{Amtsblatt der K=C3=B6niglichen Regierung zu Posen},
+published in 1816--1910 in \indexthis{Pozna=C5=84} by the local authorities=
+. All issues
+digitised in the Digital Library of \indexthis{Wielkopolska} are assigned
+@@ -1501,7 +1501,7 @@ in photographs and works of art rather than textual p=
+ublications.
+The normalisation procedure is basically a~list of regular expressions\inde=
+x{regular expressions}
+to be applied and, if matched, a~simple transformation of the
+substrings of the input string is performed. (A regular expression is a~for=
+mula representing a~search pattern.\scite{friedl2002mastering}) For
+[-instance-]{+instance,+} the rule (expressed in the Perl programming langu=
+age):
+
+\begin{verbatim}
+if ($date =3D~ m{^(0[1-9]|[12]\d|3[01])
+@@ -1813,7 +1813,7 @@ of excerpt types that might be found when looking for=
+ anachronisms
+\vskip 1.5\baselineskip plus .5\baselineskip
+
+\begin{itemize}
+   \item The phrase used systematically in an unexpected [-meaning.-]{+sens=
+e.+} For
+     instance, Pius XI was frequently referred to as \textit{Polish
+       Pope} by the Polish press in the interwar period
+     (he was Italian; the sobriquet was given to him as a~former apostolic
+@@ -2289,8 +2289,8 @@ exemplified by the following inconsistencies:
+Of course, we do not believe that there exists some ideal
+classification of publications. Every attempt to
+classify the universe is inevitably arbitrary, and to categorise
+digitised publications is [-similarly-]{+as+} challenging as it was for cer=
+tain
+Chinese encyclopaedists to classify [-animals.-]{+animals (see Chapter~\ref=
+{ch:word2vec}).+} In a~way, the chaotic
+state of affairs for publication types in Polish digital libraries is
+perfectly understandable. Nevertheless, when
+amassing the metadata from Polish digital libraries \emph{something}
+@@ -3489,8 +3489,9 @@ This was tried at first, but the number of false posi=
+tives was too
+large\ppauza when many words were considered, a~great number of spurious pa=
+irs were
+generated (especially for names, where one is quite likely to obtain a~comp=
+letely unrelated surname, let us say, by changing just one
+letter). Simply, both surface and semantic (contextual) similarity are
+necessary. Note that more advanced vector models which take[-into-]
+[-consideration-] the
+characters [-from-]{+of+} which a~word is composed {+into+}
+{+consideration+} (e.g.
+\indexthis{fastText}, which composes a~word embedding out of character n-gr=
+am
+embeddings) might be less effective, as the semantic and surface form
+are not clearly separated there.\index{Word2vec|)}\index{embeddings|)}\inde=
+x{Levenshtein distance|)}
+@@ -4563,7 +4564,7 @@ misrecognised by OCR).
+
+Consider, for instance, the abbreviation \plword{UFO}\index{UFO|(} (for
+\textit{Unidentified Flying Object}\ppauza the acronym\index{acronyms} is u=
+sed in Polish
+in the same [-meaning-]{+sense+} as in \indexthis{English}; the native acro=
+nym \plword{NOL} is
+much rarer). The word is not ambiguous in itself; the problem is that
+when you search for \plword{UFO} and lower-casing is used in the
+search engine (which is the default in Odkrywka), \plword{ufo} (in lower ca=
+se) will also be found, and as
+@@ -4798,7 +4799,7 @@ parameter can take the following values:
+
+\end{itemize}
+
+\noindent (For [-instance-]{+instance,+} the query \query{orderby:date-desc=
+ metapsychologia}
+will yield exactly the same set of results as
+\query{metapsychologia}, but the results will be sorted starting
+from the newest one, and of course the top 100 results presented on
+@@ -4854,7 +4855,7 @@ normalised to a~time\index{time intervals} interval (=
+rather than a~time point) o
+length: for a~book it might be a~year, for a~daily
+newspaper\ppauza a~day. It
+was decided to sort by the \emph{beginning} of the time interval, e.g. a
+book which is known to have been published in 1893 will be given before a~n=
+ewspaper known to be published {+on+} 25 July 1893. The items are sorted by
+the beginning rather than the end of the time interval to make sure that it=
+ems
+which \emph{might} be earlier than items with precise metadata are not
+overlooked.
+@@ -5327,7 +5328,7 @@ flexibly switch between them.\index{research!strategi=
+es}
+A~result might be marked by a~user as relevant or irrelevant the
+moment it is shown after being retrieved by the search engine for a~given q=
+uery, but the decision can be postponed\ppauza the search results
+not yet tagged are moved to a~\defined{tagging queue},
+which\index{tagging queue} can be reviewed by a~user at any [-moment.-]{+ti=
+me.+}
+
+\subsection{Rejecting a~query}
+It might be that a~query tried for a~given topic by a~researcher is seen to=
+ be much worse
+@@ -7156,7 +7157,7 @@ disambiguate words, the most frequent interpretation =
+would usually
+
+\vfill
+
+\noindent  i.e. the vector would represent the most frequent [-meaning.)-]{=
++sense.)+}
+At first sight, it is hard to discern any regularity and the numbers might
+seem random, but what matters is the relations between the numbers rather
+than the numbers in isolation. First of all, =E2=80=9Csimilar=E2=80=9D word=
+s are
+@@ -7496,7 +7497,7 @@ century\ppauza see Figure~\ref{freq:aerolit}.) Thus, =
+the 19th-century
+\plword{aerolit} is a~diachronic equivalent of the 20th-century
+\plword{meteoryt} (they also happened to be 19th-century synchronic
+synonyms). In general, word $A$ is a~\defined{diachronic equivalent}
+of $B$ if $A$ was used in some period $\chi_A$ in the same [-meaning-]{+sen=
+se+} as
+$B$ in a~different period~$\chi_B$.
+
+It might happen that a~word is replaced by another word
+@@ -9714,7 +9715,7 @@ certainty and, hopefully, eventually put the mystery =
+to rest.
+%% dated texts) and temporal classifiers (for guessing the creation
+%% date of a~text without relying on its metadata) could be trained with
+%% all the time-stamped texts.\cite{gralinski2017retroc} Temporal models an=
+d classifiers would, in
+%% turn, help to avoid the pitfalls common [-for-]{+to+} temporal visualisa=
+tions
+%% (distribution skewed by a~single source of texts; older or even historic=
+al
+%% texts published later on the Internet).
+
+diff --git a/excerpts/niespodzianka-rostworowski-1932/i.tex b/excerpts/nies=
+podzianka-rostworowski-1932/i.tex
+index a2533e4..7f3e791 100644
+--- a/excerpts/niespodzianka-rostworowski-1932/i.tex
++++ b/excerpts/niespodzianka-rostworowski-1932/i.tex
+@@ -7,7 +7,7 @@
+   {\centering\includegraphics[width=3D18mm]{excerpts/niespodzianka-rostwor=
+owski-1932/3}\par}
+}{%
+   \textup{[...]}
+-- One of the critics -- says Rostworowski -- claimed that such a thing cou=
+ld not have happened, as it is psychologically impossible for a mother not =
+to recognise her child. Unfortunately, life shows that it is possible. I wr=
+ote =E2=80=9CSurprise=E2=80=9D on the backdrop of a real occurrence, and th=
+e same incident happened in [-one-]{+some+} village near Bochnia a year ago=
+ and in a village in Czechoslovakia couple of weeks ago...
+\textup{[...]}
+}{%
+   =C5=9Awiatowid. 1932, nr~12
+
+---------------------------------------------------------------------------=
+-------------------------
+
+UEDIN-MS:
+
+
+   \plword{rakie}/\plword{ty}, \plword{p=C3=B3=C5=82}/\plword{noc},
+   \plword{wy}/\plword{puszczono}, \plword{kra=C5=84}/\plword{cu}.
+   Such occurrences might be sometimes explained by
+   a~typesetting\index{typesetting [-practises}-]{+practices}+} error or
+   glitches in the printing process, but the frequency of missing soft
+   hyphens in old newspapers is so high that it seems to be a~regular
+   practice of typesetters, desperate to squeeze text into narrow columns.
+@@ -4325,7 +4325,7 @@ information). For instance, in the case of a~culinary=
+ search engine, each
+recipe would be a~separate document. For a~diachronic search engine, such a=
+s
+the Odkrywka system, it might seem natural to equate documents with
+publications (just as documents are typically equated with web pages
+in the case of a~Web search engine). In [-practise,-]{+practice,+} this is =
+not a~good idea,
+as historical publications tend to be much longer than web pages and
+the fact that two words co-occur in a~multi-page novel does not mean much
+(=E2=80=9Csun=E2=80=9D on, for example, page~3 and =E2=80=9Ceclipse=E2=80=
+=9D on page~78 does not
+
+and humanity had its ways to address them in an =E2=80=9Canalogue=E2=80=9D =
+manner:
+through paper \index{lexicography}dictionaries, \indexthis{motif indexes}, =
+\indexthis{bibliographies}, \indexthis{library
+catalogues}. With the advent of the electronic computer, these crude measur=
+es
+can be substituted with[-the-] direct access to the large masses of texts.
+
+The aim of this book is to lay out the theory and practice of \emph{mining}
+such linguistic units in diachronic collections of both digitised and
+@@ -323,13 +323,13 @@ continuous and systematic digitisation initiatives to=
+ create
+digitised and organised).\footnote{See also:
+   \fcite{gralinski:2013:ltc}.} All texts available from Polish
+digital libraries should be aggregated and made accessible for researchers
+(linguists, \index{history}historians, [-\index{genealogy}genealogist,-]{+\=
+index{genealogy}genealogists,+} etc.) and searchable in the
+\index{full-text search}full-text manner (this might be limited to publicat=
+ions from the late 18th
+century and later, for which the quality of \indexthis{OCR} output is good =
+enough).
+
+\item Historical texts are not limited to printed publications, as
+   \index{webpages}\emph{webpages} are becoming archival materials.
+There [-exists-]{+exist+} a number of initiatives to archive \indexthis{Wor=
+ld Wide Web}, the
+largest of which is \indexthis{Internet
+Archive}, a~US-based nonprofit
+institution.\urlnoteaccessed{https://archive.org}{1~February 2019}
+@@ -413,7 +413,7 @@ is behind a~paywall, their search engines are freely av=
+ailable.)
+   a~researcher would not need to save them manually. Excerpts should
+   be clipped automatically.
+
+\item Members of {+the+} international research community should be
+   given access to the system so that equivalent linguistic units in
+   languages other than Polish could be entered (e.g. stories of the same
+   type in other languages in folkloristics).
+@@ -1175,7 +1175,7 @@ characters), but as this digital\dywiz born newspaper=
+ covers nearly 30 years
+(\textit{Donosy} is still being published to this day), it is
+an interesting resource for diachronic research.
+
+Unfortunately, [-\textit{Donosy}\ppauza-]{+\textit{Donosy},+} as [-a~rule\p=
+pauza-]{+a~rule,+} omits Polish \indexthis{diacritics}
+(\plword{=C4=85},~\plword{=C4=87}, \plword{=C4=99}, \plword{=C5=82}, \plwor=
+d{=C5=84},
+\plword{=C3=B3}, \plword{=C5=9B}, \plword{=C5=BA}/\plword{=C5=BC} are writt=
+en as,
+respectively, \plword{a}, \plword{c}, \plword{e}, \plword{l},
+@@ -1286,7 +1286,7 @@ was chosen for the Odkrywka project (the search engin=
+e described in this book, s
+Polish and/or \indexthis{Russian}).
+
+A~more pertinent question is why multiple values appear: what is
+their [-semantics.-]{+semantics?+} As usual for digital libraries, there is=
+ no
+consistency in this respect and the practice is rather haphazard,
+which makes it hard to process the metadata automatically. Here
+are some typical types of entries with multiple values:
+@@ -1751,7 +1751,7 @@ results are easy to filter out manually. Second, quer=
+ies along the
+lines of Nemiroff and Wilson's proposal were tried out\ppauza \query{papie=
+=C5=BC
+   Polak} and \query{Jan Pawe=C5=82 II} (respectively, \query{Polish Pope}
+and \query{John Paul II}) as they might have had more appeal
+(than [-\query{pope-]{+\query{Pope+} Francis}) for a~Polish time traveller =
+and his
+intended =E2=80=9Caudience=E2=80=9D (Karol Wojty=C5=82a, elected to the pap=
+acy as John
+Paul II in October 1978, was the first, and so far the only, Polish Pope).\=
+manuallooser[1]{}
+
+@@ -1833,7 +1833,7 @@ of excerpt types that might be found when looking for=
+ anachronisms
+\exc{polski-papiez-1922}
+
+\hspace*{15pt}For instance, Excerpt~\ref{ex:feniks-1907} was returned
+when looking for John Paul II before 1978. [-Actually-]{+Actually,+} the te=
+xt was
+published in 2007, but the year 1907 (probably due to a~human error)
+was given in the title.
+
+@@ -1973,7 +1973,7 @@ with \plwordglossed{dinozaur}{dinosaur}, coined in 18=
+42.
+\subsection{Multi-word chronisms}
+In general, phrases\index{multi-word units} are better than single words as=
+ chronisms, as it
+is less likely (though not impossible) for them to occur due to OCR
+error. For [-instance-]{+instance,+} in the query \query{zjednoczona partia=
+ robotnicza}
+(part of the name of the \index{Communist regime}Communist party which gove=
+rned Poland from
+1948 to 1989: \plwordglossed{Polska Zjednoczona Partia Robotnicza}{Polish
+   United Workers' Party}; three words were used as they are specific
+@@ -2025,8 +2025,8 @@ precise, some of them were defects of the normalisati=
+on procedure
+errors in the original metadata.
+
+Furthermore, the date field can be compared with the
+title [-field\ppauza-]{+field,+} as sometimes temporal information (e.g.~ye=
+ar) is included
+in the [-title\ppauza-]{+title,+} and manually verified in case of a~contra=
+diction.
+Specifically, one could search for items for which the publication year
+is off by a~century (the digit 9 instead of 8 or vice versa).
+For instance, 350 issues of \ntitle{Kurjer Warszawski} from 1829 were
+@@ -2071,7 +2071,7 @@ On the \indexthis{Newspapers.com} site, the same batc=
+h of 1978 issues of the
+\ntitle{The Laredo Times}\footnote{Accessed 15 September 2017.}
+pops up for many queries when the results are sorted chronologically.
+Removing such spurious results should not be much work for a~search
+engine [-maintainer\ppauza-]{+maintainer,+} using the same methods as when =
+looking for time travellers.
+
+Searching for =E2=80=9Cprescient=E2=80=9D content will yield publications
+mis\dywiz assigned dates earlier than the right ones, but not {\em later}
+@@ -2293,7 +2293,7 @@ digitised publications is as challenging as it was fo=
+r certain
+Chinese encyclopaedists to classify animals (see Chapter~\ref{ch:word2vec})=
+. In a~way, the chaotic
+state of affairs for publication types in Polish digital libraries is
+perfectly understandable. Nevertheless, when
+amassing the metadata from Polish digital [-libraries-]{+libraries,+} \emph=
+{something}
+needs to be done and the \fieldname{Type} field needs to be normalised in
+some way.
+
+@@ -2414,7 +2414,7 @@ and, indeed, it was printed from 1821 to 1939, spanni=
+ng more than one
+century, which is a~very long period for a~Polish periodical. Note,
+however, that we do not control here for duplicates, and some items may
+have the same title accidentally, without continuity. In fact,
+the number of issues of \ntitle{Kurier Warszawski} is affected by[-the-] bo=
+th {+the+}
+problems (\ntitle{Kurier Warszawski} is duplicated in the digital
+library of the University of Warsaw and in the Polona\index{digital librari=
+es!Polona} digital
+library, and was preceded by a~newspaper with the same name in the
+
+
+
+
+
+
+
+> Nie s=C5=82ysza=C5=82em o podobnej mierze, przynajmniej nie w dziedzinach=
+ GEC i MT lub
+> powi=C4=85zanych.
+>
+> Nad detekcj=C4=85 b=C5=82=C4=99d=C3=B3w ESL pracuj=C4=85 w Cambridge, zaz=
+wyczaj stosowane s=C4=85 te same
+> test sety jak w GEC, g=C5=82=C3=B3wnie FCE i teraz pewnie b=C4=99dzie W&I=
++LOCNESS z shared
+> taska (https://www.cl.cam.ac.uk/research/nl/bea2019st/). Do ewaluacji u=
+=C5=BCywa
+> si=C4=99 ERRANT, kt=C3=B3ry r=C3=B3wnie=C5=BC mo=C5=BCe poda=C4=87 F0.5 d=
+la detekcji b=C5=82=C4=99d=C3=B3w
+> (https://github.com/chrisjbryant/errant).
+
+> Dobry system GEC mo=C5=BCe by=C4=87 silnym baselinem, prawdopodobnie leps=
+zym ni=C5=BC
+> wi=C4=99szo=C5=9B=C4=87 prac sprzed 2019. Nasze modele s=C4=85 dost=C4=99=
+pne tutaj:
+> https://github.com/grammatical/pretraining-bea2019.
+>
+> W 2016 by=C5=82 te=C5=BC AESW shared task o ocenianiu esej=C3=B3w
+> (http://textmining.lt/aesw/), to podobne zadanie. Detekcja by=C5=82a jedn=
+ym z
+> podzada=C5=84, je=C5=BCeli dobrze pami=C4=99tam, wi=C4=99c mo=C5=BCe to b=
+y=C4=87 dodatkowy benchmark.
+>
+> Ch=C4=99tnie pomog=C4=99 w eksperymentach.
+>
+> Pozdrawiam,
+> Roman
+>
+> On 15/10/2019 22:12, Filip Gralinski wrote:
+>>
+>> Romanie, jak Tobie wspomina=C5=82em w zesz=C5=82ym tygodniu m=C3=B3j mag=
+istrant
+>> (Krzysztof Jurkiewicz - jest w CC) implementuje system do wspomagania
+>> edycji tekst=C3=B3w po angielsku dla Polak=C3=B3w. Jedn=C4=85 z podstawo=
+wych
+>> funkcjonalno=C5=9Bci jest wykrywanie anomalii w tek=C5=9Bcie. W tej chwi=
+li
+>> pr=C3=B3bujemy mojej koncepcj=C4=99 z czym=C5=9B, co nazwa=C5=82em "oddb=
+allness" - notatki
+>> w za=C5=82=C4=85czeniu. M=C3=B3g=C5=82by=C5=9B rzuci=C4=87 na to okiem? =
+Kojarzysz co=C5=9B takiego?
+>> Znasz jaki=C5=9B podobny pomys=C5=82?
+>>
+>> Przysz=C5=82o mi do g=C5=82owy, =C5=BCeby dokona=C4=87 ewaluacji tego ro=
+zwi=C4=85zania
+>> nienadzorowanego na test secie z korekty j=C4=99zyka L2, tzn. wzi=C4=85=
+=C4=87 ten
+>> test set i przerobi=C4=87 go na zadanie detekcji b=C5=82=C4=99d=C3=B3w. =
+Jaki zbi=C3=B3r
+>> najlepiej by=C5=82oby wzi=C4=85=C4=87? Co by=C5=9B poleci=C5=82?
+>>
+>> Pozdrawiam,
+>> Filip
+>
+>
+---1463769343-2130293039-1572300622=:5722--

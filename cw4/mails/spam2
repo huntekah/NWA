@@ -1,0 +1,222 @@
+Return-Path: <noreply@dromani.com.pl>
+Delivered-To: krzysztof555_1995@o2.pl
+Received: (wp-smtpd mx.tlen.pl 14920 invoked from network); 28 Oct 2019 17:16:35 +0100
+Received: from mta181250.pmta-wld-15.pl ([178.33.181.250])
+          (envelope-sender <noreply@dromani.com.pl>)
+          by mx.tlen.pl (WP-SMTPD) with ECDHE-RSA-AES256-GCM-SHA384 encrypted SMTP
+          for <krzysztof555_1995@o2.pl>; 28 Oct 2019 17:16:35 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=key; d=dromani.com.pl;
+ h=Content-Type:List-Unsubscribe:From:To:Reply-To:Subject:Message-ID:Date:
+ MIME-Version; q=dns/txt; i=noreply@dromani.com.pl;
+ bh=vc7JP5zqsBw6oyBYnU5DhjBWmOBiHm+Irk9Iedg1Kxg=;
+ b=MaEQ5OzWF3etCDUfv1RKQdXvq8SlmqNZqLveGh0zJO8tPh5qCBV4kwoLJGwlW9KLwkVEubISv8t0
+   WB/H6SiSxJye8V2IsS3SvR/sJxloWCjuDgo3GBEUkFo2MTqCBavTBFMxhgYkItFvJpCLkFXKOJpa
+   +Lrg0C/xGNkrdV3pAQ3Zai6Tdl7GuHIx20/hDvTyVy8xlx7mzBvQ+MYAY3v84js2LxZ0cfq6QqWk
+   PADJNe5W6wYxtLvXBby1PNhGLLUb3E+e7wQiIDl/wXB8zv+Ecyh3jJ6EwwjwNef6dOTKkoIHTFGl
+   o1YT6lFX/DHxS+MqQnjXtsiTLrn+o2p4elQiww==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=key; d=pmta-wld-15.pl;
+ h=Content-Type:List-Unsubscribe:From:To:Reply-To:Subject:Message-ID:Date:
+ MIME-Version; q=dns/txt;
+ bh=vc7JP5zqsBw6oyBYnU5DhjBWmOBiHm+Irk9Iedg1Kxg=;
+ b=JnQj14xnEA8gQX3pMHdN2BFAMuhLe7PumwJhNFS10B2lKWBAaY1OUkx3zgoRppXyhueX/S0Z8D7N
+   ruwP+sXVxZCqBHMIpJz3Q2lbJReyCyK1nxHiqb+4Y4+k8SiVP+zZSLM4lkxNISZsv/Ilu40FXZum
+   JpsekBsv7GrNGi+I7KG0Tho2B3ZUGoucUs0oTnG6Ygjx1FjAVXL7U2ZSRxHmSuBvyYvVYNBfM7dq
+   ruRbUsZMtIQHKlr4Fxpnaqnz3L6dT6ZOOcy2lt8H3eEv5SnAuJmTACkVyzMPAf3WseSoySzxvMcZ
+   btB5dAoisJbqCnPxisBlhB//1g1oVL+lEvSK3w==
+Received: by mta181249.pmta-wld-15.pl id hmsa662iqvgk for <krzysztof555_1995@o2.pl>; Mon, 28 Oct 2019 16:15:03 +0000 (envelope-from <noreply@dromani.com.pl>)
+Content-Type: multipart/alternative;
+ boundary="--_NmP-62f463c548e7f76b-Part_1"
+List-Unsubscribe:
+ <https://unsubscribe-wld.pl/?st=f07a449c2f57d8d2d774c3abf8b46c97&bt=ed2117f87b111634e52f676de58bc6f4>
+X-Base-Token: ed2117f87b111634e52f676de58bc6f4
+Hasoffers-ID: 1412
+Subscriber-Token: f07a449c2f57d8d2d774c3abf8b46c97
+X-Mailing-ID: 11418
+From: Nexity <noreply@dromani.com.pl>
+To: krzysztof555_1995@o2.pl
+Reply-To: noreply@dromani.com.pl
+Subject: =?UTF-8?Q?Zapraszamy_na_przedsprzeda=C5=BC_pierwsz?=
+ =?UTF-8?Q?ego_etapu_inwestycji=2E?=
+Message-ID: <69122c1e-ca98-773d-eb86-ea7bb752a162@dromani.com.pl>
+Date: Mon, 28 Oct 2019 16:15:00 +0000
+MIME-Version: 1.0
+X-WP-DKIM-Status: good (id: pmta-wld-15.pl)                                                   
+X-WP-MailID: 4d6550fda7e699a29afde398cedde09c
+X-WP-AV: skaner antywirusowy Poczty o2
+X-WP-SPAM: NO (PS-U9) 0U00010 [cVOU]                       
+
+----_NmP-62f463c548e7f76b-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Je=C5=BCeli wiadomo=C5=9B=C4=87 nie wy=C5=9Bwietla si=C4=99 poprawnie, =
+kliknij tutaj aby przej=C5=9B=C4=87 do oferty
+Zapraszamy na =
+przedsprzeda=C5=BC pierwszego etapu inwestycji. Sprawd=C5=BA!=C2=BB
+MaltaPoint.pl - nowa inwestycja
+Nowoczesne osiedle - Pozna=C5=84 =
+=C5=81acina
+
+Nowa inwestycja w Poznaniu - =C5=81acina obok Malty
+
+Ceny od 7.300 z=C5=82 za m2, lub
+2 pokoje ju=C5=BC za 287 tys z=C5=82!
+
+Zapraszamy na przedsprzeda=C5=BC pierwszego etapu inwestycji,
+do salonu sprzeda=C5=BCy przy ulicy Milcza=C5=84skiej.
+MaltaPoint.pl - nowa inwestycja
+=C5=81acina, ul. Brne=C5=84ska
+
+MaltaPoint.pl - nowa inwestycja
+----_NmP-62f463c548e7f76b-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=EF=BB=BF
+<html>
+    <head>
+        <meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3DUTF-8">       =20
+    </head>
+    <body>
+                  =20
+        <table border=3D"0" align=3D"center" =
+cellspacing=3D"0" cellpadding=3D"0">
+            <tr>
+                <td width=3D"640" align=3D"center">
+                    <table border=3D"0" align=3D"center" cellspacing=3D"0" =
+cellpadding=3D"0">
+                        <tr>
+                           =
+ <td>
+                                <table border=3D"0" align=3D"center" =
+cellspacing=3D"0" cellpadding=3D"0">
+                                    =
+<tr>
+                                        <td align=3D"center">
+                                           <a href=3D"http://wld.duo-ho.=
+pl/aff_c?offer_id=3D1412&aff_id=3D1085&url_id=3D8905&aff_sub3=3Do2.=
+pl&aff_sub4=3Df07a449c2f57d8d2d774c3abf8b46c97" TITLE=3D"MaltaPoint.pl - =
+nowa inwestycja" TARGET=3D"_blank"><img src=3D"http://storage-wld.=
+pl/1570446631601/head1.jpg" border=3D"0" alt=3D"MaltaPoint.pl - nowa =
+inwestycja" /></a>=20
+                                        </td>
+                                    </tr>
+                                 =
+   <tr>
+                                        <td align=3D'center'>
+                                             <a href=3D"http://wld.duo-ho.=
+pl/aff_c?offer_id=3D1412&aff_id=3D1085&url_id=3D8905&aff_sub3=3Do2.=
+pl&aff_sub4=3Df07a449c2f57d8d2d774c3abf8b46c97" TITLE=3D"Sprawd=C5=BA >>"  =
+TARGET=3D"_blank"><img src=3D"http://storage-wld.pl/1570446631601/head2.=
+jpg" border=3D"0" alt=3D"Nowoczesne osiedle - Pozna=C5=84 =C5=81acina" =
+/></a>
+                                        </td>
+                                    </tr>
+                                =
+</table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td =
+width=3D"640px" align=3D"center">
+                                         =
+                          <span style=3D"font-family: Arial, Helvetica, =
+sans-serif; font-size: 12px;">
+                                      <br> =
+Nowa inwestycja w Poznaniu - =C5=81acina obok Malty<br><br>
+
+
+
+Ceny od  <b>7.300 z=C5=82 za m2</b>, lub<br>
+2 pokoje ju=C5=BC za <b>287 =
+tys z=C5=82!</b>
+
+
+<br><br>
+
+Zapraszamy na <b>przedsprzeda=C5=BC =
+</b>pierwszego etapu inwestycji,<br>
+do salonu sprzeda=C5=BCy przy ulicy =
+Milcza=C5=84skiej.
+
+
+                                     =20
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=3D"640" =
+align=3D"center" style=3D"padding: 10px 0;">
+                              =
+   <a href=3D"http://wld.duo-ho.pl/aff_c?offer_id=3D1412&aff_id=3D1085&url_=
+id=3D8905&aff_sub3=3Do2.pl&aff_sub4=3Df07a449c2f57d8d2d774c3abf8b46c97" =
+TARGET=3D"_blank">                               <img =
+src=3D"http://storage-wld.pl/1570446631601/button.jpg" alt=3D"MaltaPoint.pl=
+ - nowa inwestycja" />                                   =20
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=3D"640" align=3D"center">
+                                <p>
+                                    =
+<span style=3D"font-family: Arial, Helvetica, sans-serif; font-size: =
+12px;">
+                                                                   =
+         =C5=81acina, ul. <b>Brne=C5=84ska</b>                             =
+                                </span>
+                                =
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=3D"640" =
+align=3D"center" style=3D"padding-top: 20px;">
+            <a =
+href=3D"http://wld.duo-ho.pl/aff_c?offer_id=3D1412&aff_id=3D1085&url_id=3D8=
+905&aff_sub3=3Do2.pl&aff_sub4=3Df07a449c2f57d8d2d774c3abf8b46c97" =
+TITLE=3D"Sprawd=C5=BA >>" TARGET=3D"_blank">                    <img =
+src=3D"http://storage-wld.pl/1570446631601/image.jpg" alt=3D"MaltaPoint.pl =
+- nowa inwestycja" />
+  </a>=20
+
+</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" bgcolor=3D"#ffffff" align=3D"center" style=3D"max-width:600px;=
+ width:100%; text-align: justify;">
+  <tr>
+    <td style=3D"border-collapse=
+:collapse; text-align:justify;">
+      <span style=3D"font-size: 11px; =
+color: #424242; font-family: Helvetica, Arial, sans-serif; text-decoration:=
+ none;"><br>Wiadomo&#x15B;&#x107; wys&#x142;ana na zlecenie Nexity Polska =
+Sp. z o.o., Al. Jerozolimskie 98, 00-807 Warszawa, NIP 525 239 70 63, Regon=
+ 140951936, KRS 0000281618, Kapita=C5=82 zak=C5=82adowy 9 350 000 z=C5=82 .=
+ Administratorem bazy w kt&#xF3;rej znajduje si&#x119; Tw&#xF3;j adres jest=
+ Dromani sp. z o.o., ul. Kawalerzyst=C3=B3w 17/12, 53-004 Wroc=C5=82aw. =
+Je&#x17C;eli chcesz zrezygnowa&#x107; z mo&#x17C;liwo&#x15B;ci otrzymywania=
+ wiadomo&#x15B;ci kliknij <a href=3D"http://red.new-track1.pl/aff_c?=
+offer_id=3D16&aff_id=3D1085&url_id=3D2085&aff_sub2=3Ded2117f87b111634e52f67=
+6de58bc6f4&aff_sub4=3Df07a449c2f57d8d2d774c3abf8b46c97&aff_sub5=3D1412" =
+target=3D"_blank" style=3D"margin:0; padding:0; border:0; =
+text-decoration:none;">tutaj</a>. W razie dodatkowych pyta&#x144; =
+zapraszamy do kontaktu pod adresem kontakt@dromani.com.pl</span>
+    </td>
+  </tr>
+</table>
+        <img nochangeurl=3D"1" src=3D"http://wld.duo-ho.=
+pl/aff_i?offer_id=3D1412&aff_id=3D1085&url_id=3D8905&aff_sub3=3Do2.=
+pl&aff_sub4=3Df07a449c2f57d8d2d774c3abf8b46c97" width=3D"1" height=3D"1" />
+    <img nochangeurl=3D"1" alt=3D"otw" src=3D"https://alphaip.pl/track?=
+token=3Df07a449c2f57d8d2d774c3abf8b46c97&base_id=3D67&mailing_id=3D11418&ev=
+ent_type=3Dopen&env=3Dproduction" width=3D"1" height=3D"1" />
+</body>
+</html>
+----_NmP-62f463c548e7f76b-Part_1--
+

@@ -1,0 +1,419 @@
+Return-Path: <bounces+54769-6124-krzysztof555_1995=o2.pl@em.spotify.com>
+Delivered-To: krzysztof555_1995@o2.pl
+Received: (wp-smtpd mx.tlen.pl 6568 invoked from network); 25 Oct 2019 23:38:13 +0200
+Received: from o23.em.spotify.com ([149.72.130.211])
+          (envelope-sender <bounces+54769-6124-krzysztof555_1995=o2.pl@em.spotify.com>)
+          by mx.tlen.pl (WP-SMTPD) with ECDHE-RSA-AES256-GCM-SHA384 encrypted SMTP
+          for <krzysztof555_1995@o2.pl>; 25 Oct 2019 23:38:13 +0200
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=spotify.com; 
+	h=content-type:from:mime-version:to:subject; s=s1; 
+	bh=4nZsfbI0NzC5u82faIwhAOGUr5Q=; b=cgN+LbNkiVNlaa8Ubf78cHQZuayWn
+	PALOMtRkxQUA0tGz3HJR9CDYD7f1+YmD67DJ64HaAOWttWa2YNMpneaHDi1GXNYL
+	08pugB2s/0vTclXrrADgeHguwjOJtFwZdem8Yd8l1nWvPlW9kvTgNobu+TMUp2jX
+	PlgCsXl1qdUV5Q=
+Received: by filter0175p1iad2.sendgrid.net with SMTP id filter0175p1iad2-18846-5DB36B44-8
+        2019-10-25 21:38:12.263721105 +0000 UTC m=+12935.521471565
+Received: from NTQ3Njk (144.246.66.34.bc.googleusercontent.com [34.66.246.144])
+	by ismtpd0063p1iad1.sendgrid.net (SG) with HTTP id Or_CK1QGQsyANKffo2i-5Q
+	Fri, 25 Oct 2019 21:38:12.146 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=a164584bd810430edae6b8c758cea87c8abae610f009aed60ae93e8102c7
+Date: Fri, 25 Oct 2019 21:38:12 +0000 (UTC)
+From: "Spotify" <no-reply@spotify.com>
+Mime-Version: 1.0
+To: krzysztof555_1995@o2.pl
+Message-ID: <Or_CK1QGQsyANKffo2i-5Q@ismtpd0063p1iad1.sendgrid.net>
+Subject: =?UTF-8?B?Tm93YSBtdXp5a2EsIHcgdHltIG9kIFNlbGVuYSBHb21leiwganXFvCB0ZXJheiB3IFR3b2ltIFJhZGFyemUgcHJlbWllci4=?=
+X-SG-EID: GlzHYQnDJTYpJuNCC1W7dgfPCZ40b5ney3oaReh098gRUWqfdKyBhbTYi1rkoaK2rxl8eDCZBrvKHc
+ Mzirm58R9NuBzlvwjCcMQMklhq+PhnS/XsmFaDAtJeOH9yZRsnQzVjd739pxgnFmrSj9ko0I3Ius3f
+ kpSeeN7NmNqkzsBvr3yilUVX5Xb0FVQ1Bl60jTTnP7/gFXHCgYsQqvuQtcN40/zQTxOEPocJFV2/ru
+ A=
+X-SG-ID: hk8MVMmDaDCp7rwyo+rakZLFEgeZRPNNupcOxrjJKchTP+EhGRCMXXfRPys+grS1SKfdYAd0QWSgSh
+ Yd6ot307F7ezOyufw/2QPryZfWAv1JOrAylvLodEv0cHdzIogdIoY+jSTW66hOEtjbrqvXvLRNXGRO
+ YU+4tL5tcqa1/yiBB1+ErddABNxHrcbFyHRWAxqNv94iLty04ummc056qdsiiWFcUzaM3Z9rvGggYs
+ A=
+X-WP-DKIM-Status: good (id: spotify.com)                                                      
+X-WP-MailID: 4cfe14e78c60d90bccf7ecbe0fc5eea8
+X-WP-AV: skaner antywirusowy Poczty o2
+X-WP-SPAM: NO (U9) 0U00010 [YQNk]                          
+
+--a164584bd810430edae6b8c758cea87c8abae610f009aed60ae93e8102c7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+https://open.spotify.com https://message-editor.scdn.co/newsletters/e10a099=
+d3422d8a76bc30170f00b20ee.jpg=20=20=20=20
+
+
+
+Oto Tw=C3=B3j Radar premier:
+Nowe kawa=C5=82ki ulubionych artyst=C3=B3w, w tym Selena Gomez, na spersona=
+lizowanej playli=C5=9Bcie, kt=C3=B3r=C4=85 aktualizujemy dla Ciebie w ka=C5=
+=BCdy pi=C4=85tek. Pos=C5=82uchaj teraz w Spotify.
+
+
+
+
+-------------
+
+=C5=9Aci=C4=85gnij Spotify na:
+  *  ()
+  *  ()
+  *  ()
+  * Inne ()
+
+Ta wiadomo=C5=9B=C4=87 zosta=C5=82a wys=C5=82ana na adres krzysztof555_1995=
+@o2.pl.=20=20
+
+Je=C5=9Bli w przysz=C5=82o=C5=9Bci nie chcesz otrzymywa=C4=87 wiadomo=C5=9B=
+ci e-mail od Spotify, mo=C5=BCesz zmieni=C4=87 swoje ustawienia profilu ( h=
+ttps://www.spotify.com/accounts/profile ) lub zrezygnowa=C4=87 z subskrypcj=
+i ( https://www.spotify.com/account/unsubscribe?t=3DBcELDkAwDADQq7iAhLZajlP=
+tCOa%2FJXZ770FbMEe2DeDztZvpsR2PNd7VcaZlKvUVtcTlTXW%2BXFN4K25kRBQMPZMwubkQBB=
+0HC4Itsg2gSs4%2F&a=3Dunsubscribe ).
+
+  * Warunki u=C5=BCytkowania ()
+  * Polityka prywatno=C5=9Bci ()
+  * Kontakt ()
+
+Spotify AB, Regeringsgatan 19, 111 53, Stockholm, Sweden=
+
+--a164584bd810430edae6b8c758cea87c8abae610f009aed60ae93e8102c7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"margin=
+: 0; padding: 0"><head><meta charset=3D"utf-8" /><meta name=3D"viewport" co=
+ntent=3D"width=3Ddevice-width, initial-scale=3D1" /><title>Nowa muzyka, w t=
+ym od Selena Gomez, ju=C5=BC teraz w Twoim Radarze premier.</title><style t=
+ype=3D"text/css">@media only screen and (min-device-width: 481px) {div[id=
+=3D"main"] {width: 480px !important;}}</style><!--[if mso]><style>body, tab=
+le, tr, td, h1, h2, h3, h4, h5, h6, center p, a, span, table.MsoNormalTable=
+ {font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !importan=
+t}</style><![endif]--></head><body topmargin=3D"0" leftmargin=3D"0" rightma=
+rgin=3D"0" bottommargin=3D"0" marginheight=3D"0" marginwidth=3D"0" style=3D=
+"-webkit-font-smoothing: antialiased; width: 100% !important; -webkit-text-=
+size-adjust: none; margin: 0; padding: 0"><!--TEST-FORM--><!--[if (mso) | (=
+IE)]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" valign=3D"top"=
+ width=3D"480" align=3D"center"><tr><td valign=3D"top" align=3D"left" style=
+=3D" word-break:normal; border-collapse:collapse; font-family:'Circular', '=
+Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:=
+18px; color:#555555;"><![endif]--><table cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" valign=3D"top" width=3D"100%" align=3D"center" style=3D" wid=
+th:100%; max-width:480px;"><tr><td valign=3D"top" align=3D"left" style=3D" =
+word-break:normal; border-collapse:collapse; font-family:'Circular', 'Helve=
+tica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px;=
+ color:#555555;"><center><div id=3D"main"><table class=3D"hero-image-root" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"border: none; m=
+argin: 0px; border-collapse: collapse; padding: 0px; width: 100%;"><tbody v=
+align=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><tr val=
+ign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td valig=
+n=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><center sty=
+le=3D"border: none; margin: 0px; padding: 0px;"><a href=3D"https://wl.spoti=
+fy.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsPmiw/h0/zfYKAs4AaOT6gkWW-2Fht=
+0F12pUEiYJmCsyUsAC6BU-2B80-3D/8lEl" style=3D"border: none; margin: 0px; pad=
+ding: 0px; text-decoration: none;"><!--[if mso]><img style=3D"width: 480px;=
+ display: block" width=3D"480" src=3D"https://message-editor.scdn.co/newsle=
+tters/e10a099d3422d8a76bc30170f00b20ee.jpg" /><![endif]--><!--[if mso]><div=
+ style=3D"mso-hide: all"><![endif]--><img class=3D"hero-image-image" src=3D=
+"https://message-editor.scdn.co/newsletters/e10a099d3422d8a76bc30170f00b20e=
+e.jpg" width=3D"100%" align=3D"center" alt=3D"" style=3D"border: none; padd=
+ing: 0px; display: block; max-width: 100%; margin: 0px auto -1px; text-alig=
+n: center; width: 100%;"><!--[if mso]></div><![endif]--></a></center></td><=
+/tr><tr class=3D"hero-image-padding" height=3D"0" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; height: 0px;"><td class=3D"her=
+o-image-padding" height=3D"0" valign=3D"middle" style=3D"border: none; marg=
+in: 0px; padding: 0px; height: 0px;"></td></tr></tbody></table><style style=
+=3D"border: none; margin: 0px; padding: 0px;"> #textbg_ { background-color:=
+ #18191c; } </style><table class=3D"text-root" id=3D"textbg_" bgcolor=3D"#1=
+8191c" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"border: =
+none; margin: 0px; border-collapse: collapse; padding: 0px; width: 100%;"><=
+tbody valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;">=
+<tr valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><t=
+d class=3D"table-separator" width=3D"6.25%" valign=3D"middle" style=3D"widt=
+h: 6.25%; border: none; margin: 0px; padding: 0px;"></td><td valign=3D"midd=
+le" style=3D"border: none; margin: 0px; padding: 0px;"><table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin: 0px; =
+padding: 0px"><tbody><tr><td class=3D"font text-paragraph" align=3D"left" s=
+tyle=3D"border: none; margin: 0px; padding: 0px 0px 5px; font-family: Circu=
+lar, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight:=
+ 400; text-align: left; text-decoration: none; letter-spacing: 0.15px; colo=
+r: rgb(24, 24, 24); font-size: 14px; line-height: 20px;"> <center style=3D"=
+border: none; margin: 0px; padding: 0px;"><br style=3D"border: none; margin=
+: 0px; padding: 0px;"><font size=3D"4" style=3D"border: none; margin: 0px; =
+padding: 0px;"><font color=3D"#8e8e87" style=3D"border: none; margin: 0px; =
+padding: 0px;"> Oto Tw=C3=B3j Radar premier: Nowe kawa=C5=82ki ulubionych a=
+rtyst=C3=B3w, w tym Selena Gomez, na spersonalizowanej playli=C5=9Bcie, kt=
+=C3=B3r=C4=85 aktualizujemy dla Ciebie w ka=C5=BCdy pi=C4=85tek. Pos=C5=82u=
+chaj teraz w Spotify. </font></font></center> </td></tr></tbody></table></t=
+d><td class=3D"table-separator" width=3D"6.25%" valign=3D"middle" style=3D"=
+width: 6.25%; border: none; margin: 0px; padding: 0px;"></td></tr><tr valig=
+n=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td colspan=
+=3D"3" class=3D"text-padding" height=3D"20" valign=3D"middle" style=3D"bord=
+er: none; margin: 0px; padding: 0px; height: 20px;"></td></tr></tbody></tab=
+le><!----><table class=3D"main-loop-table" width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"width: 100%; border: none; margin: 0px; border-=
+collapse: collapse; padding: 0px;"><tbody valign=3D"middle" style=3D"border=
+: none; margin: 0px; padding: 0px;"><tr valign=3D"middle" style=3D"border: =
+none; margin: 0px; padding: 0px;"><td valign=3D"middle" style=3D"border: no=
+ne; margin: 0px; padding: 0px;"><table class=3D"hero-image-root" width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100%; border: none=
+; margin: 0px; border-collapse: collapse; padding: 0px;"><tbody valign=3D"m=
+iddle" style=3D"border: none; margin: 0px; padding: 0px;"><tr valign=3D"mid=
+dle" style=3D"border: none; margin: 0px; padding: 0px;"><td valign=3D"middl=
+e" style=3D"border: none; margin: 0px; padding: 0px;"><center style=3D"bord=
+er: none; margin: 0px; padding: 0px;"><a href=3D"https://wl.spotify.com/mps=
+2/c/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsPmiw/h1/zfYKAs4AaOT6gkWW-2Fht0F-2BM2epG=
+Bs8MaUwWmUgTtFVvJPdXoiTLKh-2BSdmatp7JIYWIcYINZE8G4kGAtlSpbDrw-3D-3D/jyPy" s=
+tyle=3D"border: none; margin: 0px; padding: 0px; text-decoration: none;"><i=
+mg class=3D"hero-image-image" src=3D"https://i.scdn.co/image/2e68378a593551=
+6a3cc5591a70aa066f0a6d03d8" width=3D"100%" align=3D"center" alt=3D"" style=
+=3D"text-align: center; width: 100%; border: none; margin: 0px; padding: 0p=
+x; display: block; max-width: 100%;"></a></center></td></tr><tr class=3D"he=
+ro-image-padding" height=3D"0" valign=3D"middle" style=3D"height: 0px; bord=
+er: none; margin: 0px; padding: 0px;"><td class=3D"hero-image-padding" heig=
+ht=3D"0" valign=3D"middle" style=3D"height: 0px; border: none; margin: 0px;=
+ padding: 0px;"></td></tr></tbody></table><table class=3D"text-root" id=3D"=
+textbg_" bgcolor=3D"#18191c" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width: 100%; border: none; margin: 0px; border-collapse: co=
+llapse; padding: 0px;"><tbody valign=3D"middle" style=3D"border: none; marg=
+in: 0px; padding: 0px;"><tr valign=3D"middle" style=3D"border: none; margin=
+: 0px; padding: 0px;"><td class=3D"table-separator" width=3D"6.25%" valign=
+=3D"middle" style=3D"width: 6.25%; border: none; margin: 0px; padding: 0px;=
+"></td><td valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0=
+px;"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"=
+ style=3D"border: none; margin: 0px; border-collapse: collapse; padding: 0p=
+x;"><tbody valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0=
+px;"><tr valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px=
+;"><td class=3D"font text-paragraph" align=3D"left" style=3D"color: rgb(24,=
+ 24, 24); border: none; margin: 0px; padding: 0px; font-family: Circular, &=
+quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; =
+text-align: left; text-decoration: none; font-size: 14px; line-height: 1.1e=
+m; letter-spacing: 0.15px;" valign=3D"middle"><center style=3D"border: none=
+; margin: 0px; padding: 0px;"><br style=3D"border: none; margin: 0px; paddi=
+ng: 0px;"><font size=3D"5" style=3D"border: none; margin: 0px; padding: 0px=
+;"><font color=3D"#ffffff" style=3D"border: none; margin: 0px; padding: 0px=
+;"><b align=3D"left" style=3D"font-family: Circular, &quot;Helvetica Neue&q=
+uot;, Helvetica, Arial, sans-serif; text-align: left; text-decoration: none=
+; font-weight: bold; border: none; margin: 0px; padding: 0px;">Lose You To =
+Love Me </b></font></font><br style=3D"border: none; margin: 0px; padding: =
+0px;"><font size=3D"4" style=3D"border: none; margin: 0px; padding: 0px;"><=
+font color=3D"#ffffff" style=3D"border: none; margin: 0px; padding: 0px;">b=
+y <br style=3D"border: none; margin: 0px; padding: 0px;"> Selena Gomez </fo=
+nt></font></center></td></tr></tbody></table></td><td class=3D"table-separa=
+tor" width=3D"6.25%" valign=3D"middle" style=3D"width: 6.25%; border: none;=
+ margin: 0px; padding: 0px;"></td></tr><tr valign=3D"middle" style=3D"borde=
+r: none; margin: 0px; padding: 0px;"><td colspan=3D"3" class=3D"text-paddin=
+g" height=3D"20" valign=3D"middle" style=3D"height: 20px; border: none; mar=
+gin: 0px; padding: 0px;"></td></tr></tbody></table></td></tr></tbody></tabl=
+e><!----> <table class=3D"call-to-action-root" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border: none; margin: 0px; border-collaps=
+e: collapse; padding: 0px; width: 100%;"><tbody valign=3D"middle" style=3D"=
+border: none; margin: 0px; padding: 0px;"><tr bgcolor=3D"#18191c" valign=3D=
+"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td class=3D"ta=
+ble-separator" width=3D"6.25%" valign=3D"middle" style=3D"width: 6.25%; bor=
+der: none; margin: 0px; padding: 0px;"></td><td class=3D"font" valign=3D"mi=
+ddle" align=3D"left" style=3D"border: none; margin: 0px; padding: 0px; font=
+-family: Circular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif=
+; font-weight: 400; text-align: left; text-decoration: none; font-size: 14p=
+x; line-height: 1.1em; letter-spacing: 0.15px;"><center style=3D"border: no=
+ne; margin: 0px; padding: 0px;"><a href=3D"https://wl.spotify.com/mps2/c/Iw=
+E/8dU/t.2w5/zLfcguFmRryjMfZlKsPmiw/h2/zfYKAs4AaOT6gkWW-2Fht0F-2BFAcZgAkobBP=
+ZeGFzDXaDD20KvjnljxeEkpU5-2F2wHZgCM6qNZebEdWYOqNBDS-2FH-2Bze6Lnly6WoD4Vx36O=
+dJMjY-3D/aKXM" class=3D"call-to-action-button" style=3D"border: none; margi=
+n: 0px; padding: 0px; text-decoration: none; width: 240px; height: 44px; bo=
+rder-radius: 22px; display: block;"><table class=3D"call-to-action-containe=
+r" width=3D"240" height=3D"44" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"border: none; margin: 0px; border-collapse: collapse; padding: 0px; width:=
+ 240px; height: 44px;"><tbody valign=3D"middle" style=3D"border: none; marg=
+in: 0px; padding: 0px;"><tr valign=3D"middle" style=3D"border: none; margin=
+: 0px; padding: 0px;"><td class=3D"font call-to-action-cell" bgcolor=3D"#ff=
+ffff" height=3D"100%" valign=3D"middle" align=3D"center" style=3D"border: n=
+one; margin: 0px; padding: 0px; font-family: Circular, &quot;Helvetica Neue=
+&quot;, Helvetica, Arial, sans-serif; text-decoration: none; letter-spacing=
+: 0.15px; border-radius: 22px; color: rgb(255, 255, 255); font-size: 13px; =
+font-weight: bold; height: 100%; line-height: 16px; text-align: center; tex=
+t-transform: uppercase; min-width: 240px;"><font color=3D"black" style=3D"b=
+order: none; margin: 0px; padding: 0px;">POS=C5=81UCHAJ TERAZ</font></td></=
+tr></tbody></table></a><!--[if mso]></div><![endif]--></center></td><td cla=
+ss=3D"table-separator" width=3D"6.25%" valign=3D"middle" style=3D"width: 6.=
+25%; border: none; margin: 0px; padding: 0px;"></td></tr><tr class=3D"call-=
+to-action-padding" bgcolor=3D"#18191c" height=3D"35" valign=3D"middle" styl=
+e=3D"border: none; margin: 0px; padding: 0px; height: 35px;"><td colspan=3D=
+"3" class=3D"call-to-action-padding" height=3D"35" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; height: 35px;"></td></tr></tbo=
+dy></table><style style=3D"border: none; margin: 0px; padding: 0px;"> .foot=
+er-root a.footer-link { color: #6D6D6D; text-decoration: none; font-weight:=
+ bold; } </style><table class=3D"footer-root" dir=3D"" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" bgcolor=3D"#F7F7F7" style=3D"border: none; m=
+argin: 0px; border-collapse: collapse; padding: 0px; background-color: rgb(=
+247, 247, 247); width: 100%;"><tbody valign=3D"middle" style=3D"border: non=
+e; margin: 0px; padding: 0px;"><tr class=3D"footer-bottom-padding" height=
+=3D"25" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;=
+ height: 25px;"><td colspan=3D"3" class=3D"footer-bottom-padding" height=3D=
+"25" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; he=
+ight: 25px;"></td></tr><tr valign=3D"middle" style=3D"border: none; margin:=
+ 0px; padding: 0px;"><td width=3D"6.25%" valign=3D"middle" style=3D"border:=
+ none; margin: 0px; padding: 0px; width: 6.25%;"></td><td valign=3D"middle"=
+ style=3D"border: none; margin: 0px; padding: 0px;"><img class=3D"footer-lo=
+go" src=3D"https://message-editor.scdn.co/newsletter/images/logo_footer.png=
+" width=3D"77" height=3D"23" alt=3D"" style=3D"border: none; margin: 0px; p=
+adding: 0px; display: block; max-width: 100%; width: 77px; height: 23px;"><=
+/td><td width=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0p=
+x; padding: 0px; width: 6.25%;"></td></tr><tr class=3D"footer-bottom-paddin=
+g" height=3D"25" valign=3D"middle" style=3D"border: none; margin: 0px; padd=
+ing: 0px; height: 25px;"><td colspan=3D"3" class=3D"footer-bottom-padding" =
+height=3D"25" valign=3D"middle" style=3D"border: none; margin: 0px; padding=
+: 0px; height: 25px;"></td></tr><tr valign=3D"middle" style=3D"border: none=
+; margin: 0px; padding: 0px;"><td width=3D"6.25%" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"></td><td valign=
+=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><hr bgcolor=
+=3D"#D1D5D9" style=3D"border: none; margin: 0px; padding: 0px; background-c=
+olor: rgb(209, 213, 217); height: 1px;"></td><td width=3D"6.25%" valign=3D"=
+middle" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"></=
+td></tr><tr class=3D"footer-top-padding" height=3D"12" valign=3D"middle" st=
+yle=3D"border: none; margin: 0px; padding: 0px; height: 12px;"><td colspan=
+=3D"3" class=3D"footer-top-padding" height=3D"12" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; height: 12px;"></td></tr><tr v=
+align=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td wid=
+th=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px; padding:=
+ 0px; width: 6.25%;"></td><td class=3D"font" valign=3D"middle" align=3D"ini=
+tial" style=3D"border: none; margin: 0px; padding: 0px; font-family: Circul=
+ar, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: =
+400; text-decoration: none; letter-spacing: 0.15px; color: rgb(136, 137, 14=
+0); font-size: 11px; line-height: 1.65em; text-align: initial;"> =C5=9Aci=
+=C4=85gnij Spotify na: &nbsp; <a class=3D"footer-separated-text" href=3D"ht=
+tps://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsPmiw/h3/5AuUnYl=
+nreeK2oRw2qtrOZq6bpuFxljtMP8t9L45bWnAPswweP-2B1ov3rOh6591rm8I6J9hocgDxjRi2D=
+-2BO5Dpw-3D-3D/MgM5" style=3D"border: none; margin: 0px; padding: 0px; text=
+-decoration: none; display: inline-block; color: rgb(109, 109, 109); font-w=
+eight: bold;">iPhone</a><span class=3D"footer-separator" style=3D"border-to=
+p: none; border-bottom: none; border-image: initial; padding: 0px; width: 1=
+px; border-left: 1px solid rgb(195, 195, 195); border-right: 1px solid tran=
+sparent; display: inline-block; margin: 0px 7px;">&nbsp;</span><a class=3D"=
+footer-separated-text" href=3D"https://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/=
+zLfcguFmRryjMfZlKsPmiw/h4/5AuUnYlnreeK2oRw2qtrOZq6bpuFxljtMP8t9L45bWnAPswwe=
+P-2B1ov3rOh6591rm8I6J9hocgDxjRi2D-2BO5Dpw-3D-3D/O6xR" style=3D"border: none=
+; margin: 0px; padding: 0px; text-decoration: none; display: inline-block; =
+color: rgb(109, 109, 109); font-weight: bold;">iPad</a><span class=3D"foote=
+r-separator" style=3D"border-top: none; border-bottom: none; border-image: =
+initial; padding: 0px; width: 1px; border-left: 1px solid rgb(195, 195, 195=
+); border-right: 1px solid transparent; display: inline-block; margin: 0px =
+7px;">&nbsp;</span><a class=3D"footer-separated-text" href=3D"https://wl.sp=
+otify.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsPmiw/h5/dnGioEvqyG-2FW7eYO=
+oZmb-2BXuHCacYIkfM3dqUAf1a2CtoPuW0fKt8zvvkTPR4ple8-2FI2AcpDq-2Fb9DueZ-2FLVP=
+3jg-3D-3D/-KFI" style=3D"border: none; margin: 0px; padding: 0px; text-deco=
+ration: none; display: inline-block; color: rgb(109, 109, 109); font-weight=
+: bold;">Android</a><span class=3D"footer-separator" style=3D"border-top: n=
+one; border-bottom: none; border-image: initial; padding: 0px; width: 1px; =
+border-left: 1px solid rgb(195, 195, 195); border-right: 1px solid transpar=
+ent; display: inline-block; margin: 0px 7px;">&nbsp;</span><a class=3D"foot=
+er-separated-text" href=3D"https://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfc=
+guFmRryjMfZlKsPmiw/h6/cOU3XtHCbthgbfRSVnFGjsQDwrcmZSUq5M3-2BeIXgK5Y-2BzlYfT=
+hqMxbiQx9AjjVc2/pWT4" style=3D"border: none; margin: 0px; padding: 0px; tex=
+t-decoration: none; display: inline-block; color: rgb(109, 109, 109); font-=
+weight: bold;">Inne</a></td><td width=3D"6.25%" valign=3D"middle" style=3D"=
+border: none; margin: 0px; padding: 0px; width: 6.25%;"></td></tr><tr class=
+=3D"footer-top-padding" height=3D"12" valign=3D"middle" style=3D"border: no=
+ne; margin: 0px; padding: 0px; height: 12px;"><td colspan=3D"3" class=3D"fo=
+oter-top-padding" height=3D"12" valign=3D"middle" style=3D"border: none; ma=
+rgin: 0px; padding: 0px; height: 12px;"></td></tr><tr valign=3D"middle" sty=
+le=3D"border: none; margin: 0px; padding: 0px;"><td width=3D"6.25%" valign=
+=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;=
+"></td><td valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0=
+px;"><hr bgcolor=3D"#D1D5D9" style=3D"border: none; margin: 0px; padding: 0=
+px; background-color: rgb(209, 213, 217); height: 1px;"></td><td width=3D"6=
+.25%" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; w=
+idth: 6.25%;"></td></tr><tr class=3D"footer-bottom-padding" height=3D"25" v=
+align=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; height: =
+25px;"><td colspan=3D"3" class=3D"footer-bottom-padding" height=3D"25" vali=
+gn=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; height: 25p=
+x;"></td></tr><tr valign=3D"middle" style=3D"border: none; margin: 0px; pad=
+ding: 0px;"><td width=3D"6.25%" valign=3D"middle" style=3D"border: none; ma=
+rgin: 0px; padding: 0px; width: 6.25%;"></td><td class=3D"font" valign=3D"m=
+iddle" align=3D"initial" style=3D"border: none; margin: 0px; padding: 0px; =
+font-family: Circular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-s=
+erif; font-weight: 400; text-decoration: none; letter-spacing: 0.15px; colo=
+r: rgb(136, 137, 140); font-size: 11px; line-height: 1.65em; text-align: in=
+itial;"> Ta wiadomo=C5=9B=C4=87 zosta=C5=82a wys=C5=82ana na adres krzyszto=
+f555_1995@o2.pl.   Je=C5=9Bli w przysz=C5=82o=C5=9Bci nie chcesz otrzymywa=
+=C4=87 wiadomo=C5=9Bci e-mail od Spotify, mo=C5=BCesz <a class=3D"footer-li=
+nk" href=3D"https://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsP=
+miw/h7/cOU3XtHCbthgbfRSVnFGjiRZ9ngSRmPuIP0xHnnIW4yM-2Fo-2B4opcgCpz25nlam00O=
+/9ES5" style=3D"border: none; margin: 0px; padding: 0px; font-family: Circu=
+lar, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; text-align: =
+left; color: rgb(109, 109, 109); text-decoration: none; font-weight: bold;"=
+ align=3D"left">zmieni=C4=87 swoje ustawienia profilu</a> lub <a class=3D"f=
+ooter-link" href=3D"https://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRry=
+jMfZlKsPmiw/h8/cOU3XtHCbthgbfRSVnFGjm8erzJAsiS-2FhB3XD1LtGLemQiKci9oqboF5C9=
+HvxGMux0ziAmy-2B1nyLBYyPYf8EanBzLZC1VB7WsnWWm2VY3JRZuBnjpkzWMJClHbNNrAOAamg=
+nCUQjclNhK6SPfPWvoFplavxVKf0QnYHBcoIHWUXPVjP9wNQmiw-2BvEhXaUtfdrHExr2IhCB1f=
+qHJGCNr-2BtvA4MTJK5RKJ6kNqlK1hyBs-3D/gi7V" style=3D"border: none; margin: 0=
+px; padding: 0px; font-family: Circular, &quot;Helvetica Neue&quot;, Helvet=
+ica, Arial, sans-serif; text-align: left; color: rgb(109, 109, 109); text-d=
+ecoration: none; font-weight: bold;" align=3D"left">zrezygnowa=C4=87 z subs=
+krypcji</a>. </td><td width=3D"6.25%" valign=3D"middle" style=3D"border: no=
+ne; margin: 0px; padding: 0px; width: 6.25%;"></td></tr><tr class=3D"footer=
+-middle-padding" height=3D"33" valign=3D"middle" style=3D"border: none; mar=
+gin: 0px; padding: 0px; height: 33px;"><td colspan=3D"3" class=3D"footer-mi=
+ddle-padding" height=3D"33" valign=3D"middle" style=3D"border: none; margin=
+: 0px; padding: 0px; height: 33px;"></td></tr><tr valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px;"><td width=3D"6.25%" valign=3D=
+"middle" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"><=
+/td><td class=3D"font font-small" valign=3D"middle" align=3D"initial" style=
+=3D"border: none; margin: 0px; padding: 0px; font-family: Circular, &quot;H=
+elvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; text-d=
+ecoration: none; letter-spacing: 0.15px; color: rgb(136, 137, 140); line-he=
+ight: 1.65em; text-align: initial; font-size: 11px;"><a class=3D"footer-sep=
+arated-text" href=3D"https://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRr=
+yjMfZlKsPmiw/h9/cOU3XtHCbthgbfRSVnFGjrxuNNUpUgfbWBL8-2BblduijV69nbkkOwK4a-2=
+BqlGfUdO50caBid6ID1LMsouUr6QZkw-3D-3D/kxYB" style=3D"border: none; margin: =
+0px; padding: 0px; text-decoration: none; display: inline-block; color: rgb=
+(109, 109, 109); font-weight: bold;">Warunki u=C5=BCytkowania</a><span clas=
+s=3D"footer-separator" style=3D"border-top: none; border-bottom: none; bord=
+er-image: initial; padding: 0px; width: 1px; border-left: 1px solid rgb(195=
+, 195, 195); border-right: 1px solid transparent; display: inline-block; ma=
+rgin: 0px 7px;">&nbsp;</span><a class=3D"footer-separated-text" href=3D"htt=
+ps://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsPmiw/h10/cOU3XtH=
+CbthgbfRSVnFGjruWNs6ZLr4zPh-2FszhZ-2FBUQ-2B9nnXItx-2Fdle8y8UOsCtR/3Z7F" sty=
+le=3D"border: none; margin: 0px; padding: 0px; text-decoration: none; displ=
+ay: inline-block; color: rgb(109, 109, 109); font-weight: bold;">Polityka p=
+rywatno=C5=9Bci</a><span class=3D"footer-separator" style=3D"border-top: no=
+ne; border-bottom: none; border-image: initial; padding: 0px; width: 1px; b=
+order-left: 1px solid rgb(195, 195, 195); border-right: 1px solid transpare=
+nt; display: inline-block; margin: 0px 7px;">&nbsp;</span><a class=3D"foote=
+r-separated-text" href=3D"https://wl.spotify.com/mps2/c/IwE/8dU/t.2w5/zLfcg=
+uFmRryjMfZlKsPmiw/h11/cOU3XtHCbthgbfRSVnFGjuYb0B7ndeYg9av3bOoKW9lQ2FCz7JeSd=
+ZZq4MxVAKSF/7c5Z" style=3D"border: none; margin: 0px; padding: 0px; text-de=
+coration: none; display: inline-block; color: rgb(109, 109, 109); font-weig=
+ht: bold;">Kontakt</a></td><td width=3D"6.25%" valign=3D"middle" style=3D"b=
+order: none; margin: 0px; padding: 0px; width: 6.25%;"></td></tr><tr valign=
+=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td colspan=
+=3D"3" class=3D"footer-top-padding" height=3D"12" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; height: 12px;"></td></tr><tr v=
+align=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td wid=
+th=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px; padding:=
+ 0px; width: 6.25%;"></td><td class=3D"font font-small" valign=3D"middle" a=
+lign=3D"initial" style=3D"border: none; margin: 0px; padding: 0px; font-fam=
+ily: Circular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; fo=
+nt-weight: 400; text-decoration: none; letter-spacing: 0.15px; color: rgb(1=
+36, 137, 140); line-height: 1.65em; text-align: initial; font-size: 11px;">=
+Spotify AB, Regeringsgatan 19, 111 53, Stockholm, Sweden</td><td width=3D"6=
+.25%" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; w=
+idth: 6.25%;"></td></tr><tr height=3D"20" valign=3D"middle" style=3D"border=
+: none; margin: 0px; padding: 0px; height: 20px;"><td colspan=3D"3" class=
+=3D"footer-bottom-padding" height=3D"25" valign=3D"middle" style=3D"border:=
+ none; margin: 0px; padding: 0px; height: 25px;"></td></tr></tbody></table>=
+</div></center></td></tr></table><!--[if (mso) | (IE)]></td></tr></table><!=
+[endif]-->
+<img src=3D"https://wl.spotify.com/mpss/o/IwE/8dU/t.2w5/zLfcguFmRryjMfZlKsP=
+miw/ho.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:=
+1px !important;width:1px !important;border-width:0 !important;margin-top:0 =
+!important;margin-bottom:0 !important;margin-right:0 !important;margin-left=
+:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-=
+right:0 !important;padding-left:0 !important;"/>
+</body></html>
+
+--a164584bd810430edae6b8c758cea87c8abae610f009aed60ae93e8102c7--
+
