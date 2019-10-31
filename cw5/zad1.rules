@@ -1,0 +1,2 @@
+drop dns any any -> any any (msg:"Facebook is blocked"; content:"facebook"; classtype:policy-violation; sid:39398144; rev:1;)
+drop tls any any -> any any (msg:"Facebook is blocked"; tls.subject:"facebook"; classtype:policy-violation; sid:39398145; rev:1;)
