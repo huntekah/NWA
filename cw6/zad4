@@ -1,0 +1,1 @@
+alert icmp any any -> any any (msg:"Some generic message" ;sid:1092380921; dsize:448; itype:8;)
