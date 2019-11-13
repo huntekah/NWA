@@ -1,0 +1,218 @@
+dla ip :: mamy ataki:
+ilosc	sig id
+    821 527
+dla ip 0.0.0.0 mamy ataki:
+ilosc	sig id
+   4176 527
+dla ip 104.219.234.226 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 107.161.88.35 mamy ataki:
+ilosc	sig id
+      1 384
+      1 382
+dla ip 120.197.142.114 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 129.82.138.44 mamy ataki:
+ilosc	sig id
+     78 384
+dla ip 134.147.203.115 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 141.212.122.132 mamy ataki:
+ilosc	sig id
+      1 384
+dla ip 141.212.122.133 mamy ataki:
+ilosc	sig id
+      1 384
+dla ip 158.69.203.235 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 163.53.247.134 mamy ataki:
+ilosc	sig id
+      1 312
+dla ip 163.53.247.136 mamy ataki:
+ilosc	sig id
+      1 312
+dla ip 167.114.82.227 mamy ataki:
+ilosc	sig id
+      2 1280
+      1 1917
+dla ip 173.242.113.205 mamy ataki:
+ilosc	sig id
+      1 312
+      1 1917
+dla ip 176.197.96.162 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 182.73.97.162 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 184.105.139.101 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 184.105.139.125 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 184.105.139.73 mamy ataki:
+ilosc	sig id
+      2 1917
+dla ip 184.105.139.97 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 185.94.111.1 mamy ataki:
+ilosc	sig id
+      1 384
+dla ip 188.138.1.218 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 188.138.9.50 mamy ataki:
+ilosc	sig id
+      1 1616
+dla ip 195.218.175.162 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 195.251.255.69 mamy ataki:
+ilosc	sig id
+     77 384
+dla ip 198.20.99.130 mamy ataki:
+ilosc	sig id
+      5 384
+dla ip 198.44.48.18 mamy ataki:
+ilosc	sig id
+     12 402
+dla ip 2001:0:5ef5:79fb:30ce:3cdc:6901:b275 mamy ataki:
+ilosc	sig id
+     17 527
+dla ip 2001:0:5ef5:79fb:38de:332e:6901:b22f mamy ataki:
+ilosc	sig id
+     27 527
+dla ip 2001:0:5ef5:79fb:88a:1405:6901:b2d0 mamy ataki:
+ilosc	sig id
+      4 527
+dla ip 2001:0:5ef5:79fd:1ca5:342c:6901:b2be mamy ataki:
+ilosc	sig id
+     52 527
+dla ip 2001:0:5ef5:79fd:2ca0:cfd:6901:b2d0 mamy ataki:
+ilosc	sig id
+     12 527
+dla ip 2001:0:5ef5:79fd:3869:1d9e:b08a:7186 mamy ataki:
+ilosc	sig id
+     15 527
+dla ip 2001:0:9d38:6ab8:302e:3063:6901:b2d0 mamy ataki:
+ilosc	sig id
+      4 527
+dla ip 2001:0:9d38:6ab8:30ab:33a2:6901:b275 mamy ataki:
+ilosc	sig id
+     53 527
+dla ip 2001:0:9d38:6ab8:3801:19f2:665f:3ee7 mamy ataki:
+ilosc	sig id
+      1 527
+dla ip 2001:0:9d38:6ab8:384e:2ecb:6901:b22f mamy ataki:
+ilosc	sig id
+     13 527
+dla ip 2001:0:9d38:6ab8:48:2726:6901:b2c2 mamy ataki:
+ilosc	sig id
+    493 527
+dla ip 2001:0:9d38:6abd:34ef:19f2:6901:b275 mamy ataki:
+ilosc	sig id
+     45 527
+dla ip 2001:0:9d38:6abd:a9:3da8:6901:b2c2 mamy ataki:
+ilosc	sig id
+     39 527
+dla ip 2001:0:9d38:90d7:28b0:3e16:4f9b:9874 mamy ataki:
+ilosc	sig id
+      1 527
+dla ip 203.178.148.19 mamy ataki:
+ilosc	sig id
+     79 384
+dla ip 204.42.253.132 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 206.117.25.90 mamy ataki:
+ilosc	sig id
+     77 384
+dla ip 207.226.141.42 mamy ataki:
+ilosc	sig id
+      1 384
+      1 382
+dla ip 212.156.51.34 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 212.19.23.95 mamy ataki:
+ilosc	sig id
+      1 384
+dla ip 216.218.206.107 mamy ataki:
+ilosc	sig id
+      1 1280
+dla ip 216.218.206.119 mamy ataki:
+ilosc	sig id
+      1 1280
+dla ip 216.218.206.67 mamy ataki:
+ilosc	sig id
+      1 1280
+dla ip 216.218.206.71 mamy ataki:
+ilosc	sig id
+      1 1280
+dla ip 216.218.206.79 mamy ataki:
+ilosc	sig id
+      1 1280
+dla ip 220.176.122.58 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 221.12.133.130 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 222.34.18.27 mamy ataki:
+ilosc	sig id
+      1 384
+      1 382
+dla ip 46.166.188.68 mamy ataki:
+ilosc	sig id
+      4 312
+dla ip 47.21.61.186 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 51.254.212.184 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 5.8.66.101 mamy ataki:
+ilosc	sig id
+      3 384
+      3 366
+dla ip 5.8.66.69 mamy ataki:
+ilosc	sig id
+      1 312
+dla ip 5.8.66.78 mamy ataki:
+ilosc	sig id
+      2 402
+      2 312
+      1 1280
+dla ip 59.60.176.132 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 71.6.167.142 mamy ataki:
+ilosc	sig id
+      1 312
+      1 1616
+dla ip 80.82.64.198 mamy ataki:
+ilosc	sig id
+      1 1917
+dla ip 80.89.131.62 mamy ataki:
+ilosc	sig id
+      1 469
+      1 384
+dla ip 93.158.216.15 mamy ataki:
+ilosc	sig id
+      1 384
+      1 382
