@@ -1,0 +1,105 @@
+sig id: 312     gen id: 1       revision: 6      classification: 12
+
+opis: 
+Buffer overflow in ntpd ntp daemon 4.0.99k and earlier (aka xntpd and xntp3) allows remote attackers to cause a denial of service and possibly execute arbitrary commands via a long readvar argument.
+
+plik: deleted.rules
+
+reguła: 
+alert udp $EXTERNAL_NET any -> $HOME_NET 123 (msg:"DELETED EXPLOIT ntpdx overflow attempt"; flow:to_server; dsize:>128; reference:arachnids,492; reference:bugtraq,2540; reference:cve,2001-0414; reference:nessus,10647; classtype:attempted-admin; sid:312; rev:9;)
+
+sig id: 366     gen id: 1       revision: 7      classification: 29
+
+opis:
+ping sends an ICMP Echo Request packet to an IP address. If a host is up at that address it will reply with an ICMP Echo Reply. The reply includes the data portion of the echo packet. The data included in the Echo Request varies across different operating system implementations.
+
+plik: protocol-icmp.rules
+
+reguła:
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"PROTOCOL-ICMP PING Unix"; itype:8; content:"|10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F|"; depth:32; metadata:ruleset community; classtype:misc-activity; sid:366; rev:11;)
+
+
+sig id: 382     gen id: 1       revision: 7      classification: 29
+opis: This event is generated when a Windows PING is detected
+
+This event is generated when a Windows PING is detected
+
+plik: protocol-icmp.rules
+
+reguła:
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"PROTOCOL-ICMP PING Windows"; itype:8; content:"abcdefghijklmnop"; depth:16; metadata:ruleset community; classtype:misc-activity; sid:382; rev:11;)
+
+sig id: 384     gen id: 1       revision: 5      classification: 29
+opis: This event is generated when a ping is detected.
+
+plik: protocol-icmp.rules
+
+reguła:
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"PROTOCOL-ICMP PING"; icode:0; itype:8; metadata:ruleset community; classtype:misc-activity; sid:384; rev:8;)
+
+
+sig id: 402     gen id: 1       revision: 7      classification: 29
+opis: 
+Multiple TCP/IP and ICMP implementations allow remote attackers to cause a denial of service (reset TCP connections) via spoofed ICMP error messages, aka the "blind connection-reset attack." NOTE: CVE-2004-0790, CVE-2004-0791, and CVE-2004-1060 have been SPLIT based on different attacks; CVE-2005-0065, CVE-2005-0066, CVE-2005-0067, and CVE-2005-0068 are related identifiers that are SPLIT based on the underlying vulnerability. While CVE normally SPLITs based on vulnerability, the attack-based identifiers exist due to the variety and number of affected implementations and solutions that address the attacks instead of the underlying vulnerabilities.
+
+plik:
+protocol-icmp.rules
+
+reguła:
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"PROTOCOL-ICMP destination unreachable port unreachable packet detected"; icode:3; itype:3; metadata:policy max-detect-ips drop, ruleset community; reference:cve,2004-0790; reference:cve,2005-0068; classtype:misc-activity; sid:402; rev:16;)
+
+sig id: 469     gen id: 1       revision: 3      classification: 4
+opis:
+DELETED ICMP PING NMAP
+
+plik: 
+deleted.rules
+
+reguła:
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"DELETED ICMP PING NMAP"; dsize:0; itype:8; reference:arachnids,162; classtype:attempted-recon; sid:469; rev:6;)
+
+
+sig id: 527     gen id: 1       revision: 8      classification: 3	
+opis:
+Land IP denial of service.
+
+plik:
+deleted.rules:10329
+
+reguła:
+alert ip any any -> any any (msg:"DELETED BAD-TRAFFIC same SRC/DST"; sameip; reference:bugtraq,2666; reference:cve,1999-0016; reference:url,www.cert.org/advisories/CA-1997-28.html; classtype:bad-unknown; sid:527; rev:10;)
+
+
+sig id: 1280    gen id: 1       revision: 9      classification: 14
+opis:
+The portmapper service registers all RPC services on UNIX hosts. It can be queried for all RPC services running, the RPC program name and version, the protocol (TCP or UDP), and the port where the service listens. This can provide an attacker valuable information about which RPC services offered and on which ports.
+
+plik:
+protocol-rpc.rules:27
+
+reguła:
+alert udp $EXTERNAL_NET any -> $HOME_NET 111 (msg:"PROTOCOL-RPC portmap listing UDP 111"; flow:to_server; content:"|00 01 86 A0|"; depth:4; offset:12; content:"|00 00 00 04|"; within:4; distance:4; content:"|00 00 00 00|"; depth:4; offset:4; metadata:policy max-detect-ips drop, ruleset community, service sunrpc; classtype:rpc-portmap-decode; sid:1280; rev:18;)
+
+sig id: 1616    gen id: 1       revision: 7      classification: 4
+opis:
+An attacker can query a DNS server for the version of BIND running. Some versions of BIND, by default, respond to these queries while BIND version 9; by default, does not. A response to this query can assist an attacker in discovering servers that are potentially vulnerable to exploits associated with specific versions of BIND.
+
+plik:
+protocol-dns.rules
+
+reguła:
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg:"PROTOCOL-DNS named version attempt"; flow:to_server; content:"|07|version"; offset:12; nocase; content:"|04|bind|00|"; offset:12; nocase; metadata:policy max-detect-ips drop, ruleset community, service dns; reference:nessus,10028; classtype:attempted-recon; sid:1616; rev:17;)
+
+
+sig id: 1917    gen id: 1       revision: 6      classification: 23
+opis:
+This event is generated when UPnP service discovery is detected.
+
+
+plik:
+indicator-scan.rules
+
+reguła:
+alert udp $EXTERNAL_NET any -> $HOME_NET 1900 (msg:"INDICATOR-SCAN UPnP service discover attempt"; flow:to_server; content:"M-SEARCH "; depth:9; content:"ssdp|3A|discover"; fast_pattern:only; metadata:policy max-detect-ips drop, ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:network-scan; sid:1917; rev:16;)
+
+
