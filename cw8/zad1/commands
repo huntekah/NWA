@@ -1,0 +1,9 @@
+uzyte komendy:
+	wireshark
+	ifconfig
+	proxychains nmap -sT -PO -p 80 -iR 200 > random_scan_zad1
+	proxychains nmap -sP 150.254.68.14/30 10.0.0.0/24 > zrzut_maska_8.zad1
+	proxychains nmap -Pn -n -sT 150.254.68.14/24 > open_ports_scan.zad1
+
+
+

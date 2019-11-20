@@ -1,0 +1,93 @@
+ProxyChains-3.1 (http://proxychains.sf.net)
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-20 07:38 CST
+Nmap scan report for 14.44.67.111
+Host is up (0.26s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 175.210.233.171
+Host is up (0.29s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for c-24-7-246-165.hsd1.mn.comcast.net (24.7.246.165)
+Host is up (0.12s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for ns3107720.ip-54-36-179.eu (54.36.179.75)
+Host is up (0.025s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for bl4-3-127.dsl.telepac.pt (81.193.3.127)
+Host is up (0.055s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 112.14.168.110
+Host is up (0.28s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for pool-151-202-26-189.nycmny.fios.verizon.net (151.202.26.189)
+Host is up (0.10s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for www-fmec.ad.uni-hannover.de (130.75.73.124)
+Host is up (0.022s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 90.104.7.109.rev.sfr.net (109.7.104.90)
+Host is up (0.032s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for dslb-178-004-077-083.178.004.pools.vodafone-ip.de (178.4.77.83)
+Host is up (0.078s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for c213-102-67-84.bredband.comhem.se (213.102.67.84)
+Host is up (0.032s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for rrcs-67-53-126-73.west.biz.rr.com (67.53.126.73)
+Host is up (0.16s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for bd643db8.virtua.com.br (189.100.61.184)
+Host is up (0.24s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 58.237.111.79
+Host is up (0.25s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for mail21.mixi.jp (52.196.255.45)
+Host is up (0.40s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 200 IP addresses (15 hosts up) scanned in 24.42 seconds
