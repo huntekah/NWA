@@ -1,0 +1,4 @@
+program hping jest darmowym generatorem i analizatorem pakietów TCP/IP. Dzięki niemu można badać bezpieczeństwo sieci
+Można przy jego pomocy przetestować Firewalle, przeprowadzić skanowanie portów, zaawansowane testowanie sieci przy użyciu różnych protokołów, pozyskiwanie "podpisu palca" systemu operacyjnego (OS fingerprinting) zgadywanie uptime'u, audyt stacka TCP/IP oraz może być wykorzystywany przez studentów by uczyli się na temat TCP/IP :)
+
+ Żeby zakończyć polecenia możnaby użyć opcji --count z wartością 1, ustawić TTL na 0 opcją --ttl lub... po prostuwysłać pakiet z opcją --fin 

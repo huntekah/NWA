@@ -1,4 +1,4 @@
- proxy ustawione przy pomocy burp suite, na firefoxie dodane również. Akceptujemy pakiet w burp suite ( Proxy/intercept -> forward) 
+ proxy ustawione przy pomocy burp suite, na firefoxie dodane również. Akceptujemy pakiet w burp suite ( Proxy/intercept -> forward). na dole pliku zostało opisane jak można sobie radzić z takiego rodzaju atakami. 
 
 
 przechwycone logowanie do usosa:
@@ -38,4 +38,15 @@ insteresujące jest przechwycone haslo - "haslo_do_usosa"
 
 
 Jak dowiedziec sie ze ktos przechwytuje komunikacje?
-Mozemy otrzymac komunikat od przeglądarki
+* Mozemy otrzymac komunikat od przeglądarki
+* Należy zwracać uwagę na to, czy połączenie ze stroną jest szyfrowane
+* Niektóre strony (jak np Facebook) umożliwiają włączenie opcji ciągłego szyfrowania - nawet po zalogowaniu się (opcja Secure browsing)
+* ze względu na możliwość eavsdroppingu nie należy używać nieszyfrowanych transferów danych jak np FTP
+* można używać sieci VPN, który jest w stanie nas przed takimi atakami uchronić
+* Bazując na artykułach naukowych znalezionych w sieci:
+	https://www.researchgate.net/publication/41845836_A_survey_on_MANET_intrusion_detection
+	https://www.researchgate.net/publication/325391546_Detection_Algorithm_for_Sinkhole_Attack_in_Body_Area_Sensor_Networks_using_local_information	
+	https://www.researchgate.net/publication/263252922_Protection_of_MANETs_from_a_range_of_attacks_using_an_intrusion_detection_and_prevention_system
+
+o wiele łatwiej jest przeciwdziałać zabiegom podsłuchiwania nas niż faktycznie je wykryć... szczególnie jeśli ktoś po prostu nasłuchuje sieci (pasywnie)
+

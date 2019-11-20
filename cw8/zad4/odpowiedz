@@ -1,0 +1,4 @@
+
+Fragroute pozwala w prosty sposób manipulować pakietami. Można je opóźnić, zduplikować, odrzucić, zfragmentować, wypisać, zamienić kolejność, dokonać segmentacji. Modyfikuje on, oraz przepisuje ruch skierowany do konkretnego hosta, implementując jednocześnie kilka różnych ataków jak np DoS, Insertion lub Evasion. Narzędzie służy do testowania sieci nie natomiast do zabawy w hackera.
+
+
