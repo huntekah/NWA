@@ -1,0 +1,65 @@
+kddcup99
+========
+
+Jest to zestaw danych wykorzystywany w Trzecim Międzynarodowym Konkursie narzędzi 
+do odkrywania wiedzy i eksploracji danych, 
+który odbył się we współpracy z KDD-99 Piątą międzynarodową konferencją 
+na temat odkrywania wiedzy i eksploracji danych. 
+Zadaniem konkurencji było zbudowanie wykrywacza wtargnięcia do sieci, 
+modelu predykcyjnego zdolnego do rozróżnienia między ''złymi'' połączeniami,
+zwanymi wtargnięciami lub atakami, a ''dobrymi '' normalnymi połączeniami. 
+Ta baza danych zawiera standardowy zestaw danych do skontrolowania, 
+który obejmuje szeroki zakres ingerencji symulowanych w środowisku sieci wojskowej.
+
+
+network
+======
+ Ruch sieciowy został zebrany za pośrednictwem programu o nazwie tcpdump.
+ Tcpdump drukuje nagłówki pakietów sieciowych, które przechodzą przez interfejs sieciowy hosta wykonującego tcpdump.
+ Host używany do gromadzenia danych został podłączony między siecią LAN przedsiębiorstwa a sieciami zewnętrznymi.
+ Dlatego cały ruch sieciowy między Enterprise LAN a sieciami zewnętrznymi został przechwycony przez tcpdump.
+ Ponieważ tcpdump drukuje tylko informacje w nagłówku, żadne dane użytkownika nie zostały wydrukowane.
+
+
+
+wywołania systemowe
+===================
+zebrano kilka zestawów danych wywołań systemowych wykonywanych przez aktywne procesy.
+ Obejmują one różne rodzaje programów (np.
+ Programy działające jako demony i te, które nie działają), programy, które różnią się znacznie pod względem wielkości i złożoności, oraz różnego rodzaju włamania (przepełnienie bufora, ataki z użyciem dowiązań symbolicznych i programy trojańskie).
+ Uwzględniamy tylko te programy, które działają z uprawnieniami, ponieważ niewłaściwe użycie tych programów ma największy potencjał do uszkodzenia systemu.
+
+Niektóre normalne dane są „syntetyczne”, a niektóre są „na żywo”.
+ Ślady syntetyczne są gromadzone w środowiskach produkcyjnych przez uruchomienie przygotowanego skryptu; opcje programu są wybierane wyłącznie w celu korzystania z programu, a nie w celu spełnienia rzeczywistych żądań użytkownika.
+ Dane normalne na żywo to ślady programów gromadzone podczas normalnego użytkowania produkcyjnego systemu komputerowego.
+
+
+W niektórych przypadkach mają dane dla tego samego programu z wielu lokalizacji i / lub wielu wersji programu.
+ Każdy z nich jest odrębnym zestawem danych; normalne ślady z jednego zestawu mogą się znacznie różnić od śladów drugiego.
+
+Każdy ślad to lista wywołań systemowych wydanych przez pojedynczy proces od początku jego wykonania do końca.
+ W tym zbiorze długości śledzenia różnią się znacznie ze względu na różnice w złożoności programu i ponieważ niektóre ślady są procesami demonów, a inne nie.
+
+
+
+UNIX shell log
+==============
+Ten plik zawiera 9 zestawów oczyszczonych danych użytkownika pobranych z
+ historii 8 użytkowników komputerów UNIX w Purdue
+w przeciągu do 2 lat (USER0 i USER1 zostały wygenerowane przez tę samą osobę,
+    praca na różnych platformach i różnych projektach). Dane
+    pochodzą z plików historii tcsh i zostały przeanalizowane i oczyszczone
+    usuwając nazwy plików, nazwy użytkowników, struktury katalogów, adresy internetowe,
+    nazwy hostów i inne możliwe elementy identyfikujące. Nazwy poleceń,
+    flagi i metaznaki powłoki zostały zachowane. Dodatkowo,
+    ** Tokeny ** SOF ** i ** EOF ** zostały wstawione na początku i na końcu
+    sesji powłoki, odpowiednio. Sesje są łączone według kolejności dat
+    i tokeny pojawiają się w kolejności wydanej w sesji powłoki, ale nie
+    znaczniki czasu są zawarte w tych danych.
+
+używane
+tcsh
+ Programy działające jako demony i te, które nie działają), programy, które różnią się znacznie pod względem wielkości i złożoności, oraz różnego rodzaju włamania (przepełnienie bufora, ataki z użyciem dowiązań symbolicznych i programy trojańskie).
+
+historyczne
+pop2

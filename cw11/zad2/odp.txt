@@ -1,0 +1,32 @@
+ile różnych połączeń zawierają
+Wyszukałem liczbę unikalnych czwórek w postaci(src_addr,src_port,dest_addr,dest_port)
+└─ $ ▶ cat nat_all.csv  | cut -d "," -f2-5 | tail -n+2 | sort | uniq | wc -l
+Odp: 76275
+
+ile danych zostało w sumie przesłanych
+Zostało przesłanych: 566338932
+Sposób znalezienia rozwiązania:
+└─ $ ▶ cat nat_all.csv | cut -d "," -f11 | tail -n+2 | sort | awk '{s+=$1} END {print s}'
+
+jakie usługi/porty były wykorzystane
+odpowiedz w pliku "wykorzystane_porty.txt"
+
+
+ile różnych adresów IP
+└─ $ ▶  icat nat_all.csv  | cut -d "," -f2 | tail -n+2 | sort | uniq | wc -l
+ilość różnych adresów:  2254
+
+
+z którego adresu IP było najwięcej połączeń( top 10 najlepszych adresów)
+└─ $ ▶ cat nat_all.csv  | cut -d "," -f2 | tail -n+2 | sort | uniq -c | sort -nr | head
+811479 2
+220934 1
+28753 3
+25404 484
+24503 16
+23935 14
+20343 26
+19564 5
+17290 486
+15896 21
+
