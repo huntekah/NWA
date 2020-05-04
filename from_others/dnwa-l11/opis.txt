@@ -1,0 +1,51 @@
+Zadanie 1 i 2 (opisy do zrzutu ekranu). 
+
+--------------
+Corrected. Plik corrected poleceniem gzcat corrected.gz > corrected.csv przekonwertowałem do pliku csv. Następnie programem VisiData sparsowałem dane i je analizowałem. Dane w dużym skrócie zostały utworzone dzięki The Third International Knowledge Discovery and Data Mining Tools Competition. Warto równie W dużym skrócie wycinki w pliku mają za zadanie wykazać mówiąc kolokwialnie dobre oraz złe rodzaje połączeń, by tym samym wykryć atak. Ważną informacją jest fakt, iż zbiór zawiera informacje o użytych protokołach (zrzut ekranu - corrected3.png) Ciekawe efekty analizy widoczne są w zrzucie ekranu corrected.png. Widzimy w nim z czego składa się plik corrected -> pierwsza kolumna prawdopodobnie numer portu, choć po głębszej analizie niekoniecznie. Ponad 95% stanowi liczba 0, następną w kolejności, zajmującą 1.97% jest liczba 2, następnie znikome wartości pozostałych liczb (zrzut ekranu - corrected2.png). W DUŻYM SKRÓCIE PODANY ZBIÓR DANYCH NIE STANOWI AKTUALNEGO ŹRÓDŁA POZWALAJĄCEGO BADAĆ BEZPIECZEŃSTWO SIECI.
+--------------
+
+--------------
+kddcup.data.gz. Plik kddcup.data.gz poleceniem gzcat przekonwertowałem do pliku csv i analizowałem go tym samym programem visidata. Warto na start wyjaśnić, czym jest KDD ->  jest on w zasadzie przekształceniem śladów sieciowych DARPA w zbiór funkcji połączeń, w sumie 41 funkcji. Każde połączenie między dwoma hostami będzie reprezentować pojedynczy rekord w KDD, a każdy rekord zapewni ogólny widok tego połączenia na podstawie wartości funkcji. 41 funkcji podzielonych jest na cztery grupy. Podany zbiór nie może zostać użyty do wykrywania ataków sieciowych, gdyż w obecnych czasach większość ataków odbywa się poprzez ataki SQL Injection bądź trojany. Atak w tej kolekcji danych był symulowany czy użyciu sieci w dużej mierze wirtualnej, a te "ataki" można wykryć tylko na podstawie symulowanej topologii sieci. 
+KONKLUZJA PODANY ZBIÓR A DOKŁADNIEJ USŁUGI NIE POWINNY BYĆ OBECNIE UŻYWANE.
+--------------
+
+--------------
+network. Dane zebrane w tym katalogu odnoszą się do danych zebranych z ruchu sieciowego za pośrednictwem programu tcpdump. Tcpdump daje na wyjściu nagłówki pakietów sieciowych, które przechodzą przez interfejs sieciowy hosta wykonującego tcpdump. Host używany do gromadzenia danych został podłączony między siecią LAN przedsiębiorstwa a sieciami zewnętrznymi. Dlatego cały ruch sieciowy między Enterprise LAN a sieciami zewnętrznymi został przechwycony przez tcpdump. Ponieważ tcpdump drukuje tylko informacje w nagłówku, nie wydrukowano żadnych danych użytkownika. Dzięki filtrom w tcpdump można było zebrać pakiety protokołu TCP i UDP. Dla TCP daje wyjściu tcpdump następujące pakiety:
+Znak czasu
+Źródłowy adres IP
+Port źródłowy
+Docelowy adres IP
+Port docelowy
+Flagi (syn, fin, push, rst lub.)
+Numer sekwencji danych tego pakietu
+Numer sekwencji danych oczekiwany w zamian
+Dostępna liczba bajtów dostępnego miejsca w buforze odbiorczym
+Wskazanie, czy dane są pilne
+Dla każdego pakietu UDP tcpdump daje na wyjściu następujące informacje:
+Znak czasu
+Źródłowy adres IP
+Port źródłowy
+Docelowy adres IP
+Port docelowy
+Długość pakietu
+
+W danych tych w celu ochrony tożsamości hostów komunikujących się ze sobą podczas zbierania ruchu sieciowego, wszystkie adresy IP zostały zmodyfikowane. Każdy host zewnętrzny ma przypisany fałszywy adres IP a wszystkie host wewnętrzne będą miały ten sam fałszywy adres IP. PODANY ZBIÓR MOŻE NADAĆ SIĘ DO ANALIZY RUCHU W SIECIE I W SZCZEGÓLNOŚCI PAKIETÓW TCP I UDP, CO CZĘŚCIOWO MOŻE SIĘ PRZYDAĆ, ABY BADAĆ ATAK, GDYŻ PRZYKŁADOWO JEDEN ADRES IP MOŻE POSŁUGIWAĆ SIĘ "PODEJRZANYM" PROTOKOŁEM.
+--------------
+
+--------------
+Computer Immune Systems. Jest to zestawienie kilku wywołań systemowych wykonywanych przez aktywne procesy. Obejmują one różne rodzaje programów (np. Programy działające jako deamony i te, które nie działają), programy, które różnią się znacznie pod względem wielkości i złożoności, oraz różnego rodzaju włamania (przepełnienie bufora, ataki z użyciem dowiązań symbolicznych i programy trojańskie). Uwzględniane są tylko te programy, które działają z uprawnieniami, ponieważ niewłaściwe użycie tych programów ma największy potencjał do uszkodzenia systemu.
+Niektóre normalne dane są „syntetyczne”, a niektóre są „na żywo”. Ślady syntetyczne są gromadzone w środowiskach produkcyjnych przez uruchomienie przygotowanego skryptu; opcje programu są wybierane wyłącznie w celu korzystania z programu, a nie w celu spełnienia rzeczywistych żądań użytkownika. Dane normalne na żywo to ślady programów gromadzone podczas normalnego użytkowania produkcyjnego systemu komputerowego. PODANE NIE BĘDĄ JUŻ PRZYDATNE MOIM ZDANIEM.
+--------------
+
+--------------
+UNIX USER DATA. Plik zawiera 9 zestawów oczyszczonych danych użytkownika pobranych z historii poleceń 8 użytkowników komputerów UNIX w Purduedo z 2 lat (USER0 i USER1 zostały wygenerowane przez tę samą osobę, praca na różnych platformach i różnych projektach). Dane pochodzą z plików historii tcsh (1) i zostały przeanalizowane i oczyszczone.  Usunięto nazwy plików, nazwy użytkowników, struktury katalogów, adresy internetowe, nazwy hostów i inne możliwe elementy identyfikujące. DANE NIE POTRZEBNE OBECNIE
+--------------
+
+
+Zadanie 3.
+
+Ten link zawiera praktycznie wszystko -> https://www.netresec.com/?page=PcapFiles
+
+
+
+

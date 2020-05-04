@@ -1,0 +1,105 @@
+komendy unix - częstotliwość
+
+sort filename | uniq -c | sort -nr > count.txt
+
+
+  71746 <1>
+  23950 cd
+  17857 ls
+  11419 <2>
+  11113 **SOF**
+  11113 **EOF**
+   8800 ll
+   8406 vi
+   5046 elm
+   4474 rm
+   2601 grep
+   2385 make
+   2378 more
+   2258 m
+   1992 exit
+   1991 mv
+   1956 -l
+   1930 z
+   1905 fg
+   1765 finger
+   1713 cp
+   1703 a.out
+   1703 |
+   1585 dir
+   1568 &
+   1560 k
+   1514 latex
+   1469 less
+   1365 man
+
+zliczanie połączeń
+
+cut -d "," -f3 net.txt |sort|uniq -c |sort -nr| head > countportconnect.txt
+  
+56012 1061,20
+  52360 20,1061
+  48163 53,53
+  29016 4414,119
+  25365 22000,4502
+  20608 80,4603
+  18308 119,4414
+  16713 80,1061
+  15464 4233,119
+  14883 119,4088
+
+zliczanie portów destination
+
+cut -d "," -f5 net.txt |sort|uniq -c |sort -nr| head > countportdest.txt
+
+
+ 436654 80
+ 165526 119
+ 108324 20
+  69073 1061
+  53162 25
+  50993 23
+  49278 53
+  31781 2210
+  25446 4502
+  21990 4603
+
+zliczanie portów src
+
+cut -d "," -f3 net.txt |sort|uniq -c |sort -nr| head > countportsrc.txt
+
+ 595176 80
+ 145430 20
+ 123080 119
+  64482 1061
+  61218 25
+  53051 2210
+  48833 53
+  47198 23
+  29064 4414
+  25365 22000
+
+zliczanie portów ogólnie
+
+cut -d "," -f3 net.txt |sort|uniq -c |sort -nr| head > countportsrc.txt
+
+
+ 595176 80
+ 145430 20
+ 123080 119
+  64482 1061
+  61218 25
+  53051 2210
+  48833 53
+  47198 23
+  29064 4414
+  25365 22000
+
+zliczanie usług w kddcup
+
+cat kddcup.data | cut -d"," -f2 | sort -n | uniq -c
+
+2833545 icmp
+1870598 tcp
+ 194288 udp
+

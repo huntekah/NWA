@@ -1,0 +1,45 @@
+ proxy ustawione przy pomocy burp suite, na firefoxie dodane również. Akceptujemy pakiet w burp suite ( Proxy/intercept -> forward). na dole pliku zostało opisane jak można sobie radzić z takiego rodzaju atakami. 
+
+
+przechwycone logowanie do usosa:
+
+
+POST /cas/login?service=https%3A%2F%2Fusosweb.amu.edu.pl%2Fkontroler.php%3F_action%3Dlogowaniecas%2Findex&locale=pl HTTP/1.1
+
+Host: cas.amu.edu.pl
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate
+
+Referer: https://cas.amu.edu.pl/cas/login?service=https%3A%2F%2Fusosweb.amu.edu.pl%2Fkontroler.php%3F_action%3Dlogowaniecas%2Findex&locale=pl
+
+Content-Type: application/x-www-form-urlencoded
+
+Content-Length: 124
+
+Connection: close
+
+Cookie: JSESSIONID=73BE1A2011880283F9EA6CDB06FDBF3C; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=pl
+
+Upgrade-Insecure-Requests: 1
+
+
+
+username=12039809&password=haslo_do_usosa&lt=LT-231050-I2IgeaMJDOqmI5y1AjzpKJ5NDCGibh&execution=e1s3&_eventId=submit&submit=
+
+
+
+insteresujące jest przechwycone haslo - "haslo_do_usosa"
+
+
+Jak dowiedziec sie ze ktos przechwytuje komunikacje?
+* Bazując na artykułach naukowych znalezionych w sieci:
+	https://www.researchgate.net/publication/41845836_A_survey_on_MANET_intrusion_detection
+	https://www.researchgate.net/publication/325391546_Detection_Algorithm_for_Sinkhole_Attack_in_Body_Area_Sensor_Networks_using_local_information	
+o wiele łatwiej jest przeciwdziałać zabiegom podsłuchiwania nas niż faktycznie je wykryć... szczególnie jeśli ktoś po prostu nasłuchuje sieci (pasywnie)
+

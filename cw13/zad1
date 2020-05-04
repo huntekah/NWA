@@ -1,0 +1,68 @@
+Plik używany przez ClamAV, zawiera definicje wirusów do aktualizacji listy rozpoznanych wirusów w ClamAV; zapisywane jako cyfrowo podpisany plik tarball, który zawiera jedną lub więcej baz wirusów.
+
+Typowe pliki CVD to daily.cvd i main.cvd. Main.cvd zawiera najnowsze stabilne podstawowe bazy danych wirusów, a daily.cvd zawiera codzienne aktualizacje definicji wirusów, które można zaplanować do pobrania i instalacji.
+
+Sygnaturę można stworzyć przy użyciu `sigtool` np.:
+sigtool -hex-dump < file > out
+
+
+pliki main zawarte w clamav:
+
+main.crb main.cvd main.fp main.hdb main.hsb
+main.info main.mdb main.msb main.ndb main.sfp
+
+gdzie pliki *.fp to sygnatury whitelisty, 
+*.hdb to sygnatury plików hash
+*.hsb j.w.
+*.info - baza infromacji (danych)
+*.mdb / *.msb - sygnatury plików hash
+*.ndb - sygnatury extended
+*.sfp - whitelist 
+
+
+inne opcje sigtoola:
+
+--hex-dump
+Read data from stdin and write hex string to stdout.
+--md5 [FILES]
+Generate MD5 checksum from stdin or MD5 sigs for FILES.
+--sha1 [FILES]
+Generate SHA1 checksum from stdin or SHA1 sigs for FILES.
+--sha256 [FILES]
+Generate SHA256 checksum from stdin or SHA256 sigs for FILES.
+--mdb [FILES]
+Generate .mdb signatures for FILES.
+--html-normalise=FILE
+Create normalised HTML files comment.html, nocomment.html, and script.html in current working directory.
+--utf16-decode=FILE
+Decode UTF16 encoded data.
+--vba=FILE
+Extract VBA/Word6 macros from given MS Office document.
+--vba-hex=FILE
+Extract Word6 macros from given MS Office document and display the corresponding hex values.
+-i, --info
+Print a CVD information and verify MD5 and a digital signature.
+-b, --build
+Build a CVD file. -s, --server is required.
+--server
+ClamAV Signing Service address (for virus database maintainers only).
+--datadir=DIR
+Use DIR as the default database directory for all operations.
+--unpack=FILE, -u FILE
+Unpack FILE (CVD) to a current directory.
+--unpack-current
+Unpack a local CVD file (main or daily) to current directory.
+--diff=OLD NEW, -d OLD NEW
+Create a diff file for OLD and NEW CVDs/INCDIRs.
+--run-cdiff=FILE, -r FILE
+Execute update script FILE in current directory.
+--verify-cdiff=FILE, -r FILE
+Verify DIFF against CVD/INCDIR.
+-l[FILE], --list-sigs[=FILE]
+List all signature names from the local database directory (default) or from FILE.
+-fREGEX, --find-sigs=REGEX
+Find and display signatures from the local database directory which match the given REGEX. The whole signature body (name, hex string, etc.) is checked.
+-fREGEX, --decode-sigs=REGEX
+Decode signatures read from the standard input (eg. piped from --find-sigs)
+-fREGEX, --test-sigs=DATABASE TARGET_FILE
+Test all signatures from DATABASE against TARGET_FILE. This option will only give valid results if the target file is the final one (after unpacking, normalization, etc.) for which the signatures were created.

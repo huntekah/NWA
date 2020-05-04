@@ -1,0 +1,311 @@
+Autor: Dawid Kubicki (412146)
+
+Zadanie 1
+
+
+Wylistowanie interfejsow sieciowych i nastepnie na ich bazie uruchomienie komendy ethtool z flaga k i podaniem wybranego interfejsu. W raporcie usuniete zostaly rekordy z [FIXED].
+
+
+ifconfig -a
+ethtool -k eth0
+
+
+ Features for eth0:
+rx-checksumming: off
+tx-checksumming: on
+       tx-checksum-ip-generic: on
+scatter-gather: on
+    tx-scatter-gather: on
+tcp-segmentation-offload: on
+    tx-tcp-segmentation: on
+    tx-tcp-mangleid-segmentation: off
+udp-fragmentation-offload: off
+generic-segmentation-offload: on
+generic-receive-offload: on
+rx-vlan-offload: on
+tx-nocache-copy: off
+rx-fcs: off
+rx-all: off
+
+
+
+
+Opisy:
+
+
+rx i tx-checksumming :
+
+
+ * TX Odciążenie sumy kontrolnej
+ * LCO: Lokalne odciążenie sumy kontrolnej
+ * RCO: Zdalne odciążenie sumy kontrolnej
+
+
+Obliczanie sumy kontrolnej jest formą kontroli redundancji w celu ochrony integralności danych. Zasadniczo obliczenia sumy kontrolnej są używane dla danych sieciowych.
+
+
+scatter-gatther:
+
+
+W scatter/gather I/O, jest metodą wejścia i wyjścia, za pomocą której jedno wywołanie procedury sekwencyjnie odczytuje dane z wielu buforów i zapisuje je w jednym strumieniu danych lub odczytuje dane z strumień danych i zapisuje go w wielu buforach, jak zdefiniowano w wektorze buforów. Rozpraszanie / zbieranie odnosi się do procesu zbierania danych lub rozpraszania danych do danego zestawu buforów. Vectored I / O może działać synchronicznie lub asynchronicznie. Głównymi powodami korzystania z wektorowych we / wy są wydajność i wygoda.
+tcp-segmentation-offload:
+
+
+Odciążenie segmentacji TCP służy do zmniejszenia obciążenia procesora TCP / IP w szybkich sieciach. OSP rozkłada duże grupy danych przesyłanych przez sieć na mniejsze segmenty, które przechodzą przez wszystkie elementy sieci między źródłem a miejscem docelowym. Ten typ odciążenia polega na kontrolerze interfejsu sieciowego (NIC) w celu segmentacji danych, a następnie dodania nagłówków protokołu TCP, IP i protokołu warstwy danych do każdego segmentu. Karta sieciowa musi obsługiwać OSP. OSP jest również nazywany odciążeniem dużego segmentu (LSO).
+
+
+udp-fragmentation-offload:
+
+
+UFO robi dla UDP, co LSO robi dla TCP. Tam, gdzie TCP ma segmentację (strumienia bajtów na segmenty pasujące do pakietów IP), UDP ma tylko fragmentację - dużej wiadomości / datagramu na wiele fragmentów IP.
+
+
+generic-segmentation-offload:
+
+
+Generic Segmentation Offload (GSO) to szeroko stosowana implementacja oprogramowania TCP Segmentation Offload (TSO), która zmniejsza obciążenie związane z przetwarzaniem poszczególnych pakietów. Podobnie jak TSO, GSO zyskuje na wydajności, umożliwiając aplikacjom wyższej warstwy przetwarzanie mniejszej liczby dużych pakietów (np. Rozmiar MTU 64 KB), zamiast przetwarzać większą liczbę małych pakietów (np. Rozmiar MTU 1500 KB), zmniejszając w ten sposób narzut na pakiet .
+
+
+Na przykład GSO umożliwia stosom jądra gościa przesyłanie zbyt dużych segmentów TCP, które znacznie przekraczają MTU interfejsu jądra; eliminuje to potrzebę segmentowania pakietów w ramach gościa i poprawia stosunek danych do obciążenia zarówno łącza gość-host, jak i magistrali PCI. Oczekuje się, że stos sieci gościa w tym scenariuszu będzie taki, że segmentacja ramek wyjściowych będzie miała miejsce albo w NIC HW, albo tam, gdzie ta funkcja sprzętowa jest niedostępna, albo w aplikacji hosta, albo w stosie sieciowym.
+
+
+generic-receive-offload:
+
+
+Generic Receive Offload (GRO) jest szeroko stosowaną techniką odciążania opartą na SW w celu zmniejszenia kosztów ogólnych przetwarzania pakietów. Dzięki ponownemu złożeniu małych pakietów w większe, GRO umożliwia aplikacjom bezpośrednie przetwarzanie mniejszej liczby dużych pakietów, zmniejszając w ten sposób liczbę pakietów do przetworzenia. Aby skorzystać z aplikacji opartych na DPDK, takich jak Open vSwitch, DPDK zapewnia również własną implementację GRO. W DPDK GRO jest implementowany jako samodzielna biblioteka. Aplikacje jawnie używają biblioteki GRO do ponownego składania pakietów.
+
+
+rx-vlan-offload:
+Określa, czy należy włączyć przyspieszenie RX VLAN
+
+
+tx-nocache-copy:
+to funkcja, która omija lokalną pamięć podręczną i zapisuje dane w przestrzeni użytkownika bezpośrednio do pamięci.
+Nowe jądra mają domyślnie wyłączoną tę funkcję, podczas gdy w niektórych dystrybucjach Linuksa jest włączona.
+Zaleca się wyłączenie tej funkcji, ponieważ może to obniżyć wydajność.
+
+
+rx-fcs:
+Jedną z cech ethtool jest rx-fcs. Zwykle pole FCS pakietu jest obcinane przez ASIC HW przed wysłaniem go do bufora gniazda aplikacji (SKB). Ethtool pozwala ustawić parametr rx-fcs, aby FCS nie został obcięty, co pozwala przekazać go do aplikacji do analizy.
+
+
+rx-all:
+Ethtool pozwala ustawić parametr rx-all, aby wszystkie pola pakietów zostały obcięte.
+
+
+
+
+
+
+Zadanie 2
+
+
+
+
+Stan przed zmiana rdzenia obslugujacego karte sieciowa:
+
+
+
+
+PING google.pl (172.217.16.35) 56(84) bytes of data.
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=1 ttl=63 time=30.4 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=2 ttl=63 time=22.2 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=3 ttl=63 time=19.0 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=4 ttl=63 time=13.8 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=5 ttl=63 time=8.86 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=6 ttl=63 time=5.78 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=7 ttl=63 time=5.60 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=8 ttl=63 time=5.56 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=9 ttl=63 time=5.66 ms
+64 bytes from waw02s14-in-f3.1e100.net (172.217.16.35): icmp_seq=10 ttl=63 time=5.44 ms
+^C
+--- google.pl ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9028ms
+rtt min/avg/max/mdev = 5.441/12.252/30.487/8.443 ms
+
+
+
+
+
+
+mpstat -A
+Linux 4.17.0-kali1-amd64 (kali)     12/18/2019     _x86_64_    (4 CPU)
+
+
+08:58:42 AM  CPU        %usr   %nice        %sys %iowait        %irq   %soft  %steal  %guest  %gnice   %idle
+08:58:42 AM  all        8.13        0.01        1.66        0.30        0.00        0.18        0.00        0.00        0.00   89.73
+08:58:42 AM        0        8.39        0.03        1.52        0.25        0.00        0.05        0.00        0.00        0.00   89.76
+08:58:42 AM        1        7.98        0.00        1.66        0.34        0.00        0.03        0.00        0.00        0.00   89.99
+08:58:42 AM        2        8.41        0.00        1.68        0.26        0.00        0.02        0.00        0.00        0.00   89.63
+08:58:42 AM        3        7.75        0.00        1.77        0.34        0.00        0.61        0.00        0.00        0.00   89.53
+
+
+08:58:42 AM NODE        %usr   %nice        %sys %iowait        %irq   %soft  %steal  %guest  %gnice   %idle
+08:58:42 AM  all        8.13        0.01        1.66        0.30        0.00        0.18        0.00        0.00        0.00   89.73
+08:58:42 AM        0        8.13        0.01        1.66        0.30        0.00        0.18        0.00        0.00        0.00   89.73
+
+
+08:58:42 AM  CPU        intr/s
+08:58:42 AM  all   1790.53
+08:58:42 AM        0         85.30
+08:58:42 AM        1         80.47
+08:58:42 AM        2         85.98
+08:58:42 AM        3        333.76
+
+
+08:58:42 AM  CPU            0/s            1/s            8/s            9/s           12/s           14/s           15/s           18/s           19/s           20/s           21/s           22/s          NMI/s          LOC/s          SPU/s          PMI/s          IWI/s          RTR/s          RES/s          CAL/s          TLB/s          TRM/s          THR/s          DFR/s          MCE/s          MCP/s          HYP/s          HRE/s          HVS/s          ERR/s          MIS/s          PIN/s          NPI/s          PIW/s
+08:58:42 AM        0           0.01           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           2.91           0.00           0.00          81.34           0.00           0.00           0.00           0.00         268.72          32.71          28.48           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.05           0.00           0.00           0.00
+08:58:42 AM        1           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00          13.14           0.00           0.01           0.00          83.80           0.00           0.00           0.00           0.00         256.32          31.59          26.89           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00
+08:58:42 AM        2           0.00           0.00           0.00           0.00           3.15           0.00           0.00           0.00           0.00           0.00          30.94           0.00           0.00          84.81           0.00           0.00           0.00           0.00         266.11          30.15          28.49           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00
+08:58:42 AM        3           0.00           0.84           0.00           0.00           0.00           0.00           1.03           0.00         245.82           0.00           0.00           0.00           0.00          84.18           0.00           0.00           0.00           0.00         238.04          34.90          28.94           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00           0.00
+
+
+08:58:42 AM  CPU           HI/s        TIMER/s   NET_TX/s   NET_RX/s        BLOCK/s IRQ_POLL/s  TASKLET/s        SCHED/s  HRTIMER/s          RCU/s
+08:58:42 AM        0           0.00          31.86           0.10           0.00           0.00           0.00           0.00          24.07           0.00          29.27
+08:58:42 AM        1           0.00          32.49           0.13           0.00           0.00           0.00           0.00          23.18           0.00          24.67
+08:58:42 AM        2           0.00          35.83           0.19           0.00           0.00           0.00           0.00          25.22           0.00          24.73
+08:58:42 AM        3           0.00          36.74           1.15         245.79           0.00           0.00           1.01          24.30           0.00          24.78
+root@kali:~/Desktop#
+root@kali:~/Desktop#  cat /proc/interrupts
+               CPU0           CPU1           CPU2           CPU3           
+  0:             28              0              0              0   IO-APIC   2-edge          timer
+  1:              0              0              0           2680   IO-APIC   1-edge          i8042
+  8:              0              0              0              0   IO-APIC   8-edge          rtc0
+  9:              0              0              0              0   IO-APIC   9-fasteoi   acpi
+ 12:              0              0           9944              0   IO-APIC  12-edge          i8042
+ 14:              0              0              0              0   IO-APIC  14-edge          ata_piix
+ 15:              0              0              0           3294   IO-APIC  15-edge          ata_piix
+ 18:              0              0              2              0   IO-APIC  18-fasteoi   vboxvideo
+ 19:              0              0              0         767675   IO-APIC  19-fasteoi   eth0
+ 20:              0          42972              0              0   IO-APIC  20-fasteoi   vboxguest
+ 21:           9079              0          99032              0   IO-APIC  21-fasteoi   ahci[0000:00:0d.0], snd_intel8x0
+ 22:              0             25              0              0   IO-APIC  22-fasteoi   ohci_hcd:usb1
+NMI:              0              0              0              0   Non-maskable interrupts
+LOC:         257159         265760         271612         266359   Local timer interrupts
+SPU:              0              0              0              0   Spurious interrupts
+PMI:              0              0              0              0   Performance monitoring interrupts
+IWI:              0              0              0              1   IRQ work interrupts
+RTR:              0              0              0              0   APIC ICR read retries
+RES:         852352         818235         848298         760315   Rescheduling interrupts
+CAL:         102299          98980          94198         109045   Function call interrupts
+TLB:          89078          84147          88968          90389   TLB shootdowns
+TRM:              0              0              0              0   Thermal event interrupts
+THR:              0              0              0              0   Threshold APIC interrupts
+DFR:              0              0              0              0   Deferred Error APIC interrupts
+MCE:              0              0              0              0   Machine check exceptions
+MCP:             11             11             11             11   Machine check polls
+HYP:              0              0              0              0   Hypervisor callback interrupts
+HRE:              0              0              0              0   Hyper-V reenlightenment interrupts
+HVS:              0              0              0              0   Hyper-V stimer0 interrupts
+ERR:              0
+MIS:            160
+PIN:              0              0              0              0   Posted-interrupt notification event
+NPI:              0              0              0              0   Nested posted-interrupt event
+PIW:              0              0              0              0   Posted-interrupt wakeup event
+
+
+
+
+
+
+
+/proc/irq/N/smp_affinity
+
+
+eth0 znajduje jako rekord 19 i przypisany do rdzenia CPU 3. Wykonana została następująca komenda: echo 4 > /proc/irq/19/smp_affinity. W ten sposób do konfiguracji została wpisana 4. Następnie wygenerowany został ruch poleceniem: ping google.com -l 4000. Po wywołaniu polecenia cat /proc/interrupts widoczna jest zmiana procesora:
+
+
+cat /proc/interrupts
+               CPU0           CPU1           CPU2           CPU3           
+  0:             28              0              0              0   IO-APIC   2-edge          timer
+  1:              0              0              0           4717   IO-APIC   1-edge          i8042
+  8:              0              0              0              0   IO-APIC   8-edge          rtc0
+  9:              0              0              0              0   IO-APIC   9-fasteoi   acpi
+ 12:              0              0          13788              0   IO-APIC  12-edge          i8042
+ 14:              0              0              0              0   IO-APIC  14-edge          ata_piix
+ 15:              0              0              0           4224   IO-APIC  15-edge          ata_piix
+ 18:              0              0              2              0   IO-APIC  18-fasteoi   vboxvideo
+ 19:           1963              0            737         771598   IO-APIC  19-fasteoi   eth0
+ 20:              0          58401              0              0   IO-APIC  20-fasteoi   vboxguest
+ 21:           9079              0         128428              0   IO-APIC  21-fasteoi   ahci[0000:00:0d.0], snd_intel8x0
+ 22:              0             25              0              0   IO-APIC  22-fasteoi   ohci_hcd:usb1
+NMI:              0              0              0              0   Non-maskable interrupts
+LOC:         320944         322817         337018         330251   Local timer interrupts
+SPU:              0              0              0              0   Spurious interrupts
+PMI:              0              0              0              0   Performance monitoring interrupts
+IWI:              0              0              0              1   IRQ work interrupts
+RTR:              0              0              0              0   APIC ICR read retries
+RES:        1075398        1024830        1040412         976190   Rescheduling interrupts
+CAL:         112163         114137         107553         119971   Function call interrupts
+TLB:          98723          98844         101800         100772   TLB shootdowns
+TRM:              0              0              0              0   Thermal event interrupts
+THR:              0              0              0              0   Threshold APIC interrupts
+DFR:              0              0              0              0   Deferred Error APIC interrupts
+MCE:              0              0              0              0   Machine check exceptions
+MCP:             14             14             14             14   Machine check polls
+HYP:              0              0              0              0   Hypervisor callback interrupts
+HRE:              0              0              0              0   Hyper-V reenlightenment interrupts
+HVS:              0              0              0              0   Hyper-V stimer0 interrupts
+ERR:              0
+MIS:            161
+PIN:              0              0              0              0   Posted-interrupt notification event
+NPI:              0              0              0              0   Nested posted-interrupt event
+PIW:              0              0              0              0   Posted-interrupt wakeup event
+
+
+
+
+Zadanie 3.
+
+
+RSS: Receive Side Scaling - 1)
+RPS: Receive Packet Steering - 2)
+RFS: Receive Flow Steering - 3)
+Accelerated Receive Flow Steering - 4) 
+XPS: Transmit Packet Steering - 5)
+
+
+1. Współczesne karty sieciowe obsługują wiele kolejek deskryptora odbierania i przesyłania (wiele kolejek). Przy odbiorze karta sieciowa może wysyłać różne pakiety do różnych kolejki do dystrybucji przetwarzania między procesorami. Karta sieciowa dystrybuuje pakiety według zastosowanie filtra do każdego pakietu, który przypisuje go do jednego z małej liczby ogicznych przepływów. Pakiety dla każdego przepływu są kierowane do osobnego odbiornika kolejka, która z kolei może być przetwarzana przez osobne procesory. Ten mechanizm jest ogólnie znany jako „Skalowanie po stronie odbiorczej” (RSS). Celem RSS i inne techniki skalowania to równomierne zwiększenie wydajności. Dystrybucja z wielu kolejek może być również używana do ustalania priorytetów ruchu, ale to nie jest przedmiotem tych technik.
+Filtr używany w RSS jest zazwyczaj funkcją skrótu w siecii lub nagłówki warstw transportowych - na przykład 4-krotny skrót Adresy IP i porty TCP pakietu. Najpopularniejszy sprzęt implementacja RSS wykorzystuje 128-wejściową tabelę pośredni, w której każdy wpis przechowuje numer kolejki. Kolejka odbiorcza dla pakietu jest określona przez maskowanie niskiego rzędu siedmiu bitów obliczonego skrótu dla pakiet (zwykle skrót Toeplitz), biorąc ten numer jako klucz do tablica pośrednia i odczyt odpowiedniej wartości. Niektóre zaawansowane karty sieciowe umożliwiają sterowanie pakietami w kolejkach na podstawie programowalne filtry. Na przykład serwer związany z pakietem 80 portów TCP mogą zostać skierowane do własnej kolejki odbiorczej. Takie filtry „n-krotkowe” mogą być skonfigurowany z ethtool (--config-ntuple).
+
+
+2. Odbieranie sterowania pakietami (RPS) jest logicznie implementacją oprogramowania RSS. Będąc w oprogramowaniu, jest koniecznie wywoływane później w ścieżce danych. Natomiast RSS wybiera kolejkę, a tym samym procesor, który uruchomi sprzęt program obsługi przerwań, RPS wybiera procesor do wykonania przetwarzania protokołu powyżej obsługi przerwań. Dokonuje się tego poprzez umieszczenie pakietu w kolejce zaległości żądanego procesora i wybudzanie procesora w celu przetworzenia. RPS ma pewne zalety w stosunku do RSS: może być używany z dowolną kartą sieciową, filtry programowe można łatwo dodawać do skrótów w stosunku do nowych protokołów, nie zwiększa szybkości przerwań urządzenia sprzętowego (chociaż tak jestwprowadzić przerwania między procesorami (IPI). RPS jest wywoływany podczas dolnej połowy procedury obsługi przerwań odbierania, kiedy sterownik wysyła pakiet do stosu sieciowego za pomocą netif_rx () lub netif_receive_skb (). Wywołują one funkcję get_rps_cpu (), która wybiera kolejkę, która powinna przetworzyć pakiet.
+Pierwszym krokiem w określeniu docelowego procesora dla RPS jest obliczenie a hash przepływowy nad adresami lub portami pakietu (2-krotny lub 4-krotny skrót) w zależności od protokołu). Służy to jako spójny skrót powiązany przepływ pakietu. Hash jest dostarczany przez sprzęt lub zostanie obliczony na stosie. Odpowiedni sprzęt może przekazać skrót deskryptor odbioru dla pakietu; zwykle byłoby tak samo skrót używany do RSS (np. obliczony skrót Toeplitz). Hash jest zapisany w skb-> hash i może być używany gdzie indziej na stosie jako skrót przepływ pakietu.Do każdej kolejki sprzętowej do odbioru przypisana jest lista procesorów RPS może kolejkować pakiety w celu przetworzenia. Dla każdego odebranego pakietu indeks do listy jest obliczany na podstawie modulacji mieszania przepływu o rozmiarze z listy. Indeksowany procesor jest celem przetwarzania pakietu, a pakiet jest umieszczony w kolejce do końca kolejki zaległości tego procesora. W koniec procedury dolnej połowy IPI są wysyłane do dowolnych procesorów, dla których pakiety zostały umieszczone w kolejce do kolejki zaległości. IPI budzi zaległości przetwarzanie na zdalnym procesorze, a następnie kolejki pakietów są przetwarzane w górę stosu sieciowego.
+Konfiguracja RPS
+RPS wymaga jądra skompilowanego z symbolem kconfig CONFIG_RPS (włączony domyślnie dla SMP). Nawet po wkompilowaniu RPS pozostaje wyłączone do wyraźnie skonfigurowane. Lista procesorów, do których RPS może przekazywać ruch można skonfigurować dla każdej kolejki odbiorczej za pomocą wpisu pliku sysfs:
+
+
+/ sys / class / net / <dev> / queues / rx- <n> / rps_cpus
+
+
+Ten plik implementuje bitmapę procesorów. RPS jest wyłączony, gdy wynosi zero
+(domyślnie), w którym to przypadku pakiety są przetwarzane podczas przerywania
+PROCESOR. Dokumentacja / IRQ-affinity.txt wyjaśnia, w jaki sposób przypisane są procesory mapa bitowa.
+
+
+3. Podczas gdy RPS steruje pakietami wyłącznie na podstawie skrótu, a więc ogólnie
+zapewnia dobry rozkład obciążenia, nie bierze pod uwagę lokalizacja aplikacji. Odbywa się to poprzez odbieranie sterowania przepływem (RFS). Celem RFS jest zwiększenie szybkości transmisji danych pamięci podręcznej poprzez sterowanie przetwarzanie pakietów przez jądro do procesora, w którym wątek aplikacji
+zużycie pakietu jest uruchomione. RFS opiera się na tych samych mechanizmach RPS aby kolejkować pakiety do zaległości innego procesora i obudzić to PROCESOR.
+
+
+W RFS pakiety nie są przekazywane bezpośrednio przez wartość ich wartości skrótu, ale skrót jest używany jako indeks w tabeli odnośników. Ta tabela mapuje
+przepływa do procesorów, w których te przepływy są przetwarzane. Hash przepływu
+(patrz sekcja RPS powyżej) służy do obliczania indeksu w tej tabeli. Procesor zarejestrowany w każdym wpisie jest tym, który ostatni przetworzył przepływ.
+Jeśli wpis nie zawiera prawidłowego procesora, pakiety są mapowane na ten wpis
+są sterowane za pomocą zwykłego RPS. Wiele wpisów w tabeli może wskazywać na
+ten sam procesor. Rzeczywiście, przy wielu przepływach i niewielu procesorach jest bardzo prawdopodobne pojedynczy wątek aplikacji obsługuje przepływy z wieloma różnymi skrótami przepływów.
+
+
+rps_sock_flow_table to globalna tabela przepływu, która zawiera * pożądany * procesor dla przepływów: procesor, który aktualnie przetwarza przepływ w przestrzeni użytkownika. Każda wartość tabeli jest indeksem procesora, który jest aktualizowany podczas wywołań recvmsg
+i sendmsg (w szczególności inet_recvmsg (), inet_sendmsg (), inet_sendpage ()
+i tcp_splice_read ()).
+
+
+
+
+4. XPS jest konfigurowany dla kolejki transmisji przez ustawienie mapy bitowej na
+Procesory / kolejki odbiorcze, które mogą wykorzystywać tę kolejkę do transmisji. Rewers mapowanie, z procesorów do kolejek transmisji lub z kolejek odbiorczych do transmisji kolejki, są obliczane i utrzymywane dla każdego urządzenia sieciowego. Gdy przesyłając pierwszy pakiet w przepływie, funkcja get_xps_queue () to wywoływany, aby wybrać kolejkę. Ta funkcja używa identyfikatora kolejki odbiorczej
+dla połączenia gniazda dla dopasowania w kolejce odbiorczej do przesłania
+tabela przeglądowa. Alternatywnie, ta funkcja może również użyć identyfikatora
+uruchamianie procesora jako klucza do tabeli wyszukiwania procesora do kolejki. Jeśli Identyfikator odpowiada pojedynczej kolejce używanej do transmisji. Jeśli wiele
+kolejki pasują, jedna jest wybierana za pomocą skrótu przepływu w celu obliczenia indeksu do zestawu. Podczas wybierania kolejki nadawczej na podstawie kolejki odbiorczej mapa, urządzenie nadawcze nie jest sprawdzane względem urządzenia odbiorczego jako takiego wymaga drogiej operacji wyszukiwania w ścieżce danych.

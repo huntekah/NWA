@@ -1,0 +1,67 @@
+clamav zawiera
+
+main.crb
+main.cvd
+main.fp
+main.hdb
+main.hsb
+main.info
+main.mdb
+main.msb
+main.ndb
+main.sfp
+
+
+*.ndb *.ndu: sygnatury rozszerzone
+
+*.ldb *.ldu; *.idb: sygnatury logiczne
+
+*.cdb: Container sygnatury metadata
+
+*.cbc: sygnatury bytecode
+
+*.pdb *.gdb *.wdb: sygnatury Phishing URL 
+
+
+*.hdb *.hsb *.hdu *.hsu: sygnatury plików hash 
+
+*.mdb *.msb *.mdu *.msu:  sygnatury PE sekcji  hash 
+
+*.yar *.yara: reguły Yara
+
+
+*.fp *.sfp *.ign *.ign2: pliki i sygnatury - biała lista
+
+*.pwdb: zaszyfrowane hasła
+
+*.info: baza danych - info
+
+
+
+nazwy sygnatur w CLAMAV
+
+    Worm for Internet worms
+    Trojan for backdoor programs
+    Adware for adware
+    Flooder for flooders
+    HTML for HTML files
+    Email for email messages
+    IRC for IRC trojans
+    JS for Java Script malware
+    PHP for PHP malware
+    ASP for ASP malware
+    VBS for VBS malware
+    BAT for BAT malware
+    W97M, W2000M for Word macro viruses
+    X97M, X2000M for Excel macro viruses
+    O97M, O2000M for generic Office macro viruses
+    DoS for Denial of Service attack software
+    DOS for old DOS malware
+    Exploit for popular exploits
+    VirTool for virus construction kits
+    Dialer for dialers
+    Joke for hoaxes
+
+dodajemy po prostu własną sygnaturę do odpowiedniego pliku z odpowiednim rozszerzeniem w zalezności czego sygnatura dotyczy.
+na przykład:
+sigtool --md5 wlasna.exe > wlasna.hdb

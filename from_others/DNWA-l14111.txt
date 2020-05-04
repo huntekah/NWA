@@ -1,0 +1,19 @@
+﻿Zadanie 2
+
+Generowanie 31 pakietów TCP o wielkości 1234, z danymi z pliku tcp_data.txt (“abcd”)”:
+> hping3 localhost -c 31 -d 1234 -E tcp_data.txt
+
+
+Reguły:
+
+active tcp any any -> any any (msg:"TCP: 'abcd', size '1234'"; content: "abcd"; dsize: 1234; sid:100000001; rev:1; activates: 1)
+
+dynamic tcp any any -> any any (activated_by:1; count: 30; sid:100000002;)
+
+
+
+Zadanie 3
+
+Nie da się wytworzyć reguły, która w jednej chwili staje się aktywna, a po zadanym czasie się deaktywuje. 
+
+Najbardziej zbliżony efekt dałoby połączenie użycia reguł active/dynamic i SnortSama - pluginu pozwalającego na blokowanie całego połączenia na określony czas, poprzez dynamiczne modyfikowanie firewalla. W tym podejściu blokowane byłoby całe połączenie, a nie konkretne pakiety,

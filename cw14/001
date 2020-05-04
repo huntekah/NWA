@@ -1,0 +1,48 @@
+Różnice pomiędzy Suricatą a Snortem
+
+Snort to otwarta wersja silnika IDS wykorzystywanego przez Sourcefire. 
+Suricata to przedsięwzięcie całkowicie otwarte, częściowo finansowane przez rząd USA i niektóre prywatne firmy. Cóż, technicznie rzecz biorąc, Suricata jest finansowana przez Open Information Security Foundation, ale otrzymują fundusze z Departamentu Bezpieczeństwa Wewnętrznego USA i innych. (Suricata: https://www.openinfosecfoundation.org/index.php/download-suricata). 
+Suricata jest wielowątkowa i teoretycznie powinna lepiej skalować się w sieciach o bardzo dużej przepustowości. Niestety jednak szeroko zakrojone testy przeprowadzone przez fachowców Snorta pokazują, że tak naprawdę nie ma dużej różnicy w przepustowości pakietów w rzeczywistych sieciach między Snortem a Suricatą.
+
+Ostatecznie sprowadza się to do osobistych preferencji. Obecnie Suricata przechwytuje i rejestruje nieco więcej „kontekstu” wokół alertów, ale Snort nadrabia zaległości w tym obszarze.
+
+Ponadto w Surikacie port niema wpływu na wykrywanie protokołu, natomiast w Snorcie aby preprocesory mogły działać, powinien być skonfigurowany port.
+
+Snort - zalety:
+
+Skalowalność: Snort można z powodzeniem wdrożyć w dowolnym środowisku sieciowym.
+Elastyczność i użyteczność: Snort może działać w różnych systemach operacyjnych, w tym Linux, Windows i Mac OS X.
+Na żywo i w czasie rzeczywistym: Snort może dostarczać informacje o zdarzeniach ruchu sieciowego w czasie rzeczywistym.
+Elastyczność we wdrażaniu: Istnieje tysiące sposobów wdrażania Snorta i niezliczonych baz danych, systemów rejestrowania i narzędzi, z którymi może on współpracować.
+Szybkość w wykrywaniu i reagowaniu na zagrożenia bezpieczeństwa: Używany w połączeniu z zaporą ogniową i innymi warstwami infrastruktury bezpieczeństwa, Snort pomaga organizacjom wykrywać i reagować na crackery systemowe, robaki, luki w sieci, zagrożenia bezpieczeństwa i osoby naruszające zasady, które mają na celu usunięcie sieci i systemy komputerowe.
+Modułowy moduł detekcji: czujniki Snort są modułowe i mogą monitorować wiele maszyn z jednej fizycznej i logicznej lokalizacji. Snort należy umieścić przed zaporą, za zaporą, obok zapory i wszędzie indziej, aby monitorować całą sieć. W rezultacie organizacje używają Snorta jako rozwiązania bezpieczeństwa, aby dowiedzieć się, czy istnieją nieautoryzowane próby włamania się do sieci lub czy haker uzyskał nieautoryzowany dostęp do systemu sieciowego.
+
+Suricata - zalety:
+
+Silnik Open Source: siła społeczności działa dobrze w obronie bezpieczeństwa IT, ponieważ społeczność jest bardziej skuteczna niż pojedyncza organizacja w wychwytywaniu cech pojawiających się zagrożeń.
+Wielowątkowa: architektura wielowątkowa pozwala silnikowi korzystać z architektury wielordzeniowej i wieloprocesorowej współczesnych systemów.
+Obsługuje reputację IP: Włączając reputację i podpisy do silnika, Suricata może oznaczać ruch ze znanych złych źródeł.
+Automatyczne wykrywanie protokołu: Preprocesory automatycznie identyfikują protokół używany w strumieniu sieci i stosują odpowiednie reguły, niezależnie od portu numerycznego. Automatyczne wykrywanie protokołu zapobiega również błędom użytkownika i błędom, które w rzeczywistości są bardziej powszechne.
+
+
+
+
+Różnice pomiędzy wersjami Snort 2.9.x, Snort 3.x
+
+
+Konstrukcja przyjazna dla użytkownika - nie trzeba już konfigurować pamięci, portów, argumentów itp.
+Wbudowana dokumentacja
+Wbudowana konfiguracja
+Obsługa błędów i wielu błędów
+Weryfikacja konfiguracji podczas uruchamiania (nie trzeba już uruchamiać „-T” dla trybu testowego)
+Prostszy język reguł
+Ułatwiamy pisanie reguł.
+Lepkie bufory
+Niestandardowe bufory http
+Automatyczne wykrywanie wszystkich protokołów
+Powłoka wiersza poleceń
+Zabezpieczone na localhost
+Pozwala komuś na ponowne załadowanie konfiguracji
+Umożliwia wstrzymanie i wznowienie wykrywania
+Wielowątkowy i wielordzeniowy
+Całkowicie nowy projekt wielowątkowości, utrzymujący jedną trwałą konfigurację dla wielu wątków.

@@ -1,0 +1,83 @@
+PRZED 
+
+
+     CPU0       CPU1       CPU2       
+  0:         28          0          0   IO-APIC   2-edge      timer
+  1:        651          0          0   IO-APIC   1-edge      i8042
+  8:          0          0          0   IO-APIC   8-edge      rtc0
+  9:          0          0          0   IO-APIC   9-fasteoi   acpi
+ 12:          0          0        868   IO-APIC  12-edge      i8042
+ 14:          0          0          0   IO-APIC  14-edge      ata_piix
+ 15:          0          0        256   IO-APIC  15-edge      ata_piix
+ 18:          0          2          0   IO-APIC  18-fasteoi   vboxvideo
+ 19:          0       6222         35   IO-APIC  19-fasteoi   eth0
+ 20:       3272          0          0   IO-APIC  20-fasteoi   vboxguest
+ 21:      19753          0          0   IO-APIC  21-fasteoi   ahci[0000:00:0d.0], snd_intel8x0
+ 22:          0          0         25   IO-APIC  22-fasteoi   ohci_hcd:usb1
+NMI:          0          0          0   Non-maskable interrupts
+LOC:      27490      34087      31265   Local timer interrupts
+SPU:          0          0          0   Spurious interrupts
+PMI:          0          0          0   Performance monitoring interrupts
+IWI:          1          0          0   IRQ work interrupts
+RTR:          0          0          0   APIC ICR read retries
+RES:      86296      91761      88209   Rescheduling interrupts
+CAL:      13728      23647      18544   Function call interrupts
+TLB:      12517      13389      12428   TLB shootdowns
+TRM:          0          0          0   Thermal event interrupts
+THR:          0          0          0   Threshold APIC interrupts
+DFR:          0          0          0   Deferred Error APIC interrupts
+MCE:          0          0          0   Machine check exceptions
+MCP:          1          1          1   Machine check polls
+HYP:          0          0          0   Hypervisor callback interrupts
+HRE:          0          0          0   Hyper-V reenlightenment interrupts
+HVS:          0          0          0   Hyper-V stimer0 interrupts
+ERR:          0
+MIS:          0
+PIN:          0          0          0   Posted-interrupt notification event
+NPI:          0          0          0   Nested posted-interrupt event
+PIW:          0          0          0   Posted-interrupt wakeup event
+
+
+
+
+
+
+PO
+
+
+
+           CPU0       CPU1       CPU2       
+  0:         28          0          0   IO-APIC   2-edge      timer
+  1:       2357          0          0   IO-APIC   1-edge      i8042
+  8:          0          0          0   IO-APIC   8-edge      rtc0
+  9:          0          0          0   IO-APIC   9-fasteoi   acpi
+ 12:          0          0       4188   IO-APIC  12-edge      i8042
+ 14:          0          0          0   IO-APIC  14-edge      ata_piix
+ 15:          0          0        896   IO-APIC  15-edge      ata_piix
+ 18:          0          2          0   IO-APIC  18-fasteoi   vboxvideo
+ 19:        149      12162        299   IO-APIC  19-fasteoi   eth0
+ 20:      11052          0          0   IO-APIC  20-fasteoi   vboxguest
+ 21:      28216          0          0   IO-APIC  21-fasteoi   ahci[0000:00:0d.0], snd_intel8x0
+ 22:          0          0         25   IO-APIC  22-fasteoi   ohci_hcd:usb1
+NMI:          0          0          0   Non-maskable interrupts
+LOC:      68571      77460      74858   Local timer interrupts
+SPU:          0          0          0   Spurious interrupts
+PMI:          0          0          0   Performance monitoring interrupts
+IWI:          1          0          0   IRQ work interrupts
+RTR:          0          0          0   APIC ICR read retries
+RES:     174966     188236     179471   Rescheduling interrupts
+CAL:     120206     101415      98706   Function call interrupts
+TLB:     118533      87116      90103   TLB shootdowns
+TRM:          0          0          0   Thermal event interrupts
+THR:          0          0          0   Threshold APIC interrupts
+DFR:          0          0          0   Deferred Error APIC interrupts
+MCE:          0          0          0   Machine check exceptions
+MCP:          3          3          3   Machine check polls
+HYP:          0          0          0   Hypervisor callback interrupts
+HRE:          0          0          0   Hyper-V reenlightenment interrupts
+HVS:          0          0          0   Hyper-V stimer0 interrupts
+ERR:          0
+MIS:          0
+PIN:          0          0          0   Posted-interrupt notification event
+NPI:          0          0          0   Nested posted-interrupt event
+PIW:          0          0          0   Posted-interrupt wakeup event

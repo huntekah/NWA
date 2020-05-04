@@ -1,0 +1,12 @@
+rx-xhexksumming
+tx-checksumming
+scatter-gather
+tcp-segmentation-offload
+udp-fragmentation-offload
+generic-segmentation-offload
+rx-vlan-offload
+tx-nocache-copy
+rx-fcs
+rx-all
+
+parametry, ktore mona zmienic

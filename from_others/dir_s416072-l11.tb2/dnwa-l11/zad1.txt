@@ -1,0 +1,37 @@
+1.unix shell log 
+
+jest to zbiór wpisaywanych poleceń do 8 komputerów UNIX podczas kursu.
+zawiera np. takie komendy jak ls grep exit itp.
+
+jak najbardziej na czasie zbiór danych.
+
+2.network
+
+dane zostały zebrane za pomocą programu tcpdump - kolekcja ruchu sieciowego.
+dla każdego pakietu tcp baza danych zawiera:
+time stamp,
+adres ip nadawcy,
+port nadawcy,
+adres ip odbiorcy,
+port odbiorcy,
+itp.
+
+dla każdego pakietu udp zawarte są informacje:
+time stamp,
+adres ip nadawcy,
+port nadawcy,
+adres ip odbiorcy,
+port odbiorcy,
+długość pakietu.
+
+udp, tcp - usługi nadal używane.
+
+3.KDD CUP
+
+zestaw danych wykorzystywany w Trzecim Międzynarodowym Konkursie narzędzi 
+do odkrywania wiedzy i eksploracji danych.
+Zadaniem konkursowym było zbudowanie wykrywacza wtargnięć do sieci, czyli
+modelu predykcyjnego który rozróżnia niebezpieczne połączenia. 
+baza danych zawiera standardowy zestaw danych do skontrolowania, który obejmuje szeroki 
+zakres "wtargnięć" symulowanych w środowisku sieci wojskowej.
+

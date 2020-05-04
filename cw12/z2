@@ -1,0 +1,136 @@
+ output przed:
+
+            CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+   0:          8          0          0          0          0          0          0          0  IR-IO-APIC    2-edge      timer
+   1:      26596          0          0          0          0         11          0          0  IR-IO-APIC    1-edge      i8042
+   8:          0          0          1          0          0          0          0          0  IR-IO-APIC    8-edge      rtc0
+   9:      89523      22746          0          0          0          0          0          0  IR-IO-APIC    9-fasteoi   acpi
+  12:         41          0          0          0        191          0          0          0  IR-IO-APIC   12-edge      i8042
+  14:          0          0          0          0          0          0          0          0  IR-IO-APIC   14-fasteoi   INT344B:00
+  16:     575990          0          0          0          0          0          0        228  IR-IO-APIC   16-fasteoi   idma64.0, i2c_designware.0, i801_smbus
+ 120:          0          0          0          0          0          0          0          0  DMAR-MSI    0-edge      dmar0
+ 121:          0          0          0          0          0          0          0          0  DMAR-MSI    1-edge      dmar1
+ 126:          0          0          0          0          0          0          0         37  IR-PCI-MSI 360448-edge      mei_me
+ 127:          0         19          0          0          0          0          0          0  IR-PCI-MSI 2097152-edge      nvme0q0
+ 128:       8963          0          0          0          0          0          0          0  IR-PCI-MSI 2097153-edge      nvme0q1
+ 129:          0       6626          0          0          0          0          0          0  IR-PCI-MSI 2097154-edge      nvme0q2
+ 130:          0          0       7989          0          0          0          0          0  IR-PCI-MSI 2097155-edge      nvme0q3
+ 131:          0          0          0       4898          0          0          0          0  IR-PCI-MSI 2097156-edge      nvme0q4
+ 132:          0          0          0          0       6110          0          0          0  IR-PCI-MSI 2097157-edge      nvme0q5
+ 133:          0          0          0          0          0       5214          0          0  IR-PCI-MSI 2097158-edge      nvme0q6
+ 134:          0          0          0          0          0          0       5621          0  IR-PCI-MSI 2097159-edge      nvme0q7
+ 135:          0          0          0          0          0          0          0       5976  IR-PCI-MSI 2097160-edge      nvme0q8
+ 136:          0          0          7          0          0          0          0          0  IR-PCI-MSI 520192-edge      enp0s31f6
+ 137:          0          0          0          0          0          0          0        405  IR-PCI-MSI 514048-edge      snd_hda_intel:card0
+ 144:     300792          0          0          0          0          0      71601          0  IR-PCI-MSI 327680-edge      xhci_hcd
+ 161:          0          0          0          0          0          0          0          0  INT344B:00  108  nxp-nci_i2c
+ 180:    6124847          0          0          0    1263385          0          0          0  IR-PCI-MSI 1048576-edge      iwlwifi
+ 181:   26630446          0          0          0          0    5877523          0          0  IR-PCI-MSI 32768-edge      i915
+ 183:     114229          0          0          0          0          0          0         19     dummy   44  rmi4_smbus
+ 184:          0          0          0          0          0          0          0          0      rmi4    1  rmi4-00.fn01
+ 185:          0          0          0          0          0          0          0          0      rmi4    2  rmi4-00.fn01
+ 186:          0          0          0          0          0          0     114095          0      rmi4    3  rmi4-00.fn12
+ 187:          0          0          0          0          0          0          0          0      rmi4    4  rmi4-00.fn12
+ 188:          0          0          0          0          0          0       4678          0      rmi4    6  rmi4-00.fn30
+ 189:          0          0          0          0          0          0        152          0      rmi4    7  rmi4-00.fn03
+ NMI:          0          0          0          0          0          0          0          0   Non-maskable interrupts
+ LOC:   34133608   31251813   30968122   30760110   34705710   31055708   35965374   30938463   Local timer interrupts
+ SPU:          0          0          0          0          0          0          0          0   Spurious interrupts
+ PMI:          0          0          0          0          0          0          0          0   Performance monitoring interrupts
+ IWI:    1610423        428        383        378        212     391932        372        385   IRQ work interrupts
+ RTR:          0          0          0          0          0          0          0          0   APIC ICR read retries
+ RES:    7302197    5054373    3053598    2209373    2341548    1763981    2028769    1547885   Rescheduling interrupts
+ CAL:    2270746    2233594    2223920    2199141    2213164    2213973    2173241    2176000   Function call interrupts
+ TLB:    3077501    3144753    3107272    3103386    3103578    3087853    3046810    3040888   TLB shootdowns
+ TRM:     387940     387940     387940     387940     387940     387940     387940     387940   Thermal event interrupts
+ THR:          0          0          0          0          0          0          0          0   Threshold APIC interrupts
+ DFR:          0          0          0          0          0          0          0          0   Deferred Error APIC interrupts
+ MCE:          0          0          0          0          0          0          0          0   Machine check exceptions
+ MCP:        450        446        446        446        446        446        445        445   Machine check polls
+ HYP:          0          0          0          0          0          0          0          0   Hypervisor callback interrupts
+ HRE:          0          0          0          0          0          0          0          0   Hyper-V reenlightenment interrupts
+ HVS:          0          0          0          0          0          0          0          0   Hyper-V stimer0 interrupts
+ ERR:          0
+ MIS:          0
+ PIN:          0          0          0          0          0          0          0          0   Posted-interrupt notification event
+ NPI:          0          0          0          0          0          0          0          0   Nested posted-interrupt event
+ PIW:          0          0          0          0          0          0          0          0   Posted-interrupt wakeup event
+
+
+
+ warto zwrocic uwagę na wiersz:
+ 
+ 136:          0          0          7          0          0          0          0          0  IR-PCI-MSI 520192-edge      enp0s31f6
+ 
+ gdyż w tym komputerze pełni on rolę odpowiednika eth0
+
+
+└─ $ ▶ ping google.com
+PING google.com(fra16s12-in-x0e.1e100.net (2a00:1450:4001:818::200e)) 56 data bytes
+64 bytes from fra16s12-in-x0e.1e100.net (2a00:1450:4001:818::200e): icmp_seq=1 ttl=46 time=62.0 ms
+64 bytes from fra16s12-in-x0e.1e100.net (2a00:1450:4001:818::200e): icmp_seq=2 ttl=46 time=60.2 ms
+64 bytes from fra16s12-in-x0e.1e100.net (2a00:1450:4001:818::200e): icmp_seq=3 ttl=46 time=599 ms
+^C
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 60.155/240.452/599.180/253.659 ms
+
+
+różnice po pingu:
+
+
+            CPU0       CPU1       CPU2       CPU3       CPU4 	            CPU0       CPU1       CPU2       CPU3       CPU4 
+   0:          8          0          0          0          0 	   0:          8          0          0          0          0 
+   1:      26596          0          0          0          0  |	   1:      27863          0          0          0          0 
+   8:          0          0          1          0          0 	   8:          0          0          1          0          0 
+   9:      89523      22746          0          0          0  |	   9:      89687      22746          0          0          0 
+  12:         41          0          0          0        191 	  12:         41          0          0          0        191 
+  14:          0          0          0          0          0 	  14:          0          0          0          0          0 
+  16:     575990          0          0          0          0  |	  16:     580852          0          0          0          0 
+ 120:          0          0          0          0          0 	 120:          0          0          0          0          0 
+ 121:          0          0          0          0          0 	 121:          0          0          0          0          0 
+ 126:          0          0          0          0          0 	 126:          0          0          0          0          0 
+ 127:          0         19          0          0          0 	 127:          0         19          0          0          0 
+ 128:       8963          0          0          0          0  |	 128:       9038          0          0          0          0 
+ 129:          0       6626          0          0          0  |	 129:          0       6726          0          0          0 
+ 130:          0          0       7989          0          0  |	 130:          0          0       8081          0          0 
+ 131:          0          0          0       4898          0  |	 131:          0          0          0       5004          0 
+ 132:          0          0          0          0       6110  |	 132:          0          0          0          0       6402 
+ 133:          0          0          0          0          0  |	 133:          0          0          0          0          0 
+ 134:          0          0          0          0          0  |	 134:          0          0          0          0          0 
+ 135:          0          0          0          0          0  |	 135:          0          0          0          0          0 
+ 136:          0          0          7          0          0 	 136:          0          0          7          0          0 
+ 137:          0          0          0          0          0 	 137:          0          0          0          0          0 
+ 144:     300792          0          0          0          0  |	 144:     301412          0          0          0          0 
+ 161:          0          0          0          0          0 	 161:          0          0          0          0          0 
+ 180:    6124847          0          0          0    1263385  |	 180:    6129699          0          0          0    1263385 
+ 181:   26630446          0          0          0          0  |	 181:   26640978          0          0          0          0 
+ 183:     114229          0          0          0          0  |	 183:     115129          0          0          0          0 
+ 184:          0          0          0          0          0 	 184:          0          0          0          0          0 
+ 185:          0          0          0          0          0 	 185:          0          0          0          0          0 
+ 186:          0          0          0          0          0  |	 186:          0          0          0          0          0 
+ 187:          0          0          0          0          0 	 187:          0          0          0          0          0 
+ 188:          0          0          0          0          0  |	 188:          0          0          0          0          0 
+ 189:          0          0          0          0          0 	 189:          0          0          0          0          0 
+ NMI:          0          0          0          0          0 	 NMI:          0          0          0          0          0 
+ LOC:   34133608   31251813   30968122   30760110   34705710  |	 LOC:   34166900   31280744   30997165   30788317   34743897 
+ SPU:          0          0          0          0          0 	 SPU:          0          0          0          0          0 
+ PMI:          0          0          0          0          0 	 PMI:          0          0          0          0          0 
+ IWI:    1610423        428        383        378        212  |	 IWI:    1611395        429        385        380        212 
+ RTR:          0          0          0          0          0 	 RTR:          0          0          0          0          0 
+ RES:    7302197    5054373    3053598    2209373    2341548  |	 RES:    7311826    5059384    3055902    2210759    2343411 
+ CAL:    2270746    2233594    2223920    2199141    2213164  |	 CAL:    2271448    2233957    2224384    2199615    2213722 
+ TLB:    3077501    3144753    3107272    3103386    3103578  |	 TLB:    3078093    3145254    3107852    3103968    3104315 
+ TRM:     387940     387940     387940     387940     387940 	 TRM:     387940     387940     387940     387940     387940 
+ THR:          0          0          0          0          0 	 THR:          0          0          0          0          0 
+ DFR:          0          0          0          0          0 	 DFR:          0          0          0          0          0 
+ MCE:          0          0          0          0          0 	 MCE:          0          0          0          0          0 
+ MCP:        450        446        446        446        446  |	 MCP:        451        446        446        446        446 
+ HYP:          0          0          0          0          0 	 HYP:          0          0          0          0          0 
+ HRE:          0          0          0          0          0 	 HRE:          0          0          0          0          0 
+ HVS:          0          0          0          0          0 	 HVS:          0          0          0          0          0 
+ ERR:          0						 ERR:          0
+ MIS:          0						 MIS:          0
+ PIN:          0          0          0          0          0 	 PIN:          0          0          0          0          0 
+ NPI:          0          0          0          0          0 	 NPI:          0          0          0          0          0 
+ PIW:          0          0          0          0          0 	 PIW:          0          0          0          0          0 

@@ -1,0 +1,16 @@
+Sprawdź jakie opcje „offloadingu” obsługuje interface sieciowy (m.in. polecenie ethtool może pomóc)? Istotne są tylko parametry, które można zmienić (te, których nie można, są oznaczone fixed).
+
+są to opcje:
+
+rx-checksumming - odciążenie sumy kontrolnej
+tx-checksumming - odciążenie sumy kontrolnej
+tx-checksum-ip-generic
+scatter-gather
+tcp-segmentation-offload
+udp-fragmentation-offload
+generic-segmentation-offload
+rx-vlan-offload
+tx-nocache-copy
+rx-fcs
+rx-all
+

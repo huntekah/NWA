@@ -1,0 +1,7 @@
+Czy da się napisać regułę jak w zadaniu 2, która po aktywacji blokuje kolejne pakiety podanej postaci na np. 10 minut? Podaj przykład takiej reguły lub wyjaśnij dlaczego się nie da
+
+Takiej reguły się nieda napisać. Po przebadaniu sprawy uważam że właśnie tak jest i nie jest możliwe stworzenie reguły która po aktywacji będzie akceptować reguły tlyko przez 10 minut.
+
+Możnaby było uzyskać taki efekt opakowując wszystko w bashowy / pythonowy skrypt który zmienia zawartość reguł po określonym czasie.
+
+

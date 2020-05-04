@@ -1,0 +1,35 @@
+
+Zadanie 3 (2pkt)
+
+Co oferują pozostałe ustawienia (RSS, RPS, RFS, XPS)? Czy da się któreś zmienić w wybranej konfiguracji (tzn. dla konkretnej karty sieciowej w VirtualBox).
+
+RSS: Receive Side Scaling
+
+Karty sieciowe obsługują wiele kolejek deskryptora odbierania i przesyłania (wiele kolejek). Podczas odbioru karta sieciowa może wysyłać różne pakiety do różnych kolejek w celu rozdzielenia przetwarzania między procesory. Karta sieciowa dystrybuuje pakiety, stosując filtr do każdego pakietu, który przypisuje go do jednego z niewielkiej liczby przepływów logicznych. Pakiety dla każdego przepływu są kierowane do osobnej kolejki odbiorczej, która z kolei może być przetwarzana przez osobne procesory. Ten mechanizm jest ogólnie znany jako „skalowanie po stronie odbiorczej” (RSS). Celem RSS i innych technik skalowania jest równomierne zwiększenie wydajności. Dystrybucja z wielu kolejek może być również używana do ustalania priorytetów ruchu, ale nie jest to przedmiotem tych technik.
+
+Filtr używany w RSS to zazwyczaj funkcja skrótu w sieci i / lub nagłówki warstwy transportowej - na przykład 4-krotny skrót w adresach IP i portach TCP pakietu. Najpopularniejsza sprzętowa implementacja RSS korzysta ze 128-wejściowej tabeli pośrednictwa, w której każdy wpis przechowuje numer kolejki. Kolejka odbiorcza dla pakietu jest określana przez maskowanie siedmiu bitów obliczonego skrótu dla pakietu (zwykle skrótu Toeplitza), biorąc tę liczbę za klucz do tabeli pośredniej i odczytując odpowiednią wartość.
+
+
+
+RPS: Receive Packet Steering
+
+Odbieranie sterowania pakietami (RPS) jest logicznie implementacją RSS. Będąc w oprogramowaniu, jest koniecznie wywoływane później w ścieżce danych. Podczas gdy RSS wybiera kolejkę, a tym samym procesor, który uruchomi sprzętową procedurę obsługi przerwań, RPS wybiera procesor, aby wykonać przetwarzanie protokołu powyżej procedury obsługi przerwań. Odbywa się to poprzez umieszczenie pakietu w kolejce zaległości żądanego procesora i wybudzenie procesora do przetworzenia. RPS ma pewne zalety w stosunku do RSS:
+
+można go używać z dowolną kartą sieciową
+filtry programowe można łatwo dodawać do skrótów w stosunku do nowych protokołów
+nie zwiększa częstotliwości przerwań sprzętowych (chociaż wprowadza przerwania między procesorami (IPI))
+
+
+
+RFS: Receive Flow Steering
+
+Chociaż RPS steruje pakietami wyłącznie na podstawie skrótu, a zatem ogólnie zapewnia dobry rozkład obciążenia, nie bierze pod uwagę lokalizacji aplikacji. Odbywa się to poprzez odbieranie sterowania przepływem (RFS). Celem RFS jest zwiększenie szybkości przesyłu danych w pamięci podręcznej poprzez sterowanie przetwarzaniem pakietów przez jądro do procesora, na którym działa wątek aplikacji zużywający pakiet. RFS polega na tych samych mechanizmach RPS, aby kolejkować pakiety w zaległościach innego procesora i budzić ten procesor.
+
+W RFS pakiety nie są przekazywane bezpośrednio przez wartość ich wartości skrótu, ale skrót jest używany jako indeks do tabeli wyszukiwania przepływu. Ta tabela odwzorowuje przepływy na procesory, w których przepływy te są przetwarzane. Skrót przepływu (patrz sekcja RPS powyżej) służy do obliczania wskaźnika w tej tabeli. Procesor zarejestrowany w każdym wpisie jest tym, który ostatni przetworzył przepływ. Jeśli wpis nie zawiera prawidłowego procesora, pakiety mapowane na ten wpis są sterowane przy użyciu zwykłego protokołu RPS. Wiele wpisów w tabeli może wskazywać na ten sam procesor. Rzeczywiście, przy wielu przepływach i niewielkiej liczbie procesorów bardzo prawdopodobne jest, że pojedynczy wątek aplikacji obsługuje przepływy z wieloma różnymi skrótami przepływów
+
+
+
+XPS: Transmit Packet Steering
+
+Transmit Packet Steering to mechanizm do inteligentnego wybierania, która kolejka transmisji ma być używana podczas transmisji pakietu na urządzeniu z wieloma kolejkami. Można tego dokonać, rejestrując dwa rodzaje map, albo mapowanie procesora na kolejkę (kolejki) sprzętowe, albo mapowanie kolejki (ów) odbiorczej na kolejkę (kolejki) transmisji sprzętowej.
+

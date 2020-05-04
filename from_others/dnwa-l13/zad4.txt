@@ -1,0 +1,5 @@
+wyciągamy md5 hash i kopiujemy do pliku, który następnie przeklejamy do suricata rules.
+musimy dodać do suricaty regułę
+drop http any any -> any any (msg:"Clamav MD5 Hash"; flow:established; filemd5:blacklist_md5; classtype: suspicious-filename-detect; sid:100000; rev:1;)
+
+

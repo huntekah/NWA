@@ -1,0 +1,5 @@
+https://download.netresec.com/pcap/maccdc-2010/maccdc2010_00016_20100311225328.pcap.gz   -2gb
+
+https://download.netresec.com/pcap/maccdc-2011/maccdc2011_00013_20110312202724.pcap.gz   -3gb
+
+

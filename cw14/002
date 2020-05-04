@@ -1,0 +1,6 @@
+Zadanie 2 (2pkt)
+Napisz regułę, która po przechwyceniu 30 pakietów TCP o rozmiarze 1234 i zawartości abcd loguje kolejne takie pakiety (np. za pomocą pary reguł activate,dynamic, albo za pomocą tagowania).
+
+active tcp any any -> any any (msg:'TCP: "abcd",size "1234"';dsize: 1234; content: "My Fancy content with abcd"; sid: 123412341; rev:1; activates: 1;)
+
+dynamic tcp any any -> any any (activated_by:1; count 31; sid: 123412342;)

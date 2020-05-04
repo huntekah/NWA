@@ -1,0 +1,4 @@
+RSS - karty sieciowe obsługują wiele kolejek, aby rodzielić przetwarzanie między procesory. sterownik karty sieciowej - można skonfigurować liczbę kolejek.
+RPS - wybiera procesor. Konfiguracja - tworzymy listę procesorów, do których ma być przekazywany ruch.
+RFS - RPS zapewnia dobry rozkład obciążenia procesora, jednak nie bierze pod uwagę lokalizacji. RFS ma za zadanie zwiększyć szybkość transmisji danych pamięci podręcznej. konfiguracja - liczba pozycji w globalnej tabeli przepływu lub tabeli kolejek.
+XPS - inteligentny wybór kolejki transmisji, która ma być używana podczas transmisji pakietu na urządzeniu z wieloma kolejkami.

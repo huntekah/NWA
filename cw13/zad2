@@ -1,0 +1,14 @@
+skan:
+
+----------- SCAN SUMMARY -----------
+Known viruses: 41325621
+Engine version: 0.102.1
+Scanned directories: 1
+Scanned files: 1
+Infected files: 1
+Data scanned: 0.35 MB
+Data read: 0.32 MB (ratio 1.09:1)
+Time: 12.042 sec (0 m 12 s)
+
+
+malvare zostało pobrane z serwera heroku znalezionego w internecie

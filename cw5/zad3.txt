@@ -1,0 +1,10 @@
+W pierwszym rozwiązaniu NFQUEUE podejmuje ostateczną decyzję. 
+IPS musi otrzymać wszystkie pakiety i może jedynie zadecydować o tym, żeby wykonać akcję DROP lub ALERT. 
+Z tego względu , dowolne reguły ACCEPT przed IPS'em sprawią, że pakiet nie będzie analizowany przez IPS,  i - podobnie dowolna decyzja po regułach IPS będzie ignorowana. 
+Dlatego opisywane rozwiązanie proponuje uważne umiejscowienie reguł IPS.
+Otóż NFQUEUE posiada trzy cechy, z których możemy skorzystać - "NF_ACCEPT" , "NF_DROP" , "NF_REPEAT".
+
+Możemy zamiast korzystać z reguły NF_ACCEPT, użyć NF_REPEAT. 
+Wówczas jeśli IPS jako pierwszy dostanie pakiet, odeśle go na sam początek, jadnak zostawiając "oznaczenie" na pakiecie tak, aby NF_REPEAT nie spowodował nieskończonej pętli. Proponowana reguła to:
+iptables -A FORWARD ! -i lo -m mark ! --mark 0x1/0x1 -j NFQUEUE
+wystarczy dodać ją na początek filtra FORWARD i wówczas będziemy wolni od negatywnych konsekwencji pierwszego podejścia. (Możemy przeglądać wszystkie pakiety w IPS, jednocześnie nakładając na to tradycyjne filtrowanie). 
